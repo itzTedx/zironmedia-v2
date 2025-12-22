@@ -45,6 +45,50 @@ export const youth = localFont({
 	],
 });
 
+export const clash = localFont({
+	variable: "--font-display",
+	display: "swap",
+	preload: true,
+	src: [
+		{
+			weight: "200",
+			path: "./clash-grotesk/ClashGrotesk-Extralight.woff2",
+		},
+		{
+			weight: "300",
+			path: "./clash-grotesk/ClashGrotesk-Light.woff2",
+		},
+		{
+			weight: "400",
+			path: "./clash-grotesk/ClashGrotesk-Regular.woff2",
+		},
+		{
+			weight: "500",
+			path: "./clash-grotesk/ClashGrotesk-Medium.woff2",
+		},
+		{
+			weight: "600",
+			path: "./clash-grotesk/ClashGrotesk-Semibold.woff2",
+		},
+		{
+			weight: "700",
+			path: "./clash-grotesk/ClashGrotesk-Bold.woff2",
+		},
+	],
+	fallback: [
+		"-apple-system",
+		"BlinkMacSystemFont",
+		"Segoe UI",
+		"Roboto",
+		"Oxygen",
+		"Ubuntu",
+		"Cantarell",
+		"Helvetica Neue",
+		"Arial",
+		"sans-serif",
+	],
+});
+
 export const mono = Chivo_Mono({
 	variable: "--font-mono",
 	subsets: ["latin"],

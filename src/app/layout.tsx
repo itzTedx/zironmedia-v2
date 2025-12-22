@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 
 import { Navbar } from "@/components/shared/navbar";
 
-import { youth } from "@/assets/fonts";
+import { clash, youth } from "@/assets/fonts";
 
 import { cn } from "@/lib/utils";
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={cn("antialiased", youth.className)}>
+			<body className={cn("antialiased", youth.className, clash.variable)}>
 				<Navbar />
 				{children}
 			</body>

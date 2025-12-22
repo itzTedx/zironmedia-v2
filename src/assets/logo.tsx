@@ -1,6 +1,7 @@
-export const Logo = () => {
+export const Logo = (props: SVGProps) => {
 	return (
 		<svg
+			{...props}
 			fill="none"
 			height="42"
 			viewBox="0 0 49 42"
