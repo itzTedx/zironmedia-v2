@@ -34,9 +34,6 @@
 	--color-border: var(--gray-400);
 	--color-strong: var(--gray-500);
 
-	--color-success: var(--destructive);
-	--color-error: var(--destructive);
-
 	--color-card: var(--card);
 	--color-card-foreground: var(--card-foreground);
 
@@ -79,6 +76,7 @@
 
 	--color-warning-foreground: var(--warning-foreground);
 	--color-warning: var(--warning);
+	--color-success: var(--success);
 	--color-success-foreground: var(--success-foreground);
 	--color-info-foreground: var(--info-foreground);
 	--color-info: var(--info);
@@ -146,6 +144,7 @@
 	--gray-1300: oklch(0.2291 0.0115 285.46);
 	--gray-1400: oklch(0.1947 0.0101 294.62);
 	--gray-1500: oklch(0.1652 0.0062 285.7);
+
 	--destructive-foreground: var(--color-red-700);
 	--info: var(--color-blue-500);
 	--info-foreground: var(--color-blue-700);

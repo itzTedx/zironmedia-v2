@@ -5,7 +5,7 @@ import { IconNfc } from "@/assets/icons/nfc";
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
 
-export const NAV_LINKS: NavLinks[] = [
+export const NAV_LINKS: NavLink[] = [
 	{
 		label: "Products",
 		href: "/",
@@ -80,10 +80,25 @@ export const NAV_LINKS: NavLinks[] = [
 	{
 		label: "Company",
 		href: "/",
+		submenu: [
+			{
+				icon: IconNfc,
+				title: "Ziron Tap",
+				description: "Tap. Scan. Connect.",
+				href: "/",
+			},
+			{
+				icon: IconNfc,
+				title: "Ziron CRM",
+				description: "Tap. Scan. Connect.",
+				badge: "New • Get Early Access",
+				href: "/",
+			},
+		],
 	},
 ];
 
-export type NavLinks = {
+export type NavLink = {
 	label: string;
 	href: Route;
 	submenu?: Submenu[];

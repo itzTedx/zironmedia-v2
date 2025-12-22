@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import { IconArrowRight } from "@/assets/icons/arrow";
+import { IconArrowDown, IconArrowRight } from "@/assets/icons/arrow";
 import { Logo } from "@/assets/logo";
 
 import { Button } from "../ui/button";
-import { NAV_LINKS } from "./constants";
+import { NAV_LINKS, NavLink } from "./constants";
 
 export const Navbar = () => {
 	return (
@@ -12,11 +12,9 @@ export const Navbar = () => {
 			<nav className="mx-auto flex max-w-7xl items-center justify-between gap-4">
 				<div className="flex items-center gap-12">
 					<Logo className="size-10" />
-					<ul className="flex items-center gap-12 font-display font-semibold text-background uppercase">
+					<ul className="flex items-center gap-12 font-display font-semibold uppercase">
 						{NAV_LINKS.map((link) => (
-							<li key={link.label}>
-								<Link href={link.href}>{link.label}</Link>
-							</li>
+							<NavLinkItem key={link.label} link={link} />
 						))}
 					</ul>
 				</div>
@@ -28,3 +26,18 @@ export const Navbar = () => {
 		</header>
 	);
 };
+
+function NavLinkItem({ link }: { link: NavLink }) {
+	return (
+		<li>
+			<Link
+				className="flex items-center gap-1.5 text-primary-foreground transition-colors hover:text-white"
+				href={link.href}
+			>
+				{link.label}
+
+				{link.submenu && <IconArrowDown className="shrink-0" />}
+			</Link>
+		</li>
+	);
+}
