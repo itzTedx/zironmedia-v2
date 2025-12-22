@@ -116,6 +116,7 @@
 				"useSortedAttributes": "on",
 				"organizeImports": {
 					"level": "on",
+
 					"options": {
 						"groups": [
 							":TYPES:",
