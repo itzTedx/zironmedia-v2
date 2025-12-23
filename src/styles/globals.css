@@ -52,6 +52,7 @@
 
 	--shadow-button-primary: var(--button-primary);
 	--shadow-sm: var(--shadow-sm);
+	--shadow-lg: var(--shadow-lg);
 
 	--color-brand-50: var(--brand-50);
 	--color-brand-100: var(--brand-100);
@@ -176,6 +177,14 @@
 		0 3px 3px -1.5px --alpha(var(--gray-1500) / 9%),
 		0 6px 6px -3px --alpha(var(--gray-1500) / 6%),
 		0 12px 12px -6px --alpha(var(--gray-1500) / 6%);
+
+	--shadow-lg:
+		0px 48px 48px -24px --alpha(var(--gray-1500) / 12%),
+		0px 24px 24px -12px --alpha(var(--gray-1500) / 12%),
+		0px 12px 12px -6px --alpha(var(--gray-1500) / 12%),
+		0px 6px 6px -3px --alpha(var(--gray-1500) / 12%),
+		0px 3px 3px -1.5px --alpha(var(--gray-1500) / 12%),
+		0px 0px 0px 1px --alpha(var(--gray-1500) / 12%);
 }
 
 @layer base {

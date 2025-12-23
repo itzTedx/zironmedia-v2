@@ -8,7 +8,7 @@ import { NAV_LINKS, NavLink } from "./constants";
 
 export const Navbar = () => {
 	return (
-		<header className="bg-primary py-2.5">
+		<header className="sticky top-0 z-999 bg-primary py-2.5">
 			<nav className="container mx-auto flex max-w-7xl items-center justify-between gap-4">
 				<div className="flex items-center gap-12">
 					<Link
