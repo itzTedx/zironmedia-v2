@@ -1,9 +1,15 @@
 import { IconDesktopPoint } from "@/assets/icons/desktop";
 import { IconNfc } from "@/assets/icons/nfc";
+import {
+	IconSocialFacebook,
+	IconSocialInstagram,
+	IconSocialLinkedIn,
+	IconSocialWhatsapp,
+} from "@/assets/icons/socials";
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
 
-import { FooterMeta, NavLink } from "./types";
+import { FooterMeta, NavLink, Social } from "./types";
 
 export const NAV_LINKS: NavLink[] = [
 	{
@@ -95,6 +101,29 @@ export const NAV_LINKS: NavLink[] = [
 				href: "/",
 			},
 		],
+	},
+];
+
+export const SOCIALS: Social[] = [
+	{
+		label: "Linkedin",
+		href: "/",
+		icon: IconSocialLinkedIn,
+	},
+	{
+		label: "Facebook",
+		href: "/",
+		icon: IconSocialFacebook,
+	},
+	{
+		label: "Instagram",
+		href: "/",
+		icon: IconSocialInstagram,
+	},
+	{
+		label: "Whatsapp",
+		href: "/",
+		icon: IconSocialWhatsapp,
 	},
 ];
 

@@ -16,6 +16,12 @@ export type Submenu = {
 	badge?: string;
 };
 
+export type Social = {
+	icon: typeof IconNfc;
+	label: string;
+	href: Route;
+};
+
 export type FooterMeta = {
 	label: string;
 	href: Route;

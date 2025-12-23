@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LogoMono, Wordmark } from "@/assets/logo";
 
 import { Noise } from "../shared/noise";
-import { FOOTER_META } from "./constants";
+import { FOOTER_META, SOCIALS } from "./constants";
 
 // Static copyright year to avoid re-computation
 const currentYear = new Date().getFullYear();
@@ -22,6 +22,21 @@ export const Footer = () => {
 						</h4>
 						<div>
 							<p className="font-medium text-brand-200">Stay Connected</p>
+							<ul className="flex items-center gap-4">
+								{SOCIALS.map((social) => {
+									const Icon = social.icon;
+									return (
+										<li key={social.label}>
+											<Link
+												className="inset-shadow-white inset-shadow-xs flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-sm"
+												href={social.href}
+											>
+												<Icon />
+											</Link>
+										</li>
+									);
+								})}
+							</ul>
 						</div>
 					</div>
 				</div>
