@@ -14,6 +14,10 @@
 	--color-secondary: var(--white);
 	--color-secondary-foreground: var(--secondary-foreground);
 
+	--color-surface: var(--gray-200);
+	--color-elevated: var(--gray-50);
+	--color-floating: var(--white);
+
 	--color-accent: var(--accent);
 	--color-accent-foreground: var(--accent-foreground);
 

@@ -8,7 +8,7 @@ import { IconPlay } from "@/assets/icons/play";
 export const Hero = () => {
 	return (
 		<section className="dashed dashed-x relative mx-auto max-w-7xl">
-			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 py-24">
+			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 py-16">
 				<Badge className="gap-2">
 					<div className="size-1.5 rounded-full bg-violet-500" /> Ready to grow?
 					We’re ready to go
@@ -16,7 +16,7 @@ export const Hero = () => {
 				<h1 className="text-center font-bold font-display text-8xl text-primary uppercase">
 					Turn your brand into a revenue machine
 				</h1>
-				<p className="text-balance text-center text-2xl text-muted-foreground leading-relaxed">
+				<p className="text-balance text-center text-muted-foreground text-xl leading-relaxed">
 					We’re your full-stack creative & digital marketing partner from{" "}
 					<span className="text-foreground">
 						branding to websites, CRM software, social media, printing,

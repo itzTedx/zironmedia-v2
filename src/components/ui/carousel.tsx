@@ -2,9 +2,11 @@
 
 import * as React from "react";
 
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, {
 	type UseEmblaCarouselType,
 } from "embla-carousel-react";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 
 import { Button } from "@/components/ui/button";
 
@@ -59,7 +61,15 @@ function Carousel({
 			...opts,
 			axis: orientation === "horizontal" ? "x" : "y",
 		},
-		plugins
+		[
+			Autoplay({
+				delay: 3000,
+				stopOnMouseEnter: true,
+			}),
+
+			WheelGesturesPlugin(),
+			...(plugins || []),
+		]
 	);
 	const [canScrollPrev, setCanScrollPrev] = React.useState(false);
 	const [canScrollNext, setCanScrollNext] = React.useState(false);
