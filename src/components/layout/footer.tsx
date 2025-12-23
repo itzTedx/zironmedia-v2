@@ -11,8 +11,8 @@ const currentYear = new Date().getFullYear();
 export const Footer = () => {
 	return (
 		<footer className="pt-12">
-			<section className="mx-auto grid max-w-7xl grid-cols-3 gap-4">
-				<div className="relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-2xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-10 shadow-sm">
+			<section className="mx-auto grid max-w-7xl grid-cols-[1fr_2fr] gap-4">
+				<div className="relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-2xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-12 shadow-sm">
 					<Noise className="opacity-50" />
 					<LogoMono className="text-white" />
 					<div className="space-y-8">
@@ -28,7 +28,7 @@ export const Footer = () => {
 									return (
 										<li key={social.label}>
 											<Link
-												className="inset-shadow-white inset-shadow-xs flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-sm"
+												className="flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-dark"
 												href={social.href}
 											>
 												<Icon />
@@ -39,6 +39,15 @@ export const Footer = () => {
 							</ul>
 						</div>
 					</div>
+				</div>
+
+				<div className="rounded-2xl bg-card p-12 shadow-sm">
+					<ul>
+						<li>
+							Email.{" "}
+							<Link href="mailto:info@zironmedia.com">info@zironmedia.com</Link>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section className="dashed dashed-y mt-12">
