@@ -51,6 +51,7 @@
 	--radius-4xl: calc(var(--radius) + 16px);
 
 	--shadow-button-primary: var(--button-primary);
+	--shadow-button-neutral: var(--button-neutral);
 	--shadow-sm: var(--shadow-sm);
 	--shadow-lg: var(--shadow-lg);
 
@@ -165,6 +166,15 @@
 	--button-primary:
 		inset 0 1px 1.5px --alpha(var(--color-white) / 16%),
 		0 0 0 0.5px var(--color-primary),
+		0 0 0 0.5px --alpha(var(--gray-1500) / 12%),
+		0 3px 3px -1.5px --alpha(var(--gray-1500) / 6%),
+		0 6px 6px -3px --alpha(var(--gray-1500) / 6%),
+		0 12px 12px -6px --alpha(var(--gray-1500) / 9%),
+		0 24px 24px -12px --alpha(var(--gray-1500) / 6%),
+		0 48px 48px -24px --alpha(var(--gray-1500) / 6%);
+
+	--button-neutral:
+		inset 0 1px 1.5px --alpha(var(--color-white) / 16%),
 		0 0 0 0.5px --alpha(var(--gray-1500) / 12%),
 		0 3px 3px -1.5px --alpha(var(--gray-1500) / 6%),
 		0 6px 6px -3px --alpha(var(--gray-1500) / 6%),

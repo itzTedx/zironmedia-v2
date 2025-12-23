@@ -15,6 +15,7 @@ import {
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
+import { Frame } from "@/components/ui/frame";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 import { IconCaretRight } from "@/assets/icons/caret";
@@ -225,7 +226,7 @@ export default function Home() {
 				</div>
 			</section>
 			<section className="dashed dashed-b-0 mx-auto max-w-7xl">
-				<header className="space-y-3 p-14 text-center">
+				<header className="dashed dashed-b space-y-3 p-14 text-center">
 					<h2 className="font-display font-semibold text-6xl tracking-tight">
 						Why choose us
 					</h2>
@@ -234,8 +235,8 @@ export default function Home() {
 						It’s quite a lot!
 					</p>
 				</header>
-				<div className="mx-auto max-w-6xl">
-					<div className="grid grid-cols-4 gap-4">
+				<div className="mx-auto max-w-6xl py-14">
+					<div className="grid grid-cols-4 gap-4 pb-3">
 						<div />
 						<div>
 							<Wordmark />
@@ -243,10 +244,67 @@ export default function Home() {
 						<p>In-House Team</p>
 						<p>Other Agencies</p>
 					</div>
-					<div className="rounded-[calc(var(--radius-3xl)+calc(var(--spacing)*2))] bg-floating p-2">
+
+					<Frame>
 						<div className="rounded-3xl bg-background shadow-sm">Cost</div>
+					</Frame>
+				</div>
+				<div className="dashed dashed-t mx-auto max-w-7xl p-9" />
+			</section>
+			<section className="dashed dashed-y relative py-14">
+				<header className="mx-auto mb-14 flex max-w-7xl items-center justify-between">
+					<h2 className="font-display font-semibold text-5xl tracking-tight">
+						Learn and Get Inspired
+					</h2>
+					<Button className="w-40 justify-between bg-foreground shadow-button-neutral">
+						More articles <IconArrowRightTag className="size-5" />
+					</Button>
+				</header>
+
+				<div className="mx-auto grid max-w-7xl grid-cols-3 gap-4">
+					<div>
+						<div className="relative aspect-5/4 overflow-hidden rounded-2xl">
+							<Image
+								alt=""
+								className="object-cover"
+								fill
+								src="/images/blogs/blog-1.jpeg"
+							/>
+						</div>
+						<h3 className="p-3 font-medium text-2xl">
+							How a Strong Digital Presence Helps Businesses Grow in 2025
+						</h3>
+					</div>
+					<div>
+						<div className="relative aspect-4/5 overflow-hidden rounded-2xl">
+							<Image
+								alt=""
+								className="object-cover"
+								fill
+								src="/images/blogs/blog-2.jpg"
+							/>
+						</div>
+						<h3 className="p-3 font-medium text-2xl">
+							How Ziron Media Helps Brands Scale Digitally
+						</h3>
+					</div>
+					<div>
+						<div className="relative aspect-5/4 overflow-hidden rounded-2xl">
+							<Image
+								alt=""
+								className="object-cover"
+								fill
+								src="/images/blogs/blog-3.jpeg"
+							/>
+						</div>
+						<h3 className="p-3 font-medium text-2xl">
+							How to Boost your Business with Social media?
+						</h3>
 					</div>
 				</div>
+
+				<div className="absolute inset-x-0 top-0 -z-10 h-1/4 bg-linear-180 from-white" />
+				<div className="absolute inset-x-0 bottom-0 -z-10 h-1/4 bg-linear-0 from-white" />
 			</section>
 		</main>
 	);
