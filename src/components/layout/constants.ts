@@ -1,9 +1,9 @@
-import { Route } from "next";
-
 import { IconDesktopPoint } from "@/assets/icons/desktop";
 import { IconNfc } from "@/assets/icons/nfc";
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
+
+import { FooterMeta, NavLink } from "./types";
 
 export const NAV_LINKS: NavLink[] = [
 	{
@@ -98,16 +98,17 @@ export const NAV_LINKS: NavLink[] = [
 	},
 ];
 
-export type NavLink = {
-	label: string;
-	href: Route;
-	submenu?: Submenu[];
-};
-
-export type Submenu = {
-	icon: typeof IconNfc;
-	title: string;
-	description: string;
-	href: Route;
-	badge?: string;
-};
+export const FOOTER_META: FooterMeta[] = [
+	{
+		label: "Enquiry",
+		href: "/",
+	},
+	{
+		label: "Privacy Policy",
+		href: "/",
+	},
+	{
+		label: "Sitemap",
+		href: "/",
+	},
+];

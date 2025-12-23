@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 
-import { Navbar } from "@/components/shared/navbar";
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
 
 import { clash, youth } from "@/assets/fonts";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 			<body className={cn("antialiased", youth.className, clash.variable)}>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

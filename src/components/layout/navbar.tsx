@@ -4,7 +4,8 @@ import { IconCaretDown, IconCaretRight } from "@/assets/icons/caret";
 import { Logo } from "@/assets/logo";
 
 import { Button } from "../ui/button";
-import { NAV_LINKS, NavLink } from "./constants";
+import { NAV_LINKS } from "./constants";
+import { NavLink } from "./types";
 
 export const Navbar = () => {
 	return (
