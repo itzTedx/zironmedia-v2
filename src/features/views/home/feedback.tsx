@@ -37,14 +37,14 @@ export const Feedback = () => {
 											<Noise className="opacity-20" />
 											<Image
 												alt="Maxline global feedback about ziron media"
-												className="absolute top-14 left-1/2 z-20 -translate-x-[15%] rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[12%] group-hover/card:rotate-3 group-hover/card:scale-110"
+												className="absolute top-14 left-1/2 z-20 -translate-x-[15%] rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[12%] group-hover/card:rotate-3 group-hover/card:scale-115"
 												height={240}
 												src="/images/feedback/maxline-1.webp"
 												width={200}
 											/>
 											<Image
 												alt="Maxline global feedback about ziron media"
-												className="absolute top-12 left-1/2 z-10 -translate-x-[85%] -rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[88%] group-hover/card:-rotate-3 group-hover/card:scale-110"
+												className="absolute top-12 left-1/2 z-10 -translate-x-[85%] -rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[88%] group-hover/card:-rotate-3 group-hover/card:scale-115"
 												height={240}
 												src="/images/feedback/maxline-2.webp"
 												width={200}
@@ -96,17 +96,17 @@ export const Feedback = () => {
 								<Noise className="opacity-20" />
 								<Image
 									alt="Maxline global feedback about ziron media"
-									className="absolute top-14 left-1/2 z-20 -translate-x-[15%] rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[12%] group-hover/card:rotate-3 group-hover/card:scale-110"
-									height={240}
+									className="absolute top-14 left-1/2 z-20 -translate-x-[15%] rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[12%] group-hover/card:rotate-3 group-hover/card:scale-115"
+									height={200}
 									src="/images/feedback/maxline-1.webp"
-									width={200}
+									width={170}
 								/>
 								<Image
 									alt="Maxline global feedback about ziron media"
-									className="absolute top-12 left-1/2 z-10 -translate-x-[85%] -rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[88%] group-hover/card:-rotate-3 group-hover/card:scale-110"
-									height={240}
+									className="absolute top-12 left-1/2 z-10 -translate-x-[85%] -rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[88%] group-hover/card:-translate-y-2 group-hover/card:-rotate-3 group-hover/card:scale-115"
+									height={200}
 									src="/images/feedback/maxline-2.webp"
-									width={200}
+									width={170}
 								/>
 								<Image
 									alt="Background sky blue gradient"

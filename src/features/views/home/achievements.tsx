@@ -6,6 +6,8 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 
+import { ACHIEVEMENTS } from "./data/constants";
+
 export const Achievements = () => {
 	return (
 		<section className="dashed dashed-y">
@@ -19,22 +21,20 @@ export const Achievements = () => {
 				</p>
 			</header>
 			<div className="dashed dashed-t-0 mx-auto grid max-w-7xl grid-cols-3 gap-4 p-14">
-				{Array.from({ length: 3 }).map((_, i) => (
-					<Card key={`card-${i + 1}`}>
-						<CardContent>
-							<div className="aspect-4/3 bg-linear-0 from-gray-300 to-gray-100">
-								Business Card
-							</div>
-							<CardHeader>
-								<CardTitle>50+ Brands Served</CardTitle>
-								<CardDescription>
-									Helping businesses across various industries achieve their
-									goals
-								</CardDescription>
-							</CardHeader>
-						</CardContent>
-					</Card>
-				))}
+				{ACHIEVEMENTS.map((ach) => {
+					const AchievementCard = ach.card;
+					return (
+						<Card key={`card-${ach.id}`}>
+							<CardContent>
+								<AchievementCard />
+								<CardHeader>
+									<CardTitle>{ach.title}</CardTitle>
+									<CardDescription>{ach.description}</CardDescription>
+								</CardHeader>
+							</CardContent>
+						</Card>
+					);
+				})}
 			</div>
 			<div className="dashed dashed-t-0 mx-auto max-w-7xl p-9" />
 		</section>

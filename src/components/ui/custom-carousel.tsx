@@ -139,7 +139,7 @@ function MotionCarousel(props: PropType) {
 			</div>
 
 			<div className="flex items-center justify-center gap-3">
-				<div className="flex flex-wrap items-center justify-end gap-2 rounded-full bg-surface p-1">
+				<div className="flex flex-wrap items-center justify-end gap-2 rounded-full bg-surface/80 p-1">
 					{scrollSnaps.map((_, index) => (
 						<DotButton
 							key={`Slide ${index + 1}`}
@@ -162,7 +162,7 @@ function DotButton({ selected = false, onClick }: DotButtonProps) {
 			// 	height: selected ? 28 : 12,
 			// }}
 			className={cn(
-				"flex cursor-pointer select-none items-center justify-center rounded-full border-none bg-primary shadow-sm",
+				"flex cursor-pointer select-none items-center justify-center rounded-full border-none bg-primary shadow-sm transition-colors",
 				selected ? "bg-white" : "bg-surface"
 			)}
 			initial={false}
