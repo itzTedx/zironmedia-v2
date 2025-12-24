@@ -5,11 +5,13 @@
 
 @theme inline {
 	--font-display: var(--font-display);
-	--font-mono: var(--font-geist-mono);
+	--font-mono: var(--font-mono);
 
 	--color-primary: var(--brand-600);
 	--color-primary-foreground: var(--brand-100);
 	--color-primary-secondary: var(--brand-400);
+
+	--color-brand-secondary: var(--brand-secondary);
 
 	--color-secondary: var(--white);
 	--color-secondary-foreground: var(--secondary-foreground);
@@ -139,6 +141,8 @@
 	--brand-900: oklch(0.1712 0.0749 277.38);
 	--brand-950: oklch(0.0824 0.0346 275.68);
 
+	--brand-secondary: oklch(0.5739 0.27695 299.6177);
+
 	--gray-50: oklch(0.9854 0.0013 286.38);
 	--gray-100: oklch(0.9524 0.0013 286.37);
 	--gray-200: oklch(0.9197 0.004 286.32);
@@ -198,7 +202,7 @@
 		0 0 0 1px --alpha(var(--gray-1500) / 12%);
 
 	--shadow-dark:
-		inset 0 3px 2px --alpha(var(--gray-200) / 20%),
+		inset 0 1.5px 1.5px --alpha(var(--gray-200) / 20%),
 		0 12px 12px -6px --alpha(var(--gray-1500) / 6%),
 		0 6px 6px -3px --alpha(var(--gray-1500) / 9%),
 		0 3px 3px -1.5px --alpha(var(--gray-1500) / 12%),

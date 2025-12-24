@@ -1,3 +1,4 @@
+import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +9,7 @@ import { IconPlay } from "@/assets/icons/play";
 export const Hero = () => {
 	return (
 		<section className="dashed dashed-x relative mx-auto max-w-7xl">
+			<Noise className="opacity-50" />
 			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 py-16">
 				<Badge className="gap-2">
 					<div className="size-1.5 rounded-full bg-violet-500" /> Ready to grow?

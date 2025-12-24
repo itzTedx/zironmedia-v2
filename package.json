@@ -16,7 +16,8 @@
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-react": "^8.6.0",
 		"embla-carousel-wheel-gestures": "^8.1.0",
-		"next": "16.1.0",
+		"motion": "^12.23.26",
+		"next": "16.1.1",
 		"react": "19.2.3",
 		"react-dom": "19.2.3",
 		"tailwind-merge": "^3.4.0"

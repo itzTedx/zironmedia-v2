@@ -17,5 +17,5 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"cSpell.words": ["useCallback", "Wordmark"]
+	"cSpell.words": ["useCallback", "Wordmark", "ziron"]
 }

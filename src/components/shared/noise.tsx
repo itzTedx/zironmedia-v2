@@ -5,7 +5,7 @@ export const Noise = ({ className, ...props }: React.ComponentProps<"div">) => {
 		<div
 			{...props}
 			className={cn(
-				"pointer-events-none absolute inset-0 opacity-25 mix-blend-overlay",
+				"pointer-events-none absolute inset-0 z-50 opacity-30 mix-blend-overlay",
 				className
 			)}
 		>

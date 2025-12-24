@@ -8,18 +8,23 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Logo Design",
+				href: "/",
 			},
 			{
 				title: "Brand Guidelines",
+				href: "/",
 			},
 			{
 				title: "Pitch Decks",
+				href: "/",
 			},
 			{
 				title: "Packaging Design",
+				href: "/",
 			},
 			{
 				title: "Brand Revamps",
+				href: "/",
 			},
 		],
 	},
@@ -32,15 +37,19 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Website Design & Development",
+				href: "/",
 			},
 			{
 				title: "Web Revamps",
+				href: "/",
 			},
 			{
 				title: "Search Engine Optimization (SEO)",
+				href: "/",
 			},
 			{
 				title: "Website Management",
+				href: "/",
 			},
 		],
 	},
@@ -53,12 +62,15 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Social Media Creatives",
+				href: "/",
 			},
 			{
 				title: "Content Strategy",
+				href: "/",
 			},
 			{
 				title: "Paid Ads",
+				href: "/",
 			},
 		],
 	},
@@ -71,18 +83,23 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Offset & Digital Printing",
+				href: "/",
 			},
 			{
 				title: "Merchandise",
+				href: "/",
 			},
 			{
 				title: "Custom Corporate Gifts",
+				href: "/",
 			},
 			{
 				title: "Stationary & Corporate Identity",
+				href: "/",
 			},
 			{
 				title: "Stickers",
+				href: "/",
 			},
 		],
 	},
@@ -95,15 +112,19 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Motion Graphics",
+				href: "/",
 			},
 			{
 				title: "Explainer Videos",
+				href: "/",
 			},
 			{
 				title: "Brand Launch Videos",
+				href: "/",
 			},
 			{
 				title: "Interactive Presentations",
+				href: "/",
 			},
 		],
 	},
@@ -116,31 +137,40 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Marketing & Growth Strategy",
+				href: "/",
 			},
 			{
 				title: "Emails & Newsletters",
+				href: "/",
 			},
 			{
 				title: "Copywriting",
+				href: "/",
 			},
 			{
 				title: "Technical Content Writing",
+				href: "/",
 			},
 			{
 				title: "Campaigns",
+				href: "/",
 			},
 			{
 				title: "Social Media Management",
+				href: "/",
 			},
 			{
 				title: "Community, Events, Podcasts",
+				href: "/",
 			},
 			{
 				title: "Strategic Partnerships",
+				href: "/",
 			},
 			{
 				title: "Personal Brand Management",
+				href: "/",
 			},
 		],
 	},
-];
+] as const;

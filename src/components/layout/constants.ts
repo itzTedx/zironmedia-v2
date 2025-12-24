@@ -104,6 +104,79 @@ export const NAV_LINKS: NavLink[] = [
 	},
 ];
 
+export const CONTACT = [
+	{
+		label: "Email",
+		href: "mailto:info@zironmedia.com",
+		value: "info@zironmedia.com",
+	},
+	{
+		label: "Phone",
+		href: "tel:+971 56 789 5432",
+		value: "+971 56 789 5432",
+	},
+] as const;
+
+export const FOOTER_LINKS = [
+	{
+		section: "LINKS",
+		links: [
+			{
+				label: "Home",
+				href: "/",
+			},
+			{
+				label: "About",
+				href: "/",
+			},
+			{
+				label: "Products",
+				href: "/",
+			},
+			{
+				label: "Services",
+				href: "/",
+			},
+			{
+				label: "Contact",
+				href: "/",
+			},
+		],
+	},
+	{
+		section: "RESOURCES",
+		links: [
+			{
+				label: "Our works",
+				href: "/",
+			},
+			{
+				label: "Blogs",
+				href: "/",
+			},
+			{
+				label: "Enquiry",
+				href: "/",
+			},
+		],
+	},
+] as const;
+
+export const PARTNERS = [
+	{
+		title: "Google Partner",
+		src: "/images/partner/google.svg",
+	},
+	{
+		title: "Meta Partner",
+		src: "/images/partner/meta.svg",
+	},
+	{
+		title: "Tiktok Partner",
+		src: "/images/partner/tiktok.svg",
+	},
+] as const;
+
 export const SOCIALS: Social[] = [
 	{
 		label: "Linkedin",
@@ -125,7 +198,7 @@ export const SOCIALS: Social[] = [
 		href: "/",
 		icon: IconSocialWhatsapp,
 	},
-];
+] as const;
 
 export const FOOTER_META: FooterMeta[] = [
 	{
