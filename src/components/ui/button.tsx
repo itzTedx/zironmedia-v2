@@ -1,6 +1,5 @@
 "use client";
 
-import { Button as ButtonPrimitive } from "@base-ui/react/button";
 import { cva, type VariantProps } from "class-variance-authority";
 import { HTMLMotionProps, motion } from "motion/react";
 
@@ -60,10 +59,10 @@ function Button({
 	size = "default",
 	hoverScale = 1.05,
 	tapScale = 0.95,
-	render,
+	asChild,
 	...props
-}: ButtonPrimitive.Props & ButtonProps) {
-	const Component = render ? Slot : motion.button;
+}: ButtonProps) {
+	const Component = asChild ? Slot : motion.button;
 
 	return (
 		<Component
@@ -76,4 +75,4 @@ function Button({
 	);
 }
 
-export { Button, buttonVariants };
+export { Button, buttonVariants, type ButtonProps };

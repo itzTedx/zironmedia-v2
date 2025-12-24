@@ -7,8 +7,9 @@ import useEmblaCarousel, {
 	type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
+import { motion, type Transition } from "motion/react";
 
-import { Button } from "@/components/ui/button";
+import { Button, ButtonProps } from "@/components/ui/button";
 
 import { IconCaretLeft, IconCaretRight } from "@/assets/icons/caret";
 
@@ -47,6 +48,80 @@ function useCarousel() {
 	return context;
 }
 
+type EmblaControls = {
+	selectedIndex: number;
+	scrollSnaps: number[];
+	prevDisabled: boolean;
+	nextDisabled: boolean;
+	onDotClick: (index: number) => void;
+	onPrev: () => void;
+	onNext: () => void;
+};
+
+type DotButtonProps = {
+	selected?: boolean;
+	label: string;
+	onClick: () => void;
+};
+
+const transition: Transition = {
+	type: "spring",
+	stiffness: 240,
+	damping: 24,
+	mass: 1,
+};
+
+const useEmblaControls = (emblaApi: CarouselApi): EmblaControls => {
+	const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
+	const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+	const [prevDisabled, setPrevDisabled] = React.useState(true);
+	const [nextDisabled, setNextDisabled] = React.useState(true);
+
+	const onDotClick = React.useCallback(
+		(index: number) => emblaApi?.scrollTo(index),
+		[emblaApi]
+	);
+
+	const onPrev = React.useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+	const onNext = React.useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+	const updateSelectionState = (api: CarouselApi) => {
+		setSelectedIndex(api?.selectedScrollSnap() ?? 0);
+		setPrevDisabled(!api?.canScrollPrev());
+		setNextDisabled(!api?.canScrollNext());
+	};
+
+	const onInit = React.useCallback((api: CarouselApi) => {
+		setScrollSnaps(api?.scrollSnapList() ?? [0]);
+		updateSelectionState(api);
+	}, []);
+
+	const onSelect = React.useCallback((api: CarouselApi) => {
+		updateSelectionState(api);
+	}, []);
+
+	React.useEffect(() => {
+		if (!emblaApi) return;
+
+		onInit(emblaApi);
+		emblaApi.on("reInit", onInit).on("select", onSelect);
+
+		return () => {
+			emblaApi.off("reInit", onInit).off("select", onSelect);
+		};
+	}, [emblaApi, onInit, onSelect]);
+
+	return {
+		selectedIndex,
+		scrollSnaps,
+		prevDisabled,
+		nextDisabled,
+		onDotClick,
+		onPrev,
+		onNext,
+	};
+};
+
 function Carousel({
 	orientation = "horizontal",
 	opts,
@@ -63,8 +138,7 @@ function Carousel({
 		},
 		[
 			Autoplay({
-				delay: 3000,
-				stopOnMouseEnter: true,
+				delay: 2000,
 			}),
 
 			WheelGesturesPlugin(),
@@ -189,7 +263,7 @@ function CarouselPrevious({
 	variant = "outline",
 	size = "icon-sm",
 	...props
-}: React.ComponentProps<typeof Button>) {
+}: ButtonProps) {
 	const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
 	return (
@@ -219,7 +293,7 @@ function CarouselNext({
 	variant = "outline",
 	size = "icon-sm",
 	...props
-}: React.ComponentProps<typeof Button>) {
+}: ButtonProps) {
 	const { orientation, scrollNext, canScrollNext } = useCarousel();
 
 	return (
@@ -244,6 +318,37 @@ function CarouselNext({
 	);
 }
 
+function DotButton({ selected = false, label, onClick }: DotButtonProps) {
+	return (
+		<motion.button
+			animate={{
+				width: selected ? 68 : 12,
+				height: selected ? 28 : 12,
+			}}
+			className="flex cursor-pointer select-none items-center justify-center rounded-full border-none bg-primary text-primary-foreground text-sm"
+			initial={false}
+			layout
+			onClick={onClick}
+			transition={transition}
+			type="button"
+		>
+			<motion.span
+				animate={{
+					opacity: selected ? 1 : 0,
+					scale: selected ? 1 : 0,
+					filter: selected ? "blur(0)" : "blur(4px)",
+				}}
+				className="block whitespace-nowrap px-3 py-1"
+				initial={false}
+				layout
+				transition={transition}
+			>
+				{label}
+			</motion.span>
+		</motion.button>
+	);
+}
+
 export {
 	type CarouselApi,
 	Carousel,
@@ -252,4 +357,5 @@ export {
 	CarouselPrevious,
 	CarouselNext,
 	useCarousel,
+	DotButton,
 };
