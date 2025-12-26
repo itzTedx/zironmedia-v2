@@ -28,7 +28,7 @@ export const Navbar = () => {
 	return (
 		<header className="sticky top-0 z-999 bg-primary py-2.5">
 			<div className="container mx-auto flex max-w-7xl items-center justify-between gap-4">
-				<div className="flex items-center gap-12">
+				<div className="flex items-center gap-9">
 					<Link
 						className="transition-[filter] duration-300 hover:brightness-135"
 						href="/"
