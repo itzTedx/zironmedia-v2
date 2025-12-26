@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { Route } from "next";
 import Link from "next/link";
 
 import { IconCaretDown, IconCaretRight } from "@/assets/icons/caret";
@@ -11,15 +10,6 @@ import { Logo } from "@/assets/logo";
 
 import { Noise } from "../shared/noise";
 import { Button } from "../ui/button";
-import {
-	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuItem,
-	NavigationMenuLink,
-	NavigationMenuList,
-	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
-} from "../ui/navigation-menu";
 import { NAV_LINKS } from "./data/constants";
 import { NavLink } from "./data/types";
 
@@ -27,7 +17,7 @@ export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<header className="sticky top-0 z-999 bg-primary py-2.5">
-			<div className="container mx-auto flex max-w-7xl items-center justify-between gap-4">
+			<nav className="container mx-auto flex max-w-7xl items-center justify-between gap-4">
 				<div className="flex items-center gap-12">
 					<Link
 						className="transition-[filter] duration-300 hover:brightness-135"
@@ -35,39 +25,11 @@ export const Navbar = () => {
 					>
 						<Logo className="size-10" />
 					</Link>
-					<NavigationMenu>
-						<NavigationMenuList>
-							{NAV_LINKS.map((link) =>
-								link.submenu ? (
-									<NavigationMenuItem key={link.label}>
-										<NavigationMenuTrigger>{link.label}</NavigationMenuTrigger>
-										<NavigationMenuContent>
-											<ul className="w-96">
-												{link.submenu.map((sub) => (
-													<ListItem
-														href={sub.href}
-														key={sub.title}
-														title={sub.title}
-													>
-														{sub.description}
-													</ListItem>
-												))}
-											</ul>
-										</NavigationMenuContent>
-									</NavigationMenuItem>
-								) : (
-									<NavigationMenuItem key={link.label}>
-										<NavigationMenuLink
-											className={navigationMenuTriggerStyle()}
-											render={<Link href={link.href} />}
-										>
-											{link.label}
-										</NavigationMenuLink>
-									</NavigationMenuItem>
-								)
-							)}
-						</NavigationMenuList>
-					</NavigationMenu>
+					<ul className="hidden items-center gap-12 font-display font-semibold uppercase lg:flex">
+						{NAV_LINKS.map((link) => (
+							<NavLinkItem key={link.label} link={link} />
+						))}
+					</ul>
 				</div>
 				<div className="flex items-center gap-4">
 					<Button className="hidden md:flex" variant="secondary">
@@ -86,7 +48,7 @@ export const Navbar = () => {
 						)}
 					</button>
 				</div>
-			</div>
+			</nav>
 
 			{/* Mobile Menu */}
 			{isOpen && (
@@ -118,24 +80,6 @@ function NavLinkItem({ link }: { link: NavLink }) {
 
 				{link.submenu && <IconCaretDown className="shrink-0" />}
 			</Link>
-		</li>
-	);
-}
-
-function ListItem({
-	title,
-	children,
-	href,
-	...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: Route }) {
-	return (
-		<li {...props}>
-			<NavigationMenuLink render={<Link href={href} />}>
-				<div className="flex flex-col gap-1 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-nova:text-sm style-vega:text-sm">
-					<div className="font-medium leading-none">{title}</div>
-					<div className="line-clamp-2 text-muted-foreground">{children}</div>
-				</div>
-			</NavigationMenuLink>
 		</li>
 	);
 }

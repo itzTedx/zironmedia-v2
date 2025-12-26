@@ -10,7 +10,7 @@ import {
 	FOOTER_META,
 	PARTNERS,
 	SOCIALS,
-} from "./constants";
+} from "./data/constants";
 
 // Static copyright year to avoid re-computation
 const currentYear = new Date().getFullYear();
