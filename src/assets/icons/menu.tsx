@@ -1,6 +1,4 @@
-import type { IconProps } from "./types";
-
-export const IconMenu = ({ className, ...props }: IconProps) => (
+export const IconMenu = ({ className, ...props }: SVGProps) => (
 	<svg
 		className={className}
 		fill="none"
@@ -20,7 +18,7 @@ export const IconMenu = ({ className, ...props }: IconProps) => (
 	</svg>
 );
 
-export const IconX = ({ className, ...props }: IconProps) => (
+export const IconX = ({ className, ...props }: SVGProps) => (
 	<svg
 		className={className}
 		fill="none"

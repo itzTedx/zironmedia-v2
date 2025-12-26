@@ -18,7 +18,7 @@ const currentYear = new Date().getFullYear();
 export const Footer = () => {
 	return (
 		<footer className="pt-12">
-			<section className="mx-auto grid grid-cols-1 gap-4 px-6 md:px-0 lg:grid-cols-[1fr_2fr]">
+			<section className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 md:px-0 lg:grid-cols-[1fr_2fr]">
 				<div className="relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-2xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-12 shadow-sm">
 					<Noise className="opacity-50" />
 					<Link href="/">

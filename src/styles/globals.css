@@ -93,6 +93,7 @@
 	--color-success-foreground: var(--success-foreground);
 	--color-info-foreground: var(--info-foreground);
 	--color-info: var(--info);
+	--color-destructive: var(--destructive);
 	--color-destructive-foreground: var(--destructive-foreground);
 
 	--animate-marquee: marquee var(--duration) infinite linear;
@@ -150,8 +151,6 @@
 	--accent: oklch(0.97 0.001 106.424);
 	--accent-foreground: oklch(0.216 0.006 56.043);
 
-	--destructive: oklch(0.577 0.245 27.325);
-
 	--border: oklch(0.923 0.003 48.717);
 	--input: oklch(0.923 0.003 48.717);
 	--ring: oklch(0.709 0.01 56.259);
@@ -190,6 +189,7 @@
 	--gray-1400: oklch(0.1947 0.0101 294.62);
 	--gray-1500: oklch(0.1652 0.0062 285.7);
 
+	--destructive: oklch(0.577 0.245 27.325);
 	--destructive-foreground: var(--color-red-700);
 	--info: var(--color-blue-500);
 	--info-foreground: var(--color-blue-700);

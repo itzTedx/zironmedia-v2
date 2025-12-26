@@ -86,8 +86,6 @@ export function GrowthChart() {
 					axisLine={false}
 					dataKey="month"
 					tickFormatter={(value) => {
-						console.log(value);
-
 						return value.slice(0, 3);
 					}}
 					tickLine={false}
