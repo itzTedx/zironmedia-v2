@@ -10,15 +10,15 @@ export const Hero = () => {
 	return (
 		<section className="dashed dashed-x relative mx-auto max-w-7xl">
 			<Noise className="opacity-50" />
-			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 py-16">
+			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 py-12 md:py-16">
 				<Badge className="gap-2">
 					<div className="size-1.5 rounded-full bg-violet-500" /> Ready to grow?
 					We’re ready to go
 				</Badge>
-				<h1 className="text-center font-bold font-display text-8xl text-primary uppercase">
+				<h1 className="text-center font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
 					Turn your brand into a revenue machine
 				</h1>
-				<p className="text-balance text-center text-muted-foreground text-xl leading-relaxed">
+				<p className="text-balance text-center text-lg text-muted-foreground leading-relaxed md:text-xl">
 					We’re your full-stack creative & digital marketing partner from{" "}
 					<span className="text-foreground">
 						branding to websites, CRM software, social media, printing,
@@ -27,8 +27,8 @@ export const Hero = () => {
 					and everything in between.
 				</p>
 
-				<div className="relative z-99 flex items-center gap-4">
-					<Button className="w-60 justify-between" size="lg">
+				<div className="relative z-99 flex w-full flex-col items-center gap-4 px-6 md:w-auto md:flex-row md:px-0">
+					<Button className="w-full justify-between md:w-60" size="lg">
 						<span>
 							Get started{" "}
 							<span className="font-normal text-primary-secondary">
@@ -38,7 +38,7 @@ export const Hero = () => {
 						<IconArrowRightTag className="size-5" />
 					</Button>
 					<Button
-						className="w-52 justify-between text-muted-foreground"
+						className="w-full justify-between text-muted-foreground md:w-52"
 						size="lg"
 						variant="secondary"
 					>
@@ -48,14 +48,14 @@ export const Hero = () => {
 				</div>
 			</div>
 
-			<ul className="dashed dashed-t flex items-center text-lg">
-				<li className="flex w-full items-center justify-center gap-2 p-6">
+			<ul className="dashed dashed-t flex flex-col items-center text-lg md:flex-row">
+				<li className="dashed dashed-b md:dashed-b-0 flex w-full items-center justify-center gap-2 p-6">
 					<div className="flex size-12 items-center justify-center rounded-lg bg-muted/20">
 						<IconClock className="size-8" />
 					</div>
 					48 Hours Delivery
 				</li>
-				<li className="dashed dashed-x flex w-full items-center justify-center gap-2 p-6">
+				<li className="dashed dashed-b md:dashed-b-0 md:dashed-x flex w-full items-center justify-center gap-2 p-6">
 					<div className="flex size-12 items-center justify-center rounded-lg bg-muted/20">
 						<IconClock className="size-8" />
 					</div>
