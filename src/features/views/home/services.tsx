@@ -18,11 +18,11 @@ import { SERVICES } from "@/data/constant";
 export const Services = () => {
 	return (
 		<section className="relative">
-			<header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between py-16">
-				<h2 className="shrink-0 font-display font-semibold text-8xl uppercase tracking-tight">
+			<header className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 md:flex-row md:px-0 md:py-16">
+				<h2 className="shrink-0 text-center font-display font-semibold text-4xl uppercase tracking-tight md:text-left md:text-6xl lg:text-8xl">
 					With our services
 				</h2>
-				<p className="max-w-2xs text-balance text-right text-muted-foreground">
+				<p className="max-w-2xs text-balance text-center text-muted-foreground md:text-right">
 					We help you achieve more at every stage of business growth.
 				</p>
 			</header>
@@ -30,23 +30,30 @@ export const Services = () => {
 			<ul className="relative z-10">
 				{SERVICES.map((service) => (
 					<li
-						className="group border-t py-10 transition-all hover:bg-card hover:pb-14"
+						className="group border-t px-6 py-10 transition-all hover:bg-card hover:pb-14 md:px-0"
 						key={service.id}
 					>
-						<div className="mx-auto grid max-w-7xl grid-cols-3 gap-6">
+						<div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
 							<div className="relative h-fit overflow-hidden">
-								<div className="transition-transform group-hover:-translate-y-full">
+								<div className="transition-transform md:group-hover:-translate-y-full">
 									<span className="text-2xl text-muted">
 										0{service.id}
 										<span className="font-bold text-primary">.</span>
 									</span>
-									<h3 className="font-medium text-3xl">{service.title}</h3>
-									<p className="opacity-0">{service.description}</p>
+									<h3 className="font-medium text-2xl md:text-3xl">
+										{service.title}
+									</h3>
+									<p className="hidden opacity-0 md:block">
+										{service.description}
+									</p>
 								</div>
-								<div className="absolute top-0 translate-y-[150%] transition-transform group-hover:translate-y-0">
+								<div className="absolute top-0 hidden translate-y-[150%] transition-transform md:block md:group-hover:translate-y-0">
 									<h3 className="font-medium text-3xl">{service.title}</h3>
 									<p>{service.description}</p>
 								</div>
+								<p className="mt-2 text-muted-foreground md:hidden">
+									{service.description}
+								</p>
 							</div>
 
 							<ul className="space-y-3">

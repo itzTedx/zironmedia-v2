@@ -16,7 +16,7 @@ export const Feedback = () => {
 	const SLIDE_COUNT = 6;
 	const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 	return (
-		<section className="dashed dashed-t relative py-10">
+		<section className="dashed dashed-t relative py-6 md:py-10">
 			{/* <Carousel
 				className="relative z-10"
 				opts={{
@@ -89,7 +89,7 @@ export const Feedback = () => {
 			</Carousel> */}
 
 			<MotionCarousel options={OPTIONS} slides={SLIDES}>
-				<div className="p-4">
+				<div className="p-2 md:p-4">
 					<Card className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
 						<CardContent className="space-y-3">
 							<div className="relative aspect-7/4 overflow-hidden rounded-2xl bg-surface">

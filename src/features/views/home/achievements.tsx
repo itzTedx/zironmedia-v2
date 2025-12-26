@@ -11,8 +11,8 @@ import { ACHIEVEMENTS } from "./data/constants";
 export const Achievements = () => {
 	return (
 		<section className="dashed dashed-y">
-			<header className="dashed dashed-t-0 mx-auto max-w-7xl p-14 text-center">
-				<h2 className="font-display font-semibold text-6xl tracking-tight">
+			<header className="dashed dashed-t-0 mx-auto max-w-7xl p-6 text-center md:p-14">
+				<h2 className="font-display font-semibold text-4xl tracking-tight md:text-6xl">
 					Our Achievement
 				</h2>
 				<p className="text-">
@@ -20,7 +20,7 @@ export const Achievements = () => {
 					itself.
 				</p>
 			</header>
-			<div className="dashed dashed-t-0 mx-auto grid max-w-7xl grid-cols-3 gap-4 p-14">
+			<div className="dashed dashed-t-0 mx-auto grid max-w-7xl grid-cols-1 gap-4 p-6 sm:grid-cols-2 md:p-14 lg:grid-cols-3">
 				{ACHIEVEMENTS.map((ach) => {
 					const AchievementCard = ach.card;
 					return (

@@ -1,5 +1,3 @@
-declare global {
-	type SVGProps = React.SVGProps<SVGSVGElement>;
-}
+import type { SVGProps } from "react";
 
-export {};
+export type IconProps = SVGProps<SVGSVGElement>;
