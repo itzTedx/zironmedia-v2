@@ -3,18 +3,18 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const dashedStrokeVariants = cva(
-	"absolute bg-[repeating-linear-gradient(var(--direction),var(--color-strong)_0,var(--color-strong)_6px,transparent_6px,transparent_12px)]",
+	"absolute bg-[repeating-linear-gradient(var(--direction),var(--color)_0,var(--color)_6px,transparent_6px,transparent_12px)] [--color:var(--color-strong)] [--size:1px]",
 	{
 		variants: {
 			position: {
-				left: "top-0 left-0 h-full w-px [--direction:to_bottom]",
-				right: "top-0 right-0 h-full w-px [--direction:to_bottom]",
-				bottom: "bottom-0 left-0 h-px w-full [--direction:to_right]",
-				top: "top-0 left-0 h-px w-full [--direction:to_right]",
+				left: "top-0 left-0 h-full w-(--size) [--direction:to_bottom]",
+				right: "top-0 right-0 h-full w-(--size) [--direction:to_bottom]",
+				bottom: "bottom-0 left-0 h-(--size) w-full [--direction:to_right]",
+				top: "top-0 left-0 h-(--size) w-full [--direction:to_right]",
 			},
 		},
 		defaultVariants: {
-			position: "left",
+			position: "bottom",
 		},
 	}
 );
@@ -34,14 +34,3 @@ function DashedStroke({ className, position, ...props }: DashedStrokeProps) {
 }
 
 export { DashedStroke, dashedStrokeVariants };
-
-
-
-
-
-
-
-
-
-
-

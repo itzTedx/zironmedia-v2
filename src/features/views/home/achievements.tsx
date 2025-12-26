@@ -24,7 +24,10 @@ export const Achievements = () => {
 				{ACHIEVEMENTS.map((ach) => {
 					const AchievementCard = ach.card;
 					return (
-						<Card key={`card-${ach.id}`}>
+						<Card
+							className="rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))] transition-transform hover:-translate-y-3"
+							key={`card-${ach.id}`}
+						>
 							<CardContent>
 								<AchievementCard />
 								<CardHeader>

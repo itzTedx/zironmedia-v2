@@ -72,7 +72,7 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
 	return (
 		<div
-			className={cn("p-2 group-data-[size=sm]/card:px-3", className)}
+			className={cn("p-1 group-data-[size=sm]/card:px-3", className)}
 			data-slot="card-content"
 			{...props}
 		/>

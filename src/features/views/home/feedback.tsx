@@ -90,7 +90,7 @@ export const Feedback = () => {
 
 			<MotionCarousel options={OPTIONS} slides={SLIDES}>
 				<div className="p-4">
-					<Card className="relative z-50">
+					<Card className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
 						<CardContent className="space-y-3">
 							<div className="relative aspect-7/4 overflow-hidden rounded-2xl bg-surface">
 								<Noise className="opacity-20" />

@@ -1,4 +1,8 @@
-import { BrandServed } from "../components/achievement-cards";
+import {
+	BrandServed,
+	Experience,
+	Growth,
+} from "../components/achievement-cards";
 
 export const ACHIEVEMENTS = [
 	{
@@ -13,12 +17,12 @@ export const ACHIEVEMENTS = [
 		title: "5 Years of Experience",
 		description:
 			"Proven expertise in design, marketing & technology to every project",
-		card: BrandServed,
+		card: Experience,
 	},
 	{
 		id: 3,
 		title: "100,000+ Growth for Brands",
 		description: "Through smarter processes and scalable solutions",
-		card: BrandServed,
+		card: Growth,
 	},
 ];

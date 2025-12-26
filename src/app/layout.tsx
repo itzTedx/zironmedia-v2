@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { Providers } from "@/components/providers";
 
 import { clash, mono, youth } from "@/assets/fonts";
 
@@ -20,11 +21,20 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={cn("antialiased", youth.className, clash.variable, mono.variable)}>
-				<Navbar />
-				{children}
-				<Footer />
-			</body>
+			<Providers>
+				<body
+					className={cn(
+						"antialiased",
+						youth.className,
+						clash.variable,
+						mono.variable
+					)}
+				>
+					<Navbar />
+					{children}
+					<Footer />
+				</body>
+			</Providers>
 		</html>
 	);
 }
