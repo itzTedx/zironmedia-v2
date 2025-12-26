@@ -19,10 +19,12 @@
 		"embla-carousel-wheel-gestures": "^8.1.0",
 		"gsap": "^3.14.2",
 		"lenis": "^1.3.16",
-		"motion": "^12.23.26",
+		"lucide-react": "^0.562.0",
+		"motion": "latest",
 		"next": "16.1.1",
 		"react": "19.2.3",
 		"react-dom": "19.2.3",
+		"recharts": "2.15.4",
 		"tailwind-merge": "^3.4.0"
 	},
 	"devDependencies": {

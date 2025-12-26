@@ -93,9 +93,9 @@ export function LogoTimeline({
 							className="group relative flex items-center"
 							key={`${index + 1}-row`}
 						>
-							<div className="absolute inset-x-0 top-1/2 h-0.5 bg-linear-to-r bg-size-[12px_100%] from-[2px] from-foreground/15 to-[2px]" />
+							<div className="absolute inset-x-0 top-1/2 h-0.5 bg-linear-to-r bg-size-[12px_100%] from-[2px] from-foreground/15 to-[2px] dark:from-foreground/15" />
 							{showRowSeparator && (
-								<div className="absolute inset-x-0 bottom-0 h-0.5 bg-linear-to-r bg-size-[12px_100%] from-[2px] from-foreground/5 to-[2px] group-last:hidden" />
+								<div className="absolute inset-x-0 bottom-0 h-0.5 bg-linear-to-r bg-size-[12px_100%] from-[2px] from-foreground/5 to-[2px] group-last:hidden dark:from-foreground/5" />
 							)}
 							{rowItems.map((logo) => {
 								return (

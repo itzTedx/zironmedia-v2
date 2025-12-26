@@ -1,12 +1,16 @@
 import Image from "next/image";
 
-import { DashedStroke } from "@/components/shared/dashed-stroke";
-import { LogoTimeline, logos } from "@/components/shared/logo-timeline";
+import { LogoItem } from "@/components/shared/logo-timeline";
 import { Noise } from "@/components/shared/noise";
+import Integrations from "@/components/ui/integrations";
+
+import { IconPlay } from "@/assets/icons/play";
+
+import { GrowthChart } from "./chart";
 
 export const BrandServed = () => {
 	return (
-		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-300 to-gray-100 transition">
+		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-100 to-gray-50 transition">
 			<Noise />
 			<Image
 				alt="Our website service we did for Direct Logic Systems"
@@ -39,9 +43,9 @@ export const BrandServed = () => {
 
 export const Experience = () => {
 	return (
-		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-300 to-gray-100 transition">
+		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-100 to-gray-50 transition">
 			<Noise className="opacity-20" />
-			<div className="absolute top-12 left-1/2 z-10 -translate-x-1/2 transition-transform group-hover/card:-translate-y-6 group-hover/card:scale-90">
+			<div className="absolute top-12 left-1/2 z-20 -translate-x-1/2 transition-transform group-hover/card:-translate-y-6 group-hover/card:scale-90">
 				<svg
 					className="text-muted-foreground/60 transition-colors group-hover/card:text-muted-foreground/40"
 					fill="none"
@@ -57,13 +61,9 @@ export const Experience = () => {
 				</svg>
 			</div>
 
-			<LogoTimeline
-				animateOnHover={true}
-				className="relative z-50"
-				height="h-[400px]"
-				iconSize={20}
-				items={logos}
-			/>
+			<div className="absolute -inset-1 z-10 opacity-10 transition-[opacity,z-index] group-hover/card:z-50 group-hover/card:opacity-100">
+				<Integrations />
+			</div>
 			<div className="pointer-events-none absolute inset-0 bg-linear-0 from-fuchsia-300 to-fuchsia-100 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
 		</div>
 	);
@@ -71,16 +71,17 @@ export const Experience = () => {
 
 export const Growth = () => {
 	return (
-		<div className="relative flex aspect-4/3 items-end justify-end overflow-hidden rounded-2xl bg-linear-0 from-gray-300 to-gray-100 p-6 transition">
+		<div className="relative flex aspect-4/3 flex-col overflow-hidden rounded-2xl bg-linear-0 from-gray-100 to-gray-50 p-4 transition">
 			<Noise />
-			<p className="relative z-50 font-medium text-3xl transition-colors group-hover/card:text-green-800">
+			<p className="relative z-50 p-6 font-medium text-3xl transition-colors group-hover/card:text-green-800">
 				Growth
 			</p>
-			<div className="absolute top-0 left-0 z-20 w-full translate-y-26 transition-transform duration-500 ease-out group-hover/card:translate-y-3.5">
+			<GrowthChart />
+			{/* <div className="absolute top-0 left-0 z-20 w-full translate-y-28 transition-transform duration-500 ease-out group-hover/card:translate-y-5">
 				<p className="p-2 text-end text-success">Highest (This month)</p>
 				<DashedStroke className="[--color:var(--color-success)] [--size:2px]" />
 			</div>
-			<div className="absolute -bottom-2 left-0 z-10 -translate-x-5 transition-transform duration-500 ease-out group-hover/card:-translate-x-1/2">
+			<div className="absolute -bottom-3 left-0 z-10 -translate-x-5 transition-transform duration-500 ease-out group-hover/card:-translate-x-1/2">
 				<svg
 					fill="none"
 					height="241"
@@ -112,8 +113,130 @@ export const Growth = () => {
 						</linearGradient>
 					</defs>
 				</svg>
-			</div>
+			</div> */}
 			<div className="pointer-events-none absolute inset-0 bg-linear-0 from-green-300 to-green-50 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
 		</div>
 	);
 };
+
+export const logos: LogoItem[] = [
+	// Row 1 - Communication & Social (2 logos, 50s duration, spaced 25s apart)
+	{
+		label: "Discord",
+		icon: <IconPlay />,
+		animationDelay: -50,
+		animationDuration: 50,
+		row: 1,
+	},
+	{
+		label: "Twitter",
+		icon: <IconPlay />,
+		animationDelay: -25,
+		animationDuration: 50,
+		row: 1,
+	},
+	// Row 2 - Development Tools (2 logos, 45s duration, spaced 22.5s apart)
+	{
+		label: "GitHub",
+		icon: <IconPlay />,
+		animationDelay: -45,
+		animationDuration: 45,
+		row: 2,
+	},
+	{
+		label: "React",
+		icon: <IconPlay />,
+		animationDelay: -22.5,
+		animationDuration: 45,
+		row: 2,
+	},
+	// Row 3 - Development Tools Continued (3 logos, 60s duration, spaced 20s apart)
+	{
+		label: "TypeScript",
+		icon: <IconPlay />,
+		animationDelay: -60,
+		animationDuration: 60,
+		row: 3,
+	},
+	{
+		label: "Tailwind",
+		icon: <IconPlay />,
+		animationDelay: -40,
+		animationDuration: 60,
+		row: 3,
+	},
+	{
+		label: "Radix UI",
+		icon: <IconPlay />,
+		animationDelay: -40,
+		animationDuration: 60,
+		row: 3,
+	},
+	// Row 4 - Productivity & Cloud (2 logos, 55s duration, spaced 27.5s apart)
+	{
+		label: "Google Drive",
+		icon: <IconPlay />,
+		animationDelay: -55,
+		animationDuration: 55,
+		row: 4,
+	},
+	{
+		label: "Notion",
+		icon: <IconPlay />,
+		animationDelay: -27.5,
+		animationDuration: 55,
+		row: 4,
+	},
+	// Row 5 - Messaging (2 logos, 50s duration, spaced 25s apart)
+	{
+		label: "WhatsApp",
+		icon: <IconPlay />,
+		animationDelay: -50,
+		animationDuration: 50,
+		row: 5,
+	},
+	{
+		label: "Messenger",
+		icon: <IconPlay />,
+		animationDelay: -25,
+		animationDuration: 50,
+		row: 5,
+	},
+	// Row 6 - AI & Automation (3 logos, 65s duration, spaced ~21.5s apart)
+	{
+		label: "OpenAI",
+		icon: <IconPlay />,
+		animationDelay: -65,
+		animationDuration: 65,
+		row: 6,
+	},
+	{
+		label: "Zapier",
+		animationDelay: -43,
+		icon: <IconPlay />,
+		animationDuration: 65,
+		row: 6,
+	},
+	{
+		label: "v0",
+		animationDelay: -21.5,
+		icon: <IconPlay />,
+		animationDuration: 65,
+		row: 6,
+	},
+	// Row 7 - Payment & Services (2 logos, 50s duration, spaced 25s apart)
+	{
+		label: "PayPal",
+		animationDelay: -50,
+		icon: <IconPlay />,
+		animationDuration: 50,
+		row: 7,
+	},
+	{
+		label: "Apple Pay",
+		icon: <IconPlay />,
+		animationDelay: -25,
+		animationDuration: 50,
+		row: 7,
+	},
+];
