@@ -8,6 +8,7 @@ import { IconCaretDown, IconCaretRight } from "@/assets/icons/caret";
 import { IconMenu, IconX } from "@/assets/icons/menu"; // Assuming these icons exist or I'll need to find them
 import { Logo } from "@/assets/logo";
 
+import { Noise } from "../shared/noise";
 import { Button } from "../ui/button";
 import { NAV_LINKS } from "./constants";
 import { NavLink } from "./types";
@@ -63,6 +64,7 @@ export const Navbar = () => {
 					</Button>
 				</div>
 			)}
+			<Noise className="opacity-40" />
 		</header>
 	);
 };
