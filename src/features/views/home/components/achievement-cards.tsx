@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { DashedStroke } from "@/components/shared/dashed-stroke";
+import { LogoTimeline, logos } from "@/components/shared/logo-timeline";
 import { Noise } from "@/components/shared/noise";
 
 export const BrandServed = () => {
@@ -39,9 +40,10 @@ export const BrandServed = () => {
 export const Experience = () => {
 	return (
 		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-300 to-gray-100 transition">
-			<Noise />
+			<Noise className="opacity-20" />
 			<div className="absolute top-12 left-1/2 z-10 -translate-x-1/2 transition-transform group-hover/card:-translate-y-6 group-hover/card:scale-90">
 				<svg
+					className="text-muted-foreground/60 transition-colors group-hover/card:text-muted-foreground/40"
 					fill="none"
 					height="282"
 					viewBox="0 0 237 282"
@@ -55,6 +57,13 @@ export const Experience = () => {
 				</svg>
 			</div>
 
+			<LogoTimeline
+				animateOnHover={true}
+				className="relative z-50"
+				height="h-[400px]"
+				iconSize={20}
+				items={logos}
+			/>
 			<div className="pointer-events-none absolute inset-0 bg-linear-0 from-fuchsia-300 to-fuchsia-100 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
 		</div>
 	);
