@@ -12,83 +12,87 @@ import {
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
 
-import { FooterMeta, NavLink, Social } from "./types";
+import { FooterMeta, NavLink, ServiceType, Social, Submenu } from "./types";
+
+export const PRODUCTS: Submenu[] = [
+	{
+		id: "tap",
+		icon: IconNfc,
+		title: "Ziron Tap",
+		description: "Tap. Scan. Connect.",
+		href: "/",
+	},
+	{
+		id: "crm",
+		icon: IconNfc,
+		title: "Ziron CRM",
+		description: "Tap. Scan. Connect.",
+		badge: "New • Get Early Access",
+		href: "/",
+	},
+];
+
+export const SERVICES: ServiceType[] = [
+	{
+		id: "1",
+		icon: IconTarget,
+		title: "Brand Strategy",
+		description:
+			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+		href: "/",
+	},
+	{
+		id: "2",
+		icon: IconDesktopPoint,
+		title: "Websites",
+		description:
+			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+		href: "/",
+	},
+	{
+		id: "3",
+		icon: IconSpeaker,
+		title: "Digital Marketing",
+		description:
+			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+		href: "/",
+	},
+	{
+		id: "4",
+		icon: IconPrinter,
+		title: "Printing & Corporate Gifts",
+		description:
+			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+		href: "/",
+	},
+	{
+		id: "5",
+		icon: IconPlay,
+		title: "Motion Design",
+		description:
+			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+		href: "/",
+	},
+	{
+		id: "6",
+		icon: IconCog,
+		title: "Full-stack Marketing",
+		description:
+			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+		href: "/",
+	},
+];
 
 export const NAV_LINKS: NavLink[] = [
 	{
 		label: "Products",
 		href: "/",
-		submenu: [
-			{
-				id: "tap",
-				icon: IconNfc,
-				title: "Ziron Tap",
-				description: "Tap. Scan. Connect.",
-				href: "/",
-			},
-			{
-				id: "crm",
-				icon: IconNfc,
-				title: "Ziron CRM",
-				description: "Tap. Scan. Connect.",
-				badge: "New • Get Early Access",
-				href: "/",
-			},
-		],
+		submenu: PRODUCTS,
 	},
 	{
 		label: "Services",
 		href: "/services",
-		submenu: [
-			{
-				id: "1",
-				icon: IconTarget,
-				title: "Brand Strategy",
-				description:
-					"Crafting visual identities that feel clear, timeless, and true to your brand.",
-				href: "/",
-			},
-			{
-				id: "2",
-				icon: IconDesktopPoint,
-				title: "Websites",
-				description:
-					"Crafting visual identities that feel clear, timeless, and true to your brand.",
-				href: "/",
-			},
-			{
-				id: "3",
-				icon: IconSpeaker,
-				title: "Digital Marketing",
-				description:
-					"Crafting visual identities that feel clear, timeless, and true to your brand.",
-				href: "/",
-			},
-			{
-				id: "4",
-				icon: IconPrinter,
-				title: "Printing & Corporate Gifts",
-				description:
-					"Crafting visual identities that feel clear, timeless, and true to your brand.",
-				href: "/",
-			},
-			{
-				id: "5",
-				icon: IconPlay,
-				title: "Motion Design",
-				description:
-					"Crafting visual identities that feel clear, timeless, and true to your brand.",
-				href: "/",
-			},
-			{
-				id: "6",
-				icon: IconCog,
-				title: "Full-stack Marketing",
-				description:
-					"Crafting visual identities that feel clear, timeless, and true to your brand.",
-				href: "/",
-			},
-		],
+		submenu: SERVICES,
 	},
 	{
 		label: "Our works",
@@ -100,16 +104,22 @@ export const NAV_LINKS: NavLink[] = [
 			{
 				id: "1",
 				icon: IconNfc,
-				title: "Ziron Tap",
+				title: "About us",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
 				id: "2",
 				icon: IconNfc,
-				title: "Ziron CRM",
+				title: "FAQs",
 				description: "Tap. Scan. Connect.",
-				badge: "New • Get Early Access",
+				href: "/",
+			},
+			{
+				id: "3",
+				icon: IconNfc,
+				title: "Blogs",
+				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 		],

@@ -17,5 +17,13 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"cSpell.words": ["Bento", "Embla", "gsap", "useCallback", "Wordmark", "ziron"]
+	"cSpell.words": [
+		"Bento",
+		"Embla",
+		"gsap",
+		"useCallback",
+		"vaul",
+		"Wordmark",
+		"ziron"
+	]
 }

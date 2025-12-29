@@ -17,6 +17,14 @@ export type Submenu = {
 	badge?: string;
 };
 
+export type ServiceType = {
+	id: string;
+	icon: typeof IconNfc;
+	title: string;
+	description: string;
+	href: Route;
+};
+
 export type Social = {
 	icon: typeof IconNfc;
 	label: string;

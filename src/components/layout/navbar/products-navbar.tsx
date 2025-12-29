@@ -64,3 +64,51 @@ export const ProductsNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 		</ul>
 	);
 };
+
+export const MobileProductsNavbar = ({ submenu }: { submenu: Submenu }) => {
+	const Icon = submenu.icon;
+	const tap = submenu.id === "tap";
+
+	return (
+		<li
+			className={cn(
+				"group/product overflow-hidden rounded-xl bg-primary p-6",
+				tap
+					? "bg-gray-1000 text-white hover:bg-gray-1500"
+					: "bg-fuchsia-300 hover:bg-fuchsia-400"
+			)}
+			key={submenu.id}
+		>
+			<div className="relative flex w-full justify-between">
+				<div className="flex flex-col gap-6">
+					<div
+						className={cn(
+							"flex size-10 items-center justify-center rounded-lg shadow-dark transition-colors",
+							tap ? "bg-gray-900/50" : "bg-fuchsia-200/50"
+						)}
+					>
+						<Icon className="size-8" />
+					</div>
+					<div>
+						<p className="font-display font-medium text-lg leading-none">
+							{submenu.title}
+						</p>
+						<span className="line-clamp-2">{submenu.description}</span>
+					</div>
+				</div>
+
+				{submenu.badge && (
+					<Badge className="text-brand-secondary" size="sm">
+						{submenu.badge}
+					</Badge>
+				)}
+
+				{tap && (
+					<div className="absolute left-1/2 -translate-y-1/2">
+						<IconSignal className="size-" />
+					</div>
+				)}
+			</div>
+		</li>
+	);
+};
