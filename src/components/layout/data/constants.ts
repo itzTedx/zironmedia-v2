@@ -103,24 +103,27 @@ export const NAV_LINKS: NavLink[] = [
 		submenu: [
 			{
 				id: "1",
-
 				title: "About us",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
 				id: "2",
-
 				title: "FAQs",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
 				id: "3",
-
 				title: "Blogs",
 				description: "Tap. Scan. Connect.",
 				href: "/",
+			},
+			{
+				id: "4",
+				title: "Contact",
+				description: "Tap. Scan. Connect.",
+				href: "/contact",
 			},
 		],
 	},

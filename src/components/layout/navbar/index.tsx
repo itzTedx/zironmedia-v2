@@ -5,8 +5,8 @@ import Link from "next/link";
 import { IconCaretRight } from "@/assets/icons/caret";
 import { Logo, Wordmark } from "@/assets/logo";
 
-import { Noise } from "../shared/noise";
-import { Button } from "../ui/button";
+import { Noise } from "../../shared/noise";
+import { Button } from "../../ui/button";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -15,16 +15,16 @@ import {
 	NavigationMenuList,
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
-} from "../ui/navigation-menu";
-import { NAV_LINKS } from "./data/constants";
-import { ListItem } from "./navbar/list-item";
-import { MobileNav } from "./navbar/mobile-navbar";
-import { ProductsNavbar } from "./navbar/products-navbar";
-import { ServicesNavbar } from "./navbar/services-navbar";
+} from "../../ui/navigation-menu";
+import { NAV_LINKS } from "../data/constants";
+import { ListItem } from "./list-item";
+import { MobileNav } from "./mobile-navbar";
+import { ProductsNavbar } from "./products-navbar";
+import { ServicesNavbar } from "./services-navbar";
 
 export const Navbar = () => {
 	return (
-		<header className="sticky top-0 z-999 bg-primary py-2.5">
+		<header className="sticky top-0 z-999 bg-primary/85 py-2.5 backdrop-blur-xl">
 			<div className="container mx-auto flex max-w-7xl items-center justify-between gap-4">
 				<div className="flex items-center gap-9">
 					<Link
