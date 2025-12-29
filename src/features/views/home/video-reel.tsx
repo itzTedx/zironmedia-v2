@@ -15,20 +15,23 @@ export const VideoReel = () => {
 					<Noise />
 					<Image alt="" height={576} src="/images/reel.png" width={1024} />
 					<div className="absolute top-0 z-10 flex size-full flex-col justify-between p-6 md:p-12">
-						<LogoMono className="h-8 w-auto text-white md:h-10" />
+						<LogoMono className="h-8 w-fit text-white md:h-10" />
 
 						<div className="max-w-sm space-y-4 md:space-y-8">
-							<h3 className="text-balance font-medium text-background text-xl md:text-3xl">
+							<h3 className="hidden text-balance font-medium text-background text-xl md:inline md:text-3xl">
 								Why every modern Business needs a strong digital presence?
 							</h3>
-							<div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+							<div className="flex items-center gap-3">
 								<Button
-									className="w-full border-white/60 text-white backdrop-blur-lg sm:w-auto"
+									className="border-white/60 text-white backdrop-blur-lg"
 									variant="outline"
 								>
 									Watch video <IconCaretRight />
 								</Button>
-								<Button className="px-0 text-white sm:px-4" variant="ghost">
+								<Button
+									className="hidden px-0 text-white sm:px-4 md:inline-flex"
+									variant="ghost"
+								>
 									<div className="flex size-6 items-center justify-center rounded-md bg-white/20">
 										<IconChevronRight />
 									</div>

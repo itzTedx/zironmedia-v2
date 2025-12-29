@@ -17,7 +17,7 @@ export const Feedback = () => {
 			<MotionCarousel options={OPTIONS} slides={SLIDES}>
 				<div className="p-2 md:p-4">
 					<Card className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
-						<CardContent className="space-y-3">
+						<CardContent>
 							<div className="relative aspect-7/4 overflow-hidden rounded-2xl bg-surface">
 								<Noise className="opacity-20" />
 								<Image
@@ -41,18 +41,33 @@ export const Feedback = () => {
 									src="/images/gradient.jpg"
 								/>
 							</div>
-							<div className="max-w-sm space-y-2 rounded-2xl rounded-bl-none bg-surface p-3">
-								<p>
-									Ziron Media has completely transformed our social media
-									presence! Their striking posters and engaging motion reels
-									have noticeably boosted our reach and engagement.
-								</p>
-								<span className="text-muted text-xs">Arjun</span>
+							<div className="space-y-3 p-2.5">
+								<div className="max-w-sm space-y-2 rounded-2xl rounded-bl-none bg-surface p-3">
+									<p>
+										Ziron Media has completely transformed our social media
+										presence! Their striking posters and engaging motion reels
+										have noticeably boosted our reach and engagement.
+									</p>
+									<span className="text-muted text-xs">Arjun</span>
+								</div>
+								<div className="flex items-end justify-end">
+									<div className="max-w-sm space-y-2 rounded-2xl rounded-br-none bg-surface p-3 text-right transition-colors duration-500 group-hover/card:bg-primary group-hover/card:text-white">
+										<p>We’ll love to work with you</p>
+										<span className="text-muted text-xs">Ziron Media</span>
+									</div>
+								</div>
 							</div>
-							<div className="flex items-end justify-end">
-								<div className="max-w-sm space-y-2 rounded-2xl rounded-br-none bg-surface p-3 text-right transition-colors duration-500 group-hover/card:bg-primary group-hover/card:text-white">
-									<p>We’ll love to work with you</p>
-									<span className="text-muted text-xs">Ziron Media</span>
+							<div className="-m-1 mt-0 flex items-center gap-2 bg-background p-3">
+								<div>
+									<div className="size-12 rounded-full bg-muted" />
+								</div>
+								<div>
+									<p className="font-medium text-muted-foreground tracking-tight">
+										Arjun Unnikrishnan
+									</p>
+									<span className="text-muted text-xs tracking-tight">
+										It Support in Maxline Global
+									</span>
 								</div>
 							</div>
 						</CardContent>

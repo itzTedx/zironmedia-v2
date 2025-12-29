@@ -85,7 +85,7 @@ export const WhyUs = () => {
 	return (
 		<section className="dashed dashed-b-0 mx-auto max-w-7xl">
 			<header className="dashed dashed-b space-y-3 p-14 text-center">
-				<h2 className="font-display font-semibold text-6xl tracking-tight">
+				<h2 className="font-display font-semibold text-3xl tracking-tight md:text-6xl">
 					Why choose us
 				</h2>
 				<p className="mx-auto max-w-md text-balance">

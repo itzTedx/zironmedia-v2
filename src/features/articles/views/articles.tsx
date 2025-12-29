@@ -1,18 +1,14 @@
-import Image from "next/image";
-
-import { Noise } from "@/components/shared/noise";
 import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
-import { cn } from "@/lib/utils";
-
+import { ArticleCard } from "../components/article-card";
 import { ARTICLES } from "../data/constants";
 
 export const Articles = () => {
 	return (
 		<section className="dashed dashed-y relative py-14">
-			<header className="mx-auto mb-14 flex max-w-7xl items-center justify-between">
+			<header className="mx-auto mb-6 flex max-w-7xl items-center justify-between px-6 md:mb-14 md:px-0">
 				<h2 className="font-display font-semibold text-5xl tracking-tight">
 					Learn and Get Inspired
 				</h2>
@@ -21,25 +17,9 @@ export const Articles = () => {
 				</Button>
 			</header>
 
-			<div className="mx-auto grid max-w-7xl grid-cols-3 gap-4">
+			<div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3 md:px-0">
 				{ARTICLES.map((article) => (
-					<div className="group/article" key={article.id}>
-						<div
-							className={cn(
-								"relative overflow-hidden rounded-2xl",
-								article.isFeatured ? "aspect-4/5" : "aspect-5/4"
-							)}
-						>
-							<Noise />
-							<Image
-								alt=""
-								className="object-cover transition-[scale] group-hover/article:scale-110"
-								fill
-								src={article.image}
-							/>
-						</div>
-						<h3 className="p-3 font-medium text-2xl">{article.title}</h3>
-					</div>
+					<ArticleCard article={article} key={article.id} />
 				))}
 			</div>
 
