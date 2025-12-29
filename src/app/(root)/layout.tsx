@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<meta content="Ziron Media" name="apple-mobile-web-app-title" />
+			</head>
 			<Providers>
 				<body
 					className={cn(
