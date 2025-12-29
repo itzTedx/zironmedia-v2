@@ -1,6 +1,7 @@
-export const IconDesktopPoint = () => {
+export const IconDesktopPoint = (props: SVGProps) => {
 	return (
 		<svg
+			{...props}
 			fill="none"
 			height="32"
 			viewBox="0 0 32 32"

@@ -4,11 +4,12 @@ import { IconNfc } from "@/assets/icons/nfc";
 
 export type NavLink = {
 	label: string;
-	href: Route;
+	href?: Route;
 	submenu?: Submenu[];
 };
 
 export type Submenu = {
+	id: string;
 	icon: typeof IconNfc;
 	title: string;
 	description: string;

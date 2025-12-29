@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { Route } from "next";
 import Link from "next/link";
 
 import { IconCaretDown, IconCaretRight } from "@/assets/icons/caret";
@@ -22,6 +21,9 @@ import {
 } from "../ui/navigation-menu";
 import { NAV_LINKS } from "./data/constants";
 import { NavLink } from "./data/types";
+import { ListItem } from "./navbar/list-item";
+import { ProductsNavbar } from "./navbar/products-navbar";
+import { ServicesNavbar } from "./navbar/services-navbar";
 
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -40,26 +42,38 @@ export const Navbar = () => {
 							{NAV_LINKS.map((link) =>
 								link.submenu ? (
 									<NavigationMenuItem key={link.label}>
-										<NavigationMenuTrigger>{link.label}</NavigationMenuTrigger>
+										<NavigationMenuTrigger>
+											{link.href ? (
+												<Link href={link.href}>{link.label}</Link>
+											) : (
+												link.label
+											)}
+										</NavigationMenuTrigger>
 										<NavigationMenuContent>
-											<ul className="w-96">
-												{link.submenu.map((sub) => (
-													<ListItem
-														href={sub.href}
-														key={sub.title}
-														title={sub.title}
-													>
-														{sub.description}
-													</ListItem>
-												))}
-											</ul>
+											{link.label === "Products" ? (
+												<ProductsNavbar submenu={link.submenu} />
+											) : link.label === "Services" ? (
+												<ServicesNavbar submenu={link.submenu} />
+											) : (
+												<ul className="w-96">
+													{link.submenu.map((sub) => (
+														<ListItem
+															href={sub.href}
+															key={sub.title}
+															title={sub.title}
+														>
+															{sub.description}
+														</ListItem>
+													))}
+												</ul>
+											)}
 										</NavigationMenuContent>
 									</NavigationMenuItem>
 								) : (
 									<NavigationMenuItem key={link.label}>
 										<NavigationMenuLink
 											className={navigationMenuTriggerStyle()}
-											render={<Link href={link.href} />}
+											render={<Link href={link.href!} />}
 										>
 											{link.label}
 										</NavigationMenuLink>
@@ -107,35 +121,20 @@ export const Navbar = () => {
 	);
 };
 
-function NavLinkItem({ link }: { link: NavLink }) {
+function NavLinkItem({
+	link,
+	...props
+}: React.ComponentPropsWithRef<"li"> & { link: NavLink }) {
 	return (
-		<li>
+		<li {...props}>
 			<Link
 				className="flex items-center gap-1.5 text-primary-foreground transition-colors hover:text-white"
-				href={link.href}
+				href={link.href!}
 			>
 				{link.label}
 
 				{link.submenu && <IconCaretDown className="shrink-0" />}
 			</Link>
-		</li>
-	);
-}
-
-function ListItem({
-	title,
-	children,
-	href,
-	...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: Route }) {
-	return (
-		<li {...props}>
-			<NavigationMenuLink render={<Link href={href} />}>
-				<div className="flex flex-col gap-1 style-lyra:text-xs style-maia:text-sm style-mira:text-xs style-nova:text-sm style-vega:text-sm">
-					<div className="font-medium leading-none">{title}</div>
-					<div className="line-clamp-2 text-muted-foreground">{children}</div>
-				</div>
-			</NavigationMenuLink>
 		</li>
 	);
 }

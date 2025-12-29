@@ -1,5 +1,8 @@
+import { IconCog } from "@/assets/icons/cog";
 import { IconDesktopPoint } from "@/assets/icons/desktop";
 import { IconNfc } from "@/assets/icons/nfc";
+import { IconPlay } from "@/assets/icons/play";
+import { IconPrinter } from "@/assets/icons/printer";
 import {
 	IconSocialFacebook,
 	IconSocialInstagram,
@@ -17,12 +20,14 @@ export const NAV_LINKS: NavLink[] = [
 		href: "/",
 		submenu: [
 			{
+				id: "tap",
 				icon: IconNfc,
 				title: "Ziron Tap",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
+				id: "crm",
 				icon: IconNfc,
 				title: "Ziron CRM",
 				description: "Tap. Scan. Connect.",
@@ -33,9 +38,10 @@ export const NAV_LINKS: NavLink[] = [
 	},
 	{
 		label: "Services",
-		href: "/",
+		href: "/services",
 		submenu: [
 			{
+				id: "1",
 				icon: IconTarget,
 				title: "Brand Strategy",
 				description:
@@ -43,6 +49,7 @@ export const NAV_LINKS: NavLink[] = [
 				href: "/",
 			},
 			{
+				id: "2",
 				icon: IconDesktopPoint,
 				title: "Websites",
 				description:
@@ -50,6 +57,7 @@ export const NAV_LINKS: NavLink[] = [
 				href: "/",
 			},
 			{
+				id: "3",
 				icon: IconSpeaker,
 				title: "Digital Marketing",
 				description:
@@ -57,21 +65,24 @@ export const NAV_LINKS: NavLink[] = [
 				href: "/",
 			},
 			{
-				icon: IconSpeaker,
+				id: "4",
+				icon: IconPrinter,
 				title: "Printing & Corporate Gifts",
 				description:
 					"Crafting visual identities that feel clear, timeless, and true to your brand.",
 				href: "/",
 			},
 			{
-				icon: IconSpeaker,
+				id: "5",
+				icon: IconPlay,
 				title: "Motion Design",
 				description:
 					"Crafting visual identities that feel clear, timeless, and true to your brand.",
 				href: "/",
 			},
 			{
-				icon: IconSpeaker,
+				id: "6",
+				icon: IconCog,
 				title: "Full-stack Marketing",
 				description:
 					"Crafting visual identities that feel clear, timeless, and true to your brand.",
@@ -85,15 +96,16 @@ export const NAV_LINKS: NavLink[] = [
 	},
 	{
 		label: "Company",
-		href: "/",
 		submenu: [
 			{
+				id: "1",
 				icon: IconNfc,
 				title: "Ziron Tap",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
+				id: "2",
 				icon: IconNfc,
 				title: "Ziron CRM",
 				description: "Tap. Scan. Connect.",
@@ -102,7 +114,7 @@ export const NAV_LINKS: NavLink[] = [
 			},
 		],
 	},
-];
+] as const;
 
 export const CONTACT = [
 	{

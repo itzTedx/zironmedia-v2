@@ -1,6 +1,7 @@
-export const IconSpeaker = () => {
+export const IconSpeaker = (props: SVGProps) => {
 	return (
 		<svg
+			{...props}
 			fill="none"
 			height="32"
 			viewBox="0 0 32 32"
