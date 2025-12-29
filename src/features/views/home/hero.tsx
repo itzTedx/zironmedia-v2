@@ -28,7 +28,10 @@ export const Hero = () => {
 				</p>
 
 				<div className="relative z-99 flex items-center gap-4 md:w-auto">
-					<Button className="justify-between gap-2 md:w-60" size="lg">
+					<Button
+						className="w-full flex-1 justify-between gap-2 md:w-60"
+						size="lg"
+					>
 						<span>
 							Get started{" "}
 							<span className="hidden font-normal text-primary-secondary md:inline">
