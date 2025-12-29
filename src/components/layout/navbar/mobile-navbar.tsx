@@ -8,11 +8,16 @@ import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from "@/components/ui/popover";
+	Drawer,
+	DrawerContent,
+	DrawerDescription,
+	DrawerFooter,
+	DrawerHeader,
+	DrawerTitle,
+	DrawerTrigger,
+} from "@/components/ui/drawer";
 
+import { IconCaretRight } from "@/assets/icons/caret";
 import { IconMenu } from "@/assets/icons/menu";
 
 import { cn } from "@/lib/utils";
@@ -24,26 +29,22 @@ export function MobileNav() {
 	const [open, setOpen] = React.useState(false);
 
 	return (
-		<Popover onOpenChange={setOpen} open={open}>
-			<PopoverTrigger
-				render={
-					<Button
-						className={cn("extend-touch-target md:hidden")}
-						size="icon-lg"
-						variant="secondary"
-					/>
-				}
-			>
-				<IconMenu />
-				<span className="sr-only">Toggle Menu</span>
-			</PopoverTrigger>
-			<PopoverContent
-				align="start"
-				alignOffset={-16}
-				className="no-scrollbar h-(--available-height) w-(--available-width) overflow-y-auto rounded-none border-none bg-white/90 p-0 shadow-none backdrop-blur duration-100"
-				side="bottom"
-				sideOffset={14}
-			>
+		<Drawer onOpenChange={setOpen} open={open}>
+			<DrawerTrigger asChild>
+				<Button
+					className={cn("extend-touch-target md:hidden")}
+					size="icon-lg"
+					variant="secondary"
+				>
+					<IconMenu />
+					<span className="sr-only">Toggle Menu</span>
+				</Button>
+			</DrawerTrigger>
+			<DrawerContent data-scroll-locked={open ? true : false}>
+				<DrawerHeader className="sr-only">
+					<DrawerTitle>Ziron Media</DrawerTitle>
+					<DrawerDescription>Ziron Media</DrawerDescription>
+				</DrawerHeader>
 				<nav className="flex flex-col gap-12 overflow-auto px-6 py-6">
 					<div className="flex flex-col gap-6">
 						{NAV_LINKS.map((links) =>
@@ -80,8 +81,14 @@ export function MobileNav() {
 						)}
 					</div>
 				</nav>
-			</PopoverContent>
-		</Popover>
+				<DrawerFooter>
+					<Button size="lg" variant="default">
+						Start a project
+						<IconCaretRight className="hidden md:block" />
+					</Button>
+				</DrawerFooter>
+			</DrawerContent>
+		</Drawer>
 	);
 }
 
