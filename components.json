@@ -1,28 +1,28 @@
 {
-  "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "base-nova",
-  "rsc": true,
-  "tsx": true,
-  "tailwind": {
-    "config": "",
-    "css": "src/styles/globals.css",
-    "baseColor": "stone",
-    "cssVariables": true,
-    "prefix": ""
-  },
-  "iconLibrary": "phosphor",
-  "menuColor": "default",
-  "menuAccent": "subtle",
-  "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
-  },
-  "registries": {
-    "@coss": "https://coss.com/ui/r/{name}.json",
-    "@animate-ui": "https://animate-ui.com/r/{name}.json",
-    "@eldoraui": "https://eldoraui.site/r/{name}.json"
-  }
+	"$schema": "https://ui.shadcn.com/schema.json",
+	"style": "base-nova",
+	"rsc": true,
+	"tsx": true,
+	"tailwind": {
+		"config": "",
+		"css": "src/styles/globals.css",
+		"baseColor": "stone",
+		"cssVariables": true,
+		"prefix": ""
+	},
+	"iconLibrary": "phosphor",
+	"menuColor": "default",
+	"menuAccent": "subtle",
+	"aliases": {
+		"components": "@/components",
+		"utils": "@/lib/utils",
+		"ui": "@/components/ui",
+		"lib": "@/lib",
+		"hooks": "@/hooks"
+	},
+	"registries": {
+		"@coss": "https://coss.com/ui/r/{name}.json",
+		"@animate-ui": "https://animate-ui.com/r/{name}.json",
+		"@eldoraui": "https://eldoraui.site/r/{name}.json"
+	}
 }

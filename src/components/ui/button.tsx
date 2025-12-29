@@ -13,7 +13,7 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				default:
-					"relative bg-primary text-white shadow-button-primary after:absolute after:inset-0 after:z-10 after:bg-linear-0 after:from-white/15 hover:brightness-120 [a]:hover:bg-primary/80",
+					"relative bg-primary text-white shadow-button-primary after:absolute after:inset-0 after:z-10 after:bg-linear-to-b after:from-white/15 hover:brightness-120 [a]:hover:bg-primary/80",
 				outline:
 					"border-border bg-background/20 hover:border-white hover:bg-white/40 hover:text-white aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
 				secondary:
