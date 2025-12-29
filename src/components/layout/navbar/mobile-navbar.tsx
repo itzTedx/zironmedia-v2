@@ -116,7 +116,7 @@ function MobileLink({
 
 	return (
 		<Link
-			className={cn("flex items-center gap-2 font-medium text-2xl", className)}
+			className={cn("flex items-center gap-2 font-medium text-xl", className)}
 			href={href}
 			onClick={() => {
 				router.push(href);

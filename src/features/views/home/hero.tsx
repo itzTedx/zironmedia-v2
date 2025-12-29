@@ -27,7 +27,7 @@ export const Hero = () => {
 					and everything in between.
 				</p>
 
-				<div className="relative z-99 flex w-full items-center gap-4 md:w-auto">
+				<div className="relative z-99 flex items-center gap-4 md:w-auto">
 					<Button className="justify-between gap-2 md:w-60" size="lg">
 						<span>
 							Get started{" "}
