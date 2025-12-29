@@ -10,7 +10,7 @@ export type NavLink = {
 
 export type Submenu = {
 	id: string;
-	icon: typeof IconNfc;
+	icon?: typeof IconNfc;
 	title: string;
 	description: string;
 	href: Route;

@@ -19,6 +19,7 @@ import {
 
 import { IconCaretRight } from "@/assets/icons/caret";
 import { IconMenu } from "@/assets/icons/menu";
+import { IconNfc } from "@/assets/icons/nfc";
 
 import { cn } from "@/lib/utils";
 
@@ -55,17 +56,20 @@ export function MobileNav() {
 											<MobileProductsNavbar key={sub.id} submenu={sub} />
 										))
 									) : (
-										<li className="flex flex-col gap-3" key={links.label}>
+										<li className="flex flex-col gap-2" key={links.label}>
 											<h2 className="text-sm">{links.label}</h2>
-											{links.submenu?.map((service) => (
-												<MobileLink
-													href={service.href}
-													key={service.id}
-													onOpenChange={setOpen}
-												>
-													{service.title}
-												</MobileLink>
-											))}
+											<div className="space-y-6">
+												{links.submenu?.map((service) => (
+													<MobileLink
+														href={service.href}
+														icon={service.icon}
+														key={service.id}
+														onOpenChange={setOpen}
+													>
+														{service.title}
+													</MobileLink>
+												))}
+											</div>
 										</li>
 									)}
 								</ul>
@@ -94,20 +98,25 @@ export function MobileNav() {
 
 function MobileLink({
 	href,
+	icon,
 	onOpenChange,
 	className,
 	children,
 	...props
 }: {
+	icon?: typeof IconNfc;
 	href: Route;
 	onOpenChange?: (open: boolean) => void;
 	children: React.ReactNode;
 	className?: string;
 }) {
 	const router = useRouter();
+
+	const Icon = icon;
+
 	return (
 		<Link
-			className={cn("font-medium text-2xl", className)}
+			className={cn("flex items-center gap-2 font-medium text-2xl", className)}
 			href={href}
 			onClick={() => {
 				router.push(href);
@@ -115,6 +124,11 @@ function MobileLink({
 			}}
 			{...props}
 		>
+			{Icon && (
+				<div>
+					<Icon className="size-7 shrink-0 text-muted-foreground/70" />
+				</div>
+			)}
 			{children}
 		</Link>
 	);

@@ -103,21 +103,21 @@ export const NAV_LINKS: NavLink[] = [
 		submenu: [
 			{
 				id: "1",
-				icon: IconNfc,
+
 				title: "About us",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
 				id: "2",
-				icon: IconNfc,
+
 				title: "FAQs",
 				description: "Tap. Scan. Connect.",
 				href: "/",
 			},
 			{
 				id: "3",
-				icon: IconNfc,
+
 				title: "Blogs",
 				description: "Tap. Scan. Connect.",
 				href: "/",

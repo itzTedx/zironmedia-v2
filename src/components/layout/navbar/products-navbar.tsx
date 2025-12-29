@@ -13,7 +13,7 @@ export const ProductsNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 	return (
 		<ul className="w-sm space-y-1.5">
 			{submenu.map((sub) => {
-				const Icon = sub.icon;
+				const Icon = sub.icon!;
 				return (
 					<li key={sub.id}>
 						<NavigationMenuLink
@@ -66,7 +66,7 @@ export const ProductsNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 };
 
 export const MobileProductsNavbar = ({ submenu }: { submenu: Submenu }) => {
-	const Icon = submenu.icon;
+	const Icon = submenu.icon!;
 	const tap = submenu.id === "tap";
 
 	return (

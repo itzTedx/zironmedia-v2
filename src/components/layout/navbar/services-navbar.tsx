@@ -9,7 +9,7 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 		<div className="grid w-2xl grid-cols-7 gap-4">
 			<ul className="col-span-4 space-y-1.5">
 				{submenu.map((sub) => {
-					const Icon = sub.icon;
+					const Icon = sub.icon!;
 					return (
 						<li key={sub.id}>
 							<Link
