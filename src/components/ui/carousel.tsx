@@ -48,15 +48,15 @@ function useCarousel() {
 	return context;
 }
 
-type EmblaControls = {
-	selectedIndex: number;
-	scrollSnaps: number[];
-	prevDisabled: boolean;
-	nextDisabled: boolean;
-	onDotClick: (index: number) => void;
-	onPrev: () => void;
-	onNext: () => void;
-};
+// type EmblaControls = {
+// 	selectedIndex: number;
+// 	scrollSnaps: number[];
+// 	prevDisabled: boolean;
+// 	nextDisabled: boolean;
+// 	onDotClick: (index: number) => void;
+// 	onPrev: () => void;
+// 	onNext: () => void;
+// };
 
 type DotButtonProps = {
 	selected?: boolean;
@@ -71,56 +71,56 @@ const transition: Transition = {
 	mass: 1,
 };
 
-const useEmblaControls = (emblaApi: CarouselApi): EmblaControls => {
-	const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
-	const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
-	const [prevDisabled, setPrevDisabled] = React.useState(true);
-	const [nextDisabled, setNextDisabled] = React.useState(true);
+// const useEmblaControls = (emblaApi: CarouselApi): EmblaControls => {
+// 	const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
+// 	const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+// 	const [prevDisabled, setPrevDisabled] = React.useState(true);
+// 	const [nextDisabled, setNextDisabled] = React.useState(true);
 
-	const onDotClick = React.useCallback(
-		(index: number) => emblaApi?.scrollTo(index),
-		[emblaApi]
-	);
+// 	const onDotClick = React.useCallback(
+// 		(index: number) => emblaApi?.scrollTo(index),
+// 		[emblaApi]
+// 	);
 
-	const onPrev = React.useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-	const onNext = React.useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+// 	const onPrev = React.useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+// 	const onNext = React.useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-	const updateSelectionState = (api: CarouselApi) => {
-		setSelectedIndex(api?.selectedScrollSnap() ?? 0);
-		setPrevDisabled(!api?.canScrollPrev());
-		setNextDisabled(!api?.canScrollNext());
-	};
+// 	const updateSelectionState = (api: CarouselApi) => {
+// 		setSelectedIndex(api?.selectedScrollSnap() ?? 0);
+// 		setPrevDisabled(!api?.canScrollPrev());
+// 		setNextDisabled(!api?.canScrollNext());
+// 	};
 
-	const onInit = React.useCallback((api: CarouselApi) => {
-		setScrollSnaps(api?.scrollSnapList() ?? [0]);
-		updateSelectionState(api);
-	}, []);
+// 	const onInit = React.useCallback((api: CarouselApi) => {
+// 		setScrollSnaps(api?.scrollSnapList() ?? [0]);
+// 		updateSelectionState(api);
+// 	}, []);
 
-	const onSelect = React.useCallback((api: CarouselApi) => {
-		updateSelectionState(api);
-	}, []);
+// 	const onSelect = React.useCallback((api: CarouselApi) => {
+// 		updateSelectionState(api);
+// 	}, []);
 
-	React.useEffect(() => {
-		if (!emblaApi) return;
+// 	React.useEffect(() => {
+// 		if (!emblaApi) return;
 
-		onInit(emblaApi);
-		emblaApi.on("reInit", onInit).on("select", onSelect);
+// 		onInit(emblaApi);
+// 		emblaApi.on("reInit", onInit).on("select", onSelect);
 
-		return () => {
-			emblaApi.off("reInit", onInit).off("select", onSelect);
-		};
-	}, [emblaApi, onInit, onSelect]);
+// 		return () => {
+// 			emblaApi.off("reInit", onInit).off("select", onSelect);
+// 		};
+// 	}, [emblaApi, onInit, onSelect]);
 
-	return {
-		selectedIndex,
-		scrollSnaps,
-		prevDisabled,
-		nextDisabled,
-		onDotClick,
-		onPrev,
-		onNext,
-	};
-};
+// 	return {
+// 		selectedIndex,
+// 		scrollSnaps,
+// 		prevDisabled,
+// 		nextDisabled,
+// 		onDotClick,
+// 		onPrev,
+// 		onNext,
+// 	};
+// };
 
 function Carousel({
 	orientation = "horizontal",
@@ -282,8 +282,10 @@ function CarouselPrevious({
 			variant={variant}
 			{...props}
 		>
-			<IconCaretLeft />
-			<span className="sr-only">Previous slide</span>
+			<>
+				<IconCaretLeft />
+				<span className="sr-only">Previous slide</span>
+			</>
 		</Button>
 	);
 }
@@ -312,8 +314,10 @@ function CarouselNext({
 			variant={variant}
 			{...props}
 		>
-			<IconCaretRight />
-			<span className="sr-only">Next slide</span>
+			<>
+				<IconCaretRight />
+				<span className="sr-only">Next slide</span>
+			</>
 		</Button>
 	);
 }
