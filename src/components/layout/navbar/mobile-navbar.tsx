@@ -33,9 +33,11 @@ export function MobileNav() {
 		<Drawer onOpenChange={setOpen} open={open}>
 			<DrawerTrigger asChild>
 				<Button
-					className={cn("extend-touch-target md:hidden")}
-					size="icon-lg"
-					variant="secondary"
+					className={cn(
+						"extend-touch-target text-white hover:bg-white md:hidden"
+					)}
+					size="icon-sm"
+					variant="ghost"
 				>
 					<IconMenu />
 					<span className="sr-only">Toggle Menu</span>

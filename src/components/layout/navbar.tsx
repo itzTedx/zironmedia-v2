@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import { IconCaretRight } from "@/assets/icons/caret";
-import { Logo } from "@/assets/logo";
+import { Logo, Wordmark } from "@/assets/logo";
 
 import { Noise } from "../shared/noise";
 import { Button } from "../ui/button";
@@ -28,10 +28,11 @@ export const Navbar = () => {
 			<div className="container mx-auto flex max-w-7xl items-center justify-between gap-4">
 				<div className="flex items-center gap-9">
 					<Link
-						className="transition-[filter] duration-300 hover:brightness-135"
+						className="flex items-center gap-2 transition-[filter] duration-300 hover:brightness-135"
 						href="/"
 					>
 						<Logo className="size-10" />
+						<Wordmark className="mt-1 h-5 w-fit text-white" isMono />
 					</Link>
 					<NavigationMenu className="hidden md:flex">
 						<NavigationMenuList>
@@ -80,7 +81,7 @@ export const Navbar = () => {
 					</NavigationMenu>
 				</div>
 				<div className="flex items-center gap-4">
-					<Button className="hidden md:inline-flex" variant="secondary">
+					<Button variant="secondary">
 						Start a project
 						<IconCaretRight className="hidden md:block" />
 					</Button>

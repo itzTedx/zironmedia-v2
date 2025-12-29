@@ -108,18 +108,18 @@ export const WhyUs = () => {
 						<TableHeader className="md:sr-only">
 							<TableRow className="pb-6">
 								<TableHead className="w-[290px] opacity-0">Feature</TableHead>
-								<TableHead className="flex items-center justify-center">
+								<TableHead className="flex w-[180px] items-center justify-center">
 									<Logo className="size-7" />
 								</TableHead>
-								<TableHead>In-House Team</TableHead>
-								<TableHead>Other Agencies</TableHead>
+								<TableHead className="w-[180px]">In-House Team</TableHead>
+								<TableHead className="w-[180px]">Other Agencies</TableHead>
 							</TableRow>
 						</TableHeader>
 
 						<TableBody>
 							{features.map((feature) => (
 								<TableRow className="border-0" key={feature.feature}>
-									<TableCell className="bg-background! font-medium text-base md:text-lg">
+									<TableCell className="whitespace-nowrap bg-background! font-medium text-xs md:text-lg">
 										{feature.feature}
 									</TableCell>
 									<TableCell className="w-[290px] bg-floating! leading-snug">
