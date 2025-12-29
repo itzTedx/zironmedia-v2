@@ -7,9 +7,9 @@ import { ARTICLES } from "../data/constants";
 
 export const Articles = () => {
 	return (
-		<section className="dashed dashed-y relative py-14">
-			<header className="mx-auto mb-6 flex max-w-7xl items-center justify-between px-6 md:mb-14 md:px-0">
-				<h2 className="font-display font-semibold text-5xl tracking-tight">
+		<section className="dashed dashed-y relative py-9 md:py-14">
+			<header className="mx-auto mb-6 flex max-w-7xl flex-col gap-3 px-6 md:mb-14 md:flex-row md:items-center md:justify-between md:px-0">
+				<h2 className="font-display font-semibold text-3xl tracking-tight md:text-5xl">
 					Learn and Get Inspired
 				</h2>
 				<Button className="w-40 justify-between bg-foreground shadow-button-neutral">

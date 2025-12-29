@@ -10,7 +10,7 @@ import {
 
 import { IconCheck } from "@/assets/icons/check";
 import { IconX } from "@/assets/icons/x";
-import { Wordmark } from "@/assets/logo";
+import { Logo, Wordmark } from "@/assets/logo";
 
 import { cn } from "@/lib/utils";
 
@@ -93,22 +93,24 @@ export const WhyUs = () => {
 					It’s quite a lot!
 				</p>
 			</header>
-			<div className="mx-auto max-w-6xl py-14">
-				<div className="grid grid-cols-4 gap-6 pb-3">
+			<div className="mx-auto max-w-6xl px-4 py-14 md:px-0">
+				<div className="sr-only grid grid-cols-4 gap-6 pb-3 md:not-sr-only">
 					<div />
 					<div>
 						<Wordmark />
 					</div>
-					<p>In-House Team</p>
-					<p>Other Agencies</p>
+					<p className="text-xs sm:text-base">In-House Team</p>
+					<p className="text-xs sm:text-base">Other Agencies</p>
 				</div>
 
 				<Frame>
 					<Table>
-						<TableHeader className="sr-only">
-							<TableRow>
-								<TableHead className="w-[290px]">Feature</TableHead>
-								<TableHead>Ziron Media</TableHead>
+						<TableHeader className="md:sr-only">
+							<TableRow className="pb-6">
+								<TableHead className="w-[290px] opacity-0">Feature</TableHead>
+								<TableHead className="flex items-center justify-center">
+									<Logo className="size-7" />
+								</TableHead>
 								<TableHead>In-House Team</TableHead>
 								<TableHead>Other Agencies</TableHead>
 							</TableRow>
@@ -117,7 +119,7 @@ export const WhyUs = () => {
 						<TableBody>
 							{features.map((feature) => (
 								<TableRow className="border-0" key={feature.feature}>
-									<TableCell className="bg-background! font-medium text-lg">
+									<TableCell className="bg-background! font-medium text-base md:text-lg">
 										{feature.feature}
 									</TableCell>
 									<TableCell className="w-[290px] bg-floating! leading-snug">

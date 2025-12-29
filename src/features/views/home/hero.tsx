@@ -10,7 +10,7 @@ export const Hero = () => {
 	return (
 		<section className="dashed dashed-x relative mx-auto max-w-7xl">
 			<Noise className="opacity-50" />
-			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 py-12 md:py-16">
+			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-12 md:px-0 md:py-16">
 				<Badge className="gap-2">
 					<div className="size-1.5 rounded-full bg-violet-500" /> Ready to grow?
 					We’re ready to go
@@ -27,18 +27,18 @@ export const Hero = () => {
 					and everything in between.
 				</p>
 
-				<div className="relative z-99 flex w-full flex-col items-center gap-4 px-6 md:w-auto md:flex-row md:px-0">
-					<Button className="w-full justify-between md:w-60" size="lg">
+				<div className="relative z-99 flex w-full items-center gap-4 md:w-auto">
+					<Button className="justify-between gap-2 md:w-60" size="lg">
 						<span>
 							Get started{" "}
-							<span className="font-normal text-primary-secondary">
+							<span className="hidden font-normal text-primary-secondary md:inline">
 								- it’s free
 							</span>
 						</span>
 						<IconArrowRightTag className="size-5" />
 					</Button>
 					<Button
-						className="w-full justify-between text-muted-foreground md:w-52"
+						className="justify-between text-muted-foreground md:w-52"
 						size="lg"
 						variant="secondary"
 					>
