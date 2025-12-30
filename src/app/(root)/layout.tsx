@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
 
-import { clash, mono, youth } from "@/assets/fonts";
+import { inter, mono, youth } from "@/assets/fonts";
 
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
@@ -54,8 +54,8 @@ export default function RootLayout({
 				<body
 					className={cn(
 						"antialiased",
-						youth.className,
-						clash.variable,
+						inter.className,
+						youth.variable,
 						mono.variable
 					)}
 				>

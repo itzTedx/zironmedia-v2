@@ -1,15 +1,37 @@
+import { Route } from "next";
+import Link from "next/link";
+
 import { ContactList } from "@/components/layout/ui/contant-list";
 import { Socials } from "@/components/layout/ui/socials";
+import {
+	PreviewLinkCard,
+	PreviewLinkCardImage,
+	PreviewLinkCardPopup,
+	PreviewLinkCardPortal,
+	PreviewLinkCardPositioner,
+	PreviewLinkCardTrigger,
+} from "@/components/primitives/preview-link-card";
+import { Alert, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+	Frame,
+	FrameHeader,
+	FramePanel,
+	FrameTitle,
+} from "@/components/ui/frame";
 
+import { IconCheckmark } from "@/assets/icons/check";
+
+import { ADDRESS, OFFICE_HOURS } from "@/data/constant";
 import { ContactForm } from "@/features/contact/components/contact-form";
+import { SERVICES } from "@/features/services/constant";
 
 export default function ContactPage() {
 	return (
 		<main>
 			<section className="dashed dashed-x mx-auto max-w-7xl py-12">
-				<div className="container grid grid-cols-2 gap-4">
+				<div className="container grid gap-4 md:grid-cols-2">
 					<div className="space-y-9 py-6">
 						<div className="space-y-2">
 							<Badge>Let’s Build Something That Works for Your Brand</Badge>
@@ -29,14 +51,123 @@ export default function ContactPage() {
 						<Socials className="text-muted-foreground" />
 					</div>
 					{/* Contact Form */}
-					<Card className="shadow-sm">
-						<CardHeader className="p-6 pb-0">
-							<CardTitle>Send us a Message</CardTitle>
-						</CardHeader>
-						<CardContent className="p-6">
-							<ContactForm />
-						</CardContent>
-					</Card>
+					<Frame>
+						<Alert className="flex items-center" variant="success">
+							<IconCheckmark className="size-6" />
+							<AlertTitle className="text-success-secondary">
+								Time slots available right now!
+							</AlertTitle>
+						</Alert>
+
+						<Card className="shadow-sm">
+							<CardHeader className="p-6 pb-0">
+								<CardTitle>
+									Request a call and see how Ziron Media works
+								</CardTitle>
+							</CardHeader>
+							<CardContent className="p-6">
+								<ContactForm />
+							</CardContent>
+						</Card>
+						<FrameHeader>
+							<FrameTitle>
+								<p>
+									Prefer to hop on a call?{" "}
+									<Link className="text-primary hover:underline" href="/">
+										Book a call
+									</Link>{" "}
+									instead.
+								</p>
+							</FrameTitle>
+						</FrameHeader>
+						<div className="grid grid-cols-2 gap-4">
+							<FramePanel>
+								<span className="w-12 font-mono text-muted-foreground text-xs uppercase leading-none tracking-tight">
+									Address
+									<span className="font-bold text-brand-secondary">.</span>
+								</span>
+								<p className="font-medium text-lg">{ADDRESS}</p>
+							</FramePanel>
+							<FramePanel>
+								<span className="w-12 font-mono text-muted-foreground text-xs uppercase leading-none tracking-tight">
+									Office Hours
+									<span className="font-bold text-brand-secondary">.</span>
+								</span>
+								<ul className="space-y-1.5 font-medium text-lg">
+									{OFFICE_HOURS.map((h) => (
+										<li key={h.period}>
+											<h4>{h.period}</h4>
+											<p>{h.time}</p>
+										</li>
+									))}
+								</ul>
+							</FramePanel>
+						</div>
+					</Frame>
+				</div>
+			</section>
+
+			<section className="dashed dashed-y relative">
+				<div className="mx-auto grid max-w-7xl grid-cols-3 gap-4 py-16">
+					<div className="">
+						<h2>How we help you grow</h2>
+						<p>
+							We help businesses turn ideas into clear brand systems and growth
+							engines.
+						</p>
+
+						<p>
+							From branding and websites to marketing, motion, printing, and
+							full-stack execution — everything is handled under one roof, with
+							one accountable team.
+						</p>
+
+						<p>No handoffs. No silos. Just progress.</p>
+					</div>
+					<div className="col-span-2 grid grid-cols-3 gap-3">
+						{SERVICES.map(({ icon: Icon, ...service }) => {
+							return (
+								<Frame key={service.id}>
+									<FramePanel className="flex items-center gap-3">
+										<Icon className="size-5 shrink-0 text-muted-foreground" />
+										<h3 className="font-medium text-sm">{service.title}</h3>
+									</FramePanel>
+									<FramePanel className="h-full">
+										<ul className="flex flex-col gap-1">
+											{service.lists.map((list) => (
+												<li key={list.slug}>
+													<PreviewLinkCard
+														followCursor="x"
+														href={`/services/${service.slug}/${list.slug}`}
+														src={list.image}
+													>
+														<PreviewLinkCardTrigger
+															className="font-medium text-sm transition-colors duration-300 ease-out hover:text-brand-secondary"
+															delay={20}
+														>
+															{list.title}
+														</PreviewLinkCardTrigger>
+														<PreviewLinkCardPortal>
+															<PreviewLinkCardPositioner side="inline-end">
+																<PreviewLinkCardPopup
+																	className="overflow-hidden rounded-lg"
+																	href={
+																		`/services/${service.slug}/${list.slug}` as Route
+																	}
+																>
+																	<PreviewLinkCardImage alt="Preview link card content" />
+																</PreviewLinkCardPopup>
+															</PreviewLinkCardPositioner>
+														</PreviewLinkCardPortal>
+													</PreviewLinkCard>
+												</li>
+											))}
+										</ul>
+									</FramePanel>
+								</Frame>
+							);
+						})}
+					</div>
 				</div>
 			</section>
 		</main>

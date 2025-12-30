@@ -1,8 +1,10 @@
-import { Chivo_Mono } from "next/font/google";
+import { Chivo_Mono, Geist } from "next/font/google";
 import localFont from "next/font/local";
 
+export const inter = Geist();
+
 export const youth = localFont({
-	variable: "--font-body",
+	variable: "--font-display",
 	display: "swap",
 	preload: true,
 	src: [

@@ -1,7 +1,14 @@
+import { IconCog } from "@/assets/icons/cog";
+import { IconDesktopPoint } from "@/assets/icons/desktop";
+import { IconPlay } from "@/assets/icons/play";
+import { IconPrinter } from "@/assets/icons/printer";
+import { IconSpeaker } from "@/assets/icons/speaker";
+import { IconTarget } from "@/assets/icons/target";
 export const SERVICES = [
 	{
 		id: 1,
 		slug: "branding",
+		icon: IconTarget,
 		title: "Brand Strategy",
 		description:
 			"Crafting visual identities that feel clear, timeless, and true to your brand.",
@@ -37,6 +44,7 @@ export const SERVICES = [
 	{
 		id: 2,
 		slug: "websites",
+		icon: IconDesktopPoint,
 		title: "Websites",
 		description:
 			"Crafting visual identities that feel clear, timeless, and true to your brand.",
@@ -67,6 +75,7 @@ export const SERVICES = [
 	{
 		id: 3,
 		slug: "marketing",
+		icon: IconSpeaker,
 		title: "Digital Marketing",
 		description:
 			"Crafting visual identities that feel clear, timeless, and true to your brand.",
@@ -92,6 +101,7 @@ export const SERVICES = [
 	{
 		id: 4,
 		slug: "printing",
+		icon: IconPrinter,
 		title: "Printing & Corporate Gifts",
 		description:
 			"Crafting visual identities that feel clear, timeless, and true to your brand.",
@@ -127,6 +137,7 @@ export const SERVICES = [
 	{
 		id: 5,
 		slug: "motion",
+		icon: IconPlay,
 		title: "Motion Design",
 		description:
 			"Crafting visual identities that feel clear, timeless, and true to your brand.",
@@ -157,6 +168,7 @@ export const SERVICES = [
 	{
 		id: 6,
 		slug: "full-stack",
+		icon: IconCog,
 		title: "Full-stack Marketing",
 		description:
 			"Crafting visual identities that feel clear, timeless, and true to your brand.",

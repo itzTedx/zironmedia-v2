@@ -1,18 +1,16 @@
-import { IconCog } from "@/assets/icons/cog";
-import { IconDesktopPoint } from "@/assets/icons/desktop";
+import { Route } from "next";
+
 import { IconNfc } from "@/assets/icons/nfc";
-import { IconPlay } from "@/assets/icons/play";
-import { IconPrinter } from "@/assets/icons/printer";
 import {
 	IconSocialFacebook,
 	IconSocialInstagram,
 	IconSocialLinkedIn,
 	IconSocialWhatsapp,
 } from "@/assets/icons/socials";
-import { IconSpeaker } from "@/assets/icons/speaker";
-import { IconTarget } from "@/assets/icons/target";
 
-import { FooterMeta, NavLink, ServiceType, Social, Submenu } from "./types";
+import { SERVICES } from "@/features/services/constant";
+
+import { FooterMeta, NavLink, Social, Submenu } from "./types";
 
 export const PRODUCTS: Submenu[] = [
 	{
@@ -32,57 +30,6 @@ export const PRODUCTS: Submenu[] = [
 	},
 ];
 
-export const SERVICES: ServiceType[] = [
-	{
-		id: "1",
-		icon: IconTarget,
-		title: "Brand Strategy",
-		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		href: "/",
-	},
-	{
-		id: "2",
-		icon: IconDesktopPoint,
-		title: "Websites",
-		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		href: "/",
-	},
-	{
-		id: "3",
-		icon: IconSpeaker,
-		title: "Digital Marketing",
-		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		href: "/",
-	},
-	{
-		id: "4",
-		icon: IconPrinter,
-		title: "Printing & Corporate Gifts",
-		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		href: "/",
-	},
-	{
-		id: "5",
-		icon: IconPlay,
-		title: "Motion Design",
-		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		href: "/",
-	},
-	{
-		id: "6",
-		icon: IconCog,
-		title: "Full-stack Marketing",
-		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		href: "/",
-	},
-];
-
 export const NAV_LINKS: NavLink[] = [
 	{
 		label: "Products",
@@ -92,7 +39,13 @@ export const NAV_LINKS: NavLink[] = [
 	{
 		label: "Services",
 		href: "/services",
-		submenu: SERVICES,
+		submenu: SERVICES.flatMap((ser) => ({
+			id: ser.id.toString(),
+			description: ser.description,
+			href: `/${ser.slug}` as Route,
+			title: ser.title,
+			icon: ser.icon,
+		})),
 	},
 	{
 		label: "Our works",

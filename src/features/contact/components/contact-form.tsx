@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 
+import Link from "next/link";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
 import {
 	Field,
-	FieldDescription,
+	FieldAsterisk,
 	FieldError,
 	FieldGroup,
 	FieldLabel,
@@ -16,6 +18,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { LoadingSwap } from "@/components/ui/loading-swap";
 import { Textarea } from "@/components/ui/textarea";
+
+import { IconArrowRightTag } from "@/assets/icons/arrow";
 
 import { submitContactForm } from "../actions";
 import { ContactType, contactFormSchema } from "../actions/schema";
@@ -58,7 +62,7 @@ export function ContactForm() {
 					render={({ field, fieldState }) => (
 						<Field data-invalid={fieldState.invalid}>
 							<FieldLabel htmlFor="contact-form-name">
-								Full Name <span className="text-destructive">*</span>
+								Full Name <FieldAsterisk />
 							</FieldLabel>
 							<Input
 								{...field}
@@ -79,7 +83,8 @@ export function ContactForm() {
 					render={({ field, fieldState }) => (
 						<Field data-invalid={fieldState.invalid}>
 							<FieldLabel htmlFor="contact-form-email">
-								Email Address<span className="text-destructive">*</span>
+								Email Address
+								<FieldAsterisk />
 							</FieldLabel>
 							<Input
 								{...field}
@@ -122,7 +127,7 @@ export function ContactForm() {
 					render={({ field, fieldState }) => (
 						<Field data-invalid={fieldState.invalid}>
 							<FieldLabel htmlFor="contact-form-subject">
-								Subject <span className="text-destructive">*</span>
+								Subject <FieldAsterisk />
 							</FieldLabel>
 							<Input
 								{...field}
@@ -142,7 +147,7 @@ export function ContactForm() {
 					render={({ field, fieldState }) => (
 						<Field data-invalid={fieldState.invalid}>
 							<FieldLabel htmlFor="contact-form-message">
-								Message <span className="text-destructive">*</span>
+								Message <FieldAsterisk />
 							</FieldLabel>
 							<Textarea
 								{...field}
@@ -152,20 +157,44 @@ export function ContactForm() {
 								id="contact-form-message"
 								placeholder="Tell us about your project or inquiry..."
 							/>
-							<FieldDescription>
-								Please provide details about your project or inquiry. Minimum 10
-								characters.
-							</FieldDescription>
+
 							{fieldState.invalid && <FieldError errors={[fieldState.error]} />}
 						</Field>
 					)}
 				/>
 
-				<Field className="pt-2" orientation="horizontal">
-					<Button disabled={isPending} form="contact-form" type="submit">
-						<LoadingSwap isLoading={isPending}>Send Message</LoadingSwap>
+				<div className="flex items-center gap-12 pt-2">
+					<p className="shrink text-balance text-2xs text-muted-foreground">
+						By submitting you agree to our
+						<br />{" "}
+						<Link className="text-primary hover:underline" href="/">
+							Terms of Service
+						</Link>{" "}
+						and{" "}
+						<Link className="text-primary hover:underline" href="/">
+							Privacy Policy.
+						</Link>
+					</p>
+					<Button
+						className="w-full flex-1"
+						disabled={isPending}
+						form="contact-form"
+						type="submit"
+					>
+						<LoadingSwap
+							className="flex w-full items-center justify-between"
+							isLoading={isPending}
+						>
+							<span>
+								Send Message{" "}
+								<span className="hidden font-normal text-primary-secondary md:inline">
+									- it’s free
+								</span>
+							</span>
+							<IconArrowRightTag className="size-5" />
+						</LoadingSwap>
 					</Button>
-				</Field>
+				</div>
 			</FieldGroup>
 		</form>
 	);
