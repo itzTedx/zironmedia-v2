@@ -21,20 +21,20 @@ import { findServiceBySlug } from "@/features/services/actions/query";
 import { SERVICES } from "@/features/services/constant";
 
 type PageProps = {
-	params: Promise<{ slug: string }>;
+	params: Promise<{ category: string }>;
 };
 
 export async function generateStaticParams() {
 	return SERVICES.map((service) => ({
-		slug: service.slug,
+		category: service.slug,
 	}));
 }
 
 export async function generateMetadata({
 	params,
 }: PageProps): Promise<Metadata> {
-	const { slug } = await params;
-	const service = findServiceBySlug(slug);
+	const { category } = await params;
+	const service = findServiceBySlug(category);
 
 	if (!service) {
 		return {
@@ -64,8 +64,8 @@ export async function generateMetadata({
 }
 
 export default async function ServiceCategoryPage({ params }: PageProps) {
-	const { slug } = await params;
-	const service = findServiceBySlug(slug);
+	const { category } = await params;
+	const service = findServiceBySlug(category);
 
 	if (!service) {
 		notFound();

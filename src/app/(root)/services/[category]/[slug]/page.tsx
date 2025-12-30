@@ -17,7 +17,9 @@ export async function generateStaticParams() {
 		});
 	});
 
-	console.log(params);
-
 	return params;
+}
+
+export default function ServicePage() {
+	return <div>Service</div>;
 }
