@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,16 +31,19 @@ export const Hero = () => {
 
 				<div className="relative z-99 flex items-center gap-4 md:w-auto">
 					<Button
+						asChild
 						className="w-full flex-1 justify-between gap-2 md:w-60"
 						size="lg"
 					>
-						<span>
-							Get started{" "}
-							<span className="hidden font-normal text-primary-secondary md:inline">
-								- it’s free
+						<Link href="/services">
+							<span>
+								Get started{" "}
+								<span className="hidden font-normal text-primary-secondary md:inline">
+									- it’s free
+								</span>
 							</span>
-						</span>
-						<IconArrowRightTag className="size-5" />
+							<IconArrowRightTag className="size-5" />
+						</Link>
 					</Button>
 					<Button
 						className="justify-between text-muted-foreground md:w-52"

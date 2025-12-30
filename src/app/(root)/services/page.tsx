@@ -56,28 +56,34 @@ export default function ServicesPage() {
 						</h2>
 					</div>
 					<div className="col-span-7 space-y-3">
-						<h3>
+						<h3 className="font-medium text-lg">
 							Your brand isn’t experienced in pieces — it’s experienced as a
 							whole.
 						</h3>
-						<div className="grid grid-cols-2 gap-6">
+						<div className="grid grid-cols-2 gap-6 text-muted-foreground [&_p_span]:text-foreground">
 							<p>
-								Our process blends strategy, user psychology, creative
-								execution, technology, and production to create experiences that
-								feel clear, consistent, and intentional - online and offline.
+								Our process blends{" "}
+								<span>
+									strategy, user psychology, creative execution, technology, and
+									production
+								</span>{" "}
+								to create experiences that feel clear, consistent, and
+								intentional - online and offline.
 							</p>
 							<p>
-								Every service we offer is designed to work together, ensuring
-								clarity, consistency, and performance across digital and
-								physical touchpoints.
+								Every service we offer is designed to work{" "}
+								<span>
+									together, ensuring clarity, consistency, and performance
+								</span>{" "}
+								across digital and physical.
 							</p>
 							<p>
-								We start with goals, structure, and behaviour - then design
-								everything to support them.
+								We start with <span>goals, structure, and behavior</span> - then
+								design everything to support them.
 							</p>
 							<p>
 								Because when every element works together, your brand doesn’t
-								just look better - it performs better.
+								just look better - <span>it performs better.</span>
 							</p>
 						</div>
 					</div>
