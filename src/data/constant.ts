@@ -147,11 +147,11 @@ export const SERVICES = [
 				href: "/",
 				image: "/images/services/motion.avif",
 			},
-			{
-				title: "Interactive Presentations",
-				href: "/",
-				image: "/images/services/motion.avif",
-			},
+			// {
+			// 	title: "Interactive Presentations",
+			// 	href: "/",
+			// 	image: "/images/services/motion.avif",
+			// },
 		],
 	},
 	{
@@ -202,11 +202,11 @@ export const SERVICES = [
 				href: "/",
 				image: "/images/services/full-stack.webp",
 			},
-			{
-				title: "Personal Brand Management",
-				href: "/",
-				image: "/images/services/full-stack.webp",
-			},
+			// {
+			// 	title: "Personal Brand Management",
+			// 	href: "/",
+			// 	image: "/images/services/full-stack.webp",
+			// },
 		],
 	},
 ] as const;

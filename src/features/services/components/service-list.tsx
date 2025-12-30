@@ -1,4 +1,6 @@
+import { Route } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
 	PreviewLinkCard,
@@ -39,7 +41,7 @@ export const ServiceList = ({
 
 			<ul className="space-y-3">
 				{service.lists.map((list) => (
-					<li className="text-lg" key={list.title}>
+					<li className="isolate text-lg" key={list.title}>
 						<PreviewLinkCard followCursor="x" href={list.href} src={list.image}>
 							<PreviewLinkCardTrigger delay={100}>
 								{list.title}
@@ -69,9 +71,13 @@ export const ServicesLists = () => {
 		<ul className="relative z-10">
 			{SERVICES.map((service) => (
 				<li
-					className="group border-t px-6 py-10 transition-all hover:bg-card hover:pb-14 md:px-0"
+					className="group relative border-t px-6 py-10 transition-all hover:bg-card hover:pb-14 md:px-0"
 					key={service.id}
 				>
+					<Link
+						className="absolute inset-0 z-10"
+						href={`/services/${service.slug}` as Route}
+					/>
 					<ServiceList service={service} />
 				</li>
 			))}

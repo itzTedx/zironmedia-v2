@@ -5,7 +5,7 @@ import { Noise } from "@/components/shared/noise";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { ContactForm } from "@/features/contact/components/contact-form";
-import { ServicesLists } from "@/features/views/home/components/service-list";
+import { ServicesLists } from "@/features/services/components/service-list";
 
 export default function ContactPage() {
 	return (

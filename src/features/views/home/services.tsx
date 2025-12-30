@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
-import { ServicesLists } from "./components/service-list";
+import { ServicesLists } from "../../services/components/service-list";
 
 export const Services = () => {
 	return (
