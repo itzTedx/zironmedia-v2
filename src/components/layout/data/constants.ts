@@ -160,11 +160,11 @@ export const FOOTER_LINKS = [
 			},
 			{
 				label: "Services",
-				href: "/",
+				href: "/services",
 			},
 			{
 				label: "Contact",
-				href: "/",
+				href: "/contact",
 			},
 		],
 	},

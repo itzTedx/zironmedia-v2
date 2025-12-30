@@ -1,77 +1,28 @@
-import Link from "next/link";
-
-import { SOCIALS } from "@/components/layout/data/constants";
-import { Noise } from "@/components/shared/noise";
+import { ContactList } from "@/components/layout/ui/contant-list";
+import { Socials } from "@/components/layout/ui/socials";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { ContactForm } from "@/features/contact/components/contact-form";
-import { ServicesLists } from "@/features/services/components/service-list";
 
 export default function ContactPage() {
 	return (
 		<main>
-			{/* Hero Section */}
-			<section className="dashed dashed-x relative mx-auto max-w-7xl">
-				<Noise className="opacity-50" />
-				<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-12 md:px-0 md:py-16">
-					<h1 className="text-center font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
-						Get in Touch
-					</h1>
-					<p className="text-balance text-center text-lg text-muted-foreground leading-relaxed md:text-xl">
-						Have a project in mind? We'd love to hear from you. Send us a
-						message and we'll respond as soon as possible.
-					</p>
-				</div>
-			</section>
-
-			{/* Contact Section */}
-			<section className="dashed relative mx-auto max-w-7xl py-9 md:py-14">
-				<div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[1fr_1.2fr] md:px-0 lg:gap-12">
-					{/* Contact Information */}
-					<div className="space-y-8">
-						<div>
-							<h2 className="mb-4 font-display font-semibold text-3xl tracking-tight md:text-4xl">
-								Let's Connect
-							</h2>
-							<p className="text-balance text-lg text-muted-foreground leading-relaxed">
-								Whether you're looking to start a new project or just want to
-								learn more about our services, we're here to help.
-							</p>
-						</div>
-
-						<ServicesLists />
-
-						<div className="space-y-4">
-							<p className="font-medium text-muted-foreground">Follow Us</p>
-							<ul className="flex items-center gap-4">
-								{SOCIALS.map((social) => {
-									const Icon = social.icon;
-									return (
-										<li key={social.label}>
-											<Link
-												aria-label={social.label}
-												className="flex size-12 items-center justify-center rounded-lg bg-muted/20 text-foreground transition-colors hover:bg-primary hover:text-white"
-												href={social.href}
-											>
-												<Icon />
-											</Link>
-										</li>
-									);
-								})}
-							</ul>
-						</div>
-
-						<div className="rounded-2xl bg-card p-6 shadow-sm">
-							<h3 className="mb-2 font-medium text-xl">Office Hours</h3>
-							<p className="text-muted-foreground">
-								Monday - Friday: 9:00 AM - 6:00 PM GST
-							</p>
-							<p className="mt-2 text-muted-foreground">
-								Saturday: 10:00 AM - 4:00 PM GST
-							</p>
-						</div>
+			<section className="dashed dashed-x mx-auto max-w-7xl py-12">
+				<div className="container grid grid-cols-2 gap-4">
+					<div>
+						<Badge>Let’s Build Something That Works for Your Brand</Badge>
+						<h1 className="font-bold font-display text-7xl text-primary uppercase tracking-tight">
+							The right design partner for your next project
+						</h1>
+						<p className="text-balance text-muted-foreground text-xl">
+							Whether you’re planning a new launch, refreshing your brand,
+							scaling your marketing, or bringing your ideas to life across
+							digital and print — we’re ready.
+						</p>
+						<ContactList />
+						<Socials className="text-muted-foreground" />
 					</div>
-
 					{/* Contact Form */}
 					<Card className="shadow-sm">
 						<CardHeader className="p-6 pb-0">

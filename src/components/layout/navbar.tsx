@@ -5,8 +5,8 @@ import Link from "next/link";
 import { IconCaretRight } from "@/assets/icons/caret";
 import { Logo, Wordmark } from "@/assets/logo";
 
-import { Noise } from "../../shared/noise";
-import { Button } from "../../ui/button";
+import { Noise } from "../shared/noise";
+import { Button } from "../ui/button";
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -15,12 +15,12 @@ import {
 	NavigationMenuList,
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
-} from "../../ui/navigation-menu";
-import { NAV_LINKS } from "../data/constants";
-import { ListItem } from "./list-item";
-import { MobileNav } from "./mobile-navbar";
-import { ProductsNavbar } from "./products-navbar";
-import { ServicesNavbar } from "./services-navbar";
+} from "../ui/navigation-menu";
+import { NAV_LINKS } from "./data/constants";
+import { ListItem } from "./ui/list-item";
+import { MobileNav } from "./ui/mobile-navbar";
+import { ProductsNavbar } from "./ui/products-navbar";
+import { ServicesNavbar } from "./ui/services-navbar";
 
 export const Navbar = () => {
 	return (
@@ -81,9 +81,11 @@ export const Navbar = () => {
 					</NavigationMenu>
 				</div>
 				<div className="flex items-center gap-4">
-					<Button variant="secondary">
-						Start a project
-						<IconCaretRight className="hidden md:block" />
+					<Button asChild variant="secondary">
+						<Link href="/contact">
+							Start a project
+							<IconCaretRight className="hidden md:block" />
+						</Link>
 					</Button>
 					<MobileNav />
 				</div>

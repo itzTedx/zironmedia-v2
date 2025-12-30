@@ -1,0 +1,41 @@
+import Link from "next/link";
+
+import { cn } from "@/lib/utils";
+
+import { SOCIALS } from "../data/constants";
+
+export const Socials = ({
+	className,
+	...props
+}: React.ComponentProps<"div">) => {
+	return (
+		<div className="space-y-3" {...props}>
+			<p className={cn("font-medium text-brand-200", className)}>
+				Stay Connected
+			</p>
+			<ul className="flex items-center gap-4">
+				{SOCIALS.map((social) => (
+					<Social key={social.label} social={social} />
+				))}
+			</ul>
+		</div>
+	);
+};
+
+interface SocialProps {
+	social: (typeof SOCIALS)[number];
+}
+
+function Social({ social }: SocialProps) {
+	const Icon = social.icon;
+	return (
+		<li>
+			<Link
+				className="flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-dark transition-[filter] hover:brightness-125"
+				href={social.href}
+			>
+				<Icon />
+			</Link>
+		</li>
+	);
+}

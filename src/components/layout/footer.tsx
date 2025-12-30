@@ -4,13 +4,9 @@ import Link from "next/link";
 import { LogoMono, Wordmark } from "@/assets/logo";
 
 import { Noise } from "../shared/noise";
-import {
-	CONTACT,
-	FOOTER_LINKS,
-	FOOTER_META,
-	PARTNERS,
-	SOCIALS,
-} from "./data/constants";
+import { FOOTER_LINKS, FOOTER_META, PARTNERS } from "./data/constants";
+import { ContactList } from "./ui/contant-list";
+import { Socials } from "./ui/socials";
 
 // Static copyright year to avoid re-computation
 const currentYear = new Date().getFullYear();
@@ -29,45 +25,13 @@ export const Footer = () => {
 							We Build Digital Experiences That{" "}
 							<span className="text-brand-200">Convert Better, Faster.</span>
 						</h4>
-						<div className="space-y-3">
-							<p className="font-medium text-brand-200">Stay Connected</p>
-							<ul className="flex items-center gap-4">
-								{SOCIALS.map((social) => {
-									const Icon = social.icon;
-									return (
-										<li key={social.label}>
-											<Link
-												className="flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-dark transition-[filter] hover:brightness-125"
-												href={social.href}
-											>
-												<Icon />
-											</Link>
-										</li>
-									);
-								})}
-							</ul>
-						</div>
+						<Socials />
 					</div>
 				</div>
 
 				<div className="space-y-12 rounded-2xl bg-card p-6 shadow-sm md:space-y-20 md:p-12">
 					<div className="flex flex-col justify-between gap-12 md:flex-row md:gap-4">
-						<ul className="space-y-6">
-							{CONTACT.map((contact) => (
-								<li className="flex items-center gap-3" key={contact.label}>
-									<span className="w-12 font-mono text-muted-foreground text-xs uppercase leading-none tracking-tight">
-										{contact.label}
-										<span className="font-bold text-brand-secondary">.</span>
-									</span>
-									<Link
-										className="font-medium text-xl leading-none"
-										href={contact.href}
-									>
-										{contact.value}
-									</Link>
-								</li>
-							))}
-						</ul>
+						<ContactList />
 
 						<div className="flex gap-12">
 							{FOOTER_LINKS.map((l) => (
