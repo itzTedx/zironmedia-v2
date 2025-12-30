@@ -32,7 +32,7 @@ export const Navbar = () => {
 						href="/"
 					>
 						<Logo className="size-10" />
-						<Wordmark className="mt-1 h-5 w-fit text-white" isMono />
+						<Wordmark className="mt-1 h-4 w-fit text-white md:h-5" isMono />
 					</Link>
 					<NavigationMenu className="hidden md:flex">
 						<NavigationMenuList>
@@ -80,10 +80,11 @@ export const Navbar = () => {
 						</NavigationMenuList>
 					</NavigationMenu>
 				</div>
-				<div className="flex items-center gap-4">
+				<div className="flex items-center gap-2">
 					<Button asChild variant="secondary">
 						<Link href="/contact">
-							Start a project
+							<span className="hidden md:inline">Start a project</span>
+							<span className="md:hidden">Contact</span>
 							<IconCaretRight className="hidden md:block" />
 						</Link>
 					</Button>

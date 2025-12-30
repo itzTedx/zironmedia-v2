@@ -10,7 +10,7 @@ function Frame({
 	return (
 		<div
 			className={cn(
-				"relative flex flex-col gap-1.5 rounded-2xl bg-surface p-1.5",
+				"relative flex flex-col gap-1 rounded-2xl bg-surface p-1.5 md:gap-1.5",
 				stackedPanels
 					? "*:has-[+[data-slot=frame-panel]]:rounded-b-none *:has-[+[data-slot=frame-panel]]:before:hidden dark:*:has-[+[data-slot=frame-panel]]:before:block *:[[data-slot=frame-panel]+[data-slot=frame-panel]]:rounded-t-none *:[[data-slot=frame-panel]+[data-slot=frame-panel]]:border-t-0 dark:*:[[data-slot=frame-panel]+[data-slot=frame-panel]]:before:hidden"
 					: "*:[[data-slot=frame-panel]+[data-slot=frame-panel]]:mt-1",

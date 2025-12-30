@@ -39,7 +39,7 @@ export const Achievements = () => {
 					);
 				})}
 			</div>
-			<div className="dashed dashed-t-0 mx-auto max-w-7xl p-9" />
+			<div className="dashed dashed-t-0 mx-auto max-w-7xl p-6 md:p-9" />
 		</section>
 	);
 };

@@ -118,7 +118,7 @@ function MobileLink({
 
 	return (
 		<Link
-			className={cn("flex items-center gap-2 font-medium text-xl", className)}
+			className={cn("flex items-center gap-2 font-medium text-lg", className)}
 			href={href}
 			onClick={() => {
 				router.push(href);
@@ -128,7 +128,7 @@ function MobileLink({
 		>
 			{Icon && (
 				<div>
-					<Icon className="size-7 shrink-0 text-muted-foreground/70" />
+					<Icon className="size-6 shrink-0 text-muted-foreground/70" />
 				</div>
 			)}
 			{children}

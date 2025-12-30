@@ -60,7 +60,7 @@ export const Footer = () => {
 					</div>
 
 					<div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center md:gap-4">
-						<h5 className="max-w-xs text-balance font-medium text-primary text-xl tracking-tight md:text-2xl">
+						<h5 className="max-w-xs text-balance font-semibold text-primary text-xl tracking-tight md:text-2xl">
 							A friendly digital marketing company in Dubai
 						</h5>
 						<ul className="flex flex-wrap items-center gap-6">
@@ -78,9 +78,9 @@ export const Footer = () => {
 					</div>
 				</div>
 			</section>
-			<section className="dashed dashed-y mt-12">
+			<section className="dashed dashed-y mt-9 md:mt-12">
 				<div className="dashed dashed-x mx-auto max-w-7xl p-px">
-					<div className="flex flex-col items-center justify-between gap-8 bg-surface px-6 py-9 text-center md:flex-row md:text-left">
+					<div className="flex flex-col items-center justify-between gap-4 bg-surface px-6 py-6 text-center md:flex-row md:gap-8 md:py-9 md:text-left">
 						<p className="w-full">
 							© {currentYear} Ziron Media. All rights reserved.
 						</p>
@@ -91,7 +91,7 @@ export const Footer = () => {
 							/>
 						</Link>
 
-						<ul className="flex w-full flex-wrap items-center justify-center gap-x-7 gap-y-2 md:justify-end">
+						<ul className="flex w-full flex-wrap items-center justify-center gap-2 md:justify-end">
 							{FOOTER_META.map((meta) => (
 								<li key={meta.label}>
 									<Link
@@ -106,7 +106,7 @@ export const Footer = () => {
 					</div>
 				</div>
 			</section>
-			<div className="dashed dashed-x mx-auto h-12 max-w-7xl" />
+			<div className="dashed dashed-x mx-auto h-6 max-w-7xl md:h-12" />
 		</footer>
 	);
 };

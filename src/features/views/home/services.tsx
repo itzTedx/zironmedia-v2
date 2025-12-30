@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
@@ -7,7 +9,7 @@ import { ServicesLists } from "../../services/components/service-list";
 export const Services = () => {
 	return (
 		<section className="relative">
-			<header className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-12 md:flex-row md:px-0 md:py-16">
+			<header className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-12 md:flex-row md:gap-6 md:px-0 md:py-16">
 				<h2 className="shrink-0 text-center font-display font-semibold text-4xl text-primary uppercase tracking-tight md:text-left md:text-6xl lg:text-8xl">
 					With our services
 				</h2>
@@ -18,9 +20,11 @@ export const Services = () => {
 
 			<ServicesLists />
 
-			<div className="flex items-center justify-center py-12">
-				<Button className="text-muted-foreground" variant="secondary">
-					Build your vision with us <IconArrowRightTag />
+			<div className="flex items-center justify-center pb-9 md:py-12">
+				<Button asChild className="text-muted-foreground" variant="secondary">
+					<Link href="/services">
+						Build your vision with us <IconArrowRightTag />
+					</Link>
 				</Button>
 			</div>
 			<div className="absolute inset-x-0 top-0 -z-10 h-1/4 bg-linear-180 from-white" />

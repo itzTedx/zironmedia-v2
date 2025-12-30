@@ -29,7 +29,7 @@ export const Hero = () => {
 					and everything in between.
 				</p>
 
-				<div className="relative z-99 flex items-center gap-4 md:w-auto">
+				<div className="relative z-99 flex w-full items-center gap-4 md:w-auto">
 					<Button
 						asChild
 						className="w-full flex-1 justify-between gap-2 md:w-60"
@@ -51,7 +51,7 @@ export const Hero = () => {
 						variant="secondary"
 					>
 						<span>See us in action</span>
-						<IconPlay className="size-5" />
+						<IconPlay className="hidden size-5 md:inline" />
 					</Button>
 				</div>
 			</div>

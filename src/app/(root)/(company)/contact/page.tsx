@@ -80,7 +80,7 @@ export default function ContactPage() {
 								</p>
 							</FrameTitle>
 						</FrameHeader>
-						<div className="grid grid-cols-2 gap-4">
+						<div className="grid gap-4 md:grid-cols-2">
 							<FramePanel>
 								<span className="w-12 font-mono text-muted-foreground text-xs uppercase leading-none tracking-tight">
 									Address
@@ -108,7 +108,7 @@ export default function ContactPage() {
 			</section>
 
 			<section className="dashed dashed-y relative">
-				<div className="mx-auto grid max-w-7xl grid-cols-3 gap-4 py-16">
+				<div className="mx-auto grid max-w-7xl gap-4 py-16 md:grid-cols-3">
 					<div className="">
 						<h2>How we help you grow</h2>
 						<p>
@@ -124,7 +124,7 @@ export default function ContactPage() {
 
 						<p>No handoffs. No silos. Just progress.</p>
 					</div>
-					<div className="col-span-2 grid grid-cols-3 gap-3">
+					<div className="col-span-2 grid grid-cols-1 gap-1 md:grid-cols-3 md:gap-3">
 						{SERVICES.map(({ icon: Icon, ...service }) => {
 							return (
 								<Frame key={service.id}>
