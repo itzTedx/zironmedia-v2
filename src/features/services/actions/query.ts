@@ -1,4 +1,4 @@
-import { SERVICES } from "@/data/constant";
+import { SERVICES } from "@/features/services/constant";
 import { slugify } from "@/lib/slugify";
 
 export function findServiceBySlug(slug: string) {

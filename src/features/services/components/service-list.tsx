@@ -12,7 +12,7 @@ import {
 } from "@/components/primitives/preview-link-card";
 import { Noise } from "@/components/shared/noise";
 
-import { SERVICES } from "@/data/constant";
+import { SERVICES } from "@/features/services/constant";
 
 export const ServiceList = ({
 	service,
@@ -42,13 +42,19 @@ export const ServiceList = ({
 			<ul className="space-y-3">
 				{service.lists.map((list) => (
 					<li className="isolate text-lg" key={list.title}>
-						<PreviewLinkCard followCursor="x" href={list.href} src={list.image}>
+						<PreviewLinkCard
+							followCursor="x"
+							href={`/services/${service.slug}/${list.slug}` as Route}
+							src={list.image}
+						>
 							<PreviewLinkCardTrigger delay={100}>
 								{list.title}
 							</PreviewLinkCardTrigger>
 							<PreviewLinkCardPortal>
 								<PreviewLinkCardPositioner>
-									<PreviewLinkCardPopup href={list.href}>
+									<PreviewLinkCardPopup
+										href={`/services/${service.slug}/${list.slug}` as Route}
+									>
 										<PreviewLinkCardImage alt="Preview link card content" />
 									</PreviewLinkCardPopup>
 								</PreviewLinkCardPositioner>

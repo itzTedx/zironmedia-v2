@@ -1,3 +1,4 @@
+import { Route } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
-import { SERVICES } from "@/data/constant";
+import { SERVICES } from "@/features/services/constant";
 
 function slugify(text: string): string {
 	return text
@@ -123,7 +124,7 @@ export default function ServicesPage() {
 										<li className="text-lg" key={list.title}>
 											<PreviewLinkCard
 												followCursor="x"
-												href={list.href}
+												href={`/services/${service.slug}/${list.slug}` as Route}
 												src={service.image}
 											>
 												<PreviewLinkCardTrigger delay={100}>
@@ -131,7 +132,11 @@ export default function ServicesPage() {
 												</PreviewLinkCardTrigger>
 												<PreviewLinkCardPortal>
 													<PreviewLinkCardPositioner>
-														<PreviewLinkCardPopup href={list.href}>
+														<PreviewLinkCardPopup
+															href={
+																`/services/${service.slug}/${list.slug}` as Route
+															}
+														>
 															<PreviewLinkCardImage alt="Preview link card content" />
 														</PreviewLinkCardPopup>
 													</PreviewLinkCardPositioner>

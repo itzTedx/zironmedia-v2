@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Route } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import {
@@ -11,14 +12,13 @@ import {
 	PreviewLinkCardTrigger,
 } from "@/components/primitives/preview-link-card";
 import { Noise } from "@/components/shared/noise";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import { IconArrowRightTag } from "@/assets/icons/arrow";
+import { IconArrowLeft, IconArrowRightTag } from "@/assets/icons/arrow";
 
-import { SERVICES } from "@/data/constant";
 import { siteConfig } from "@/data/site-config";
 import { findServiceBySlug } from "@/features/services/actions/query";
+import { SERVICES } from "@/features/services/constant";
 
 type PageProps = {
 	params: Promise<{ slug: string }>;
@@ -77,10 +77,16 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 				<header className="dashed dashed-x relative z-10 mx-auto max-w-7xl py-12 md:py-16">
 					<div className="container grid grid-cols-2 gap-6">
 						<div>
-							<Badge>
-								<div className="size-1.5 rounded-full bg-brand-secondary" />
-								Service Category
-							</Badge>
+							<Button asChild className="flex w-fit gap-2" variant="ghost">
+								<Link href="/services">
+									<IconArrowLeft
+										aria-hidden="true"
+										className="transition-transform group-hover/button:-translate-x-1"
+									/>
+									Back to Services
+								</Link>
+							</Button>
+
 							<h1 className="max-w-5xl font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
 								{service.title}
 							</h1>
@@ -124,7 +130,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 									>
 										<PreviewLinkCard
 											followCursor="x"
-											href={list.href}
+											href={`/services/${service.slug}/${list.slug}` as Route}
 											src={service.image}
 										>
 											<div className="flex items-center justify-between gap-4">
@@ -142,7 +148,11 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 											</div>
 											<PreviewLinkCardPortal>
 												<PreviewLinkCardPositioner>
-													<PreviewLinkCardPopup href={list.href}>
+													<PreviewLinkCardPopup
+														href={
+															`/services/${service.slug}/${list.slug}` as Route
+														}
+													>
 														<PreviewLinkCardImage alt="Preview link card content" />
 													</PreviewLinkCardPopup>
 												</PreviewLinkCardPositioner>

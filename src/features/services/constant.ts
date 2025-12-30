@@ -9,27 +9,27 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Logo Design",
-				href: "/",
+				slug: "logo-design",
 				image: "/images/services/branding.jpg",
 			},
 			{
 				title: "Brand Guidelines",
-				href: "/",
+				slug: "brand-guidelines",
 				image: "/images/services/branding.jpg",
 			},
 			{
 				title: "Pitch Decks",
-				href: "/",
+				slug: "pitch-decks",
 				image: "/images/services/branding.jpg",
 			},
 			{
 				title: "Packaging Design",
-				href: "/",
+				slug: "packaging-design",
 				image: "/images/services/branding.jpg",
 			},
 			{
 				title: "Brand Revamps",
-				href: "/",
+				slug: "brand-revamps",
 				image: "/images/services/branding.jpg",
 			},
 		],
@@ -44,22 +44,22 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Website Design & Development",
-				href: "/",
+				slug: "design-and-dev",
 				image: "/images/services/website.jpg",
 			},
 			{
 				title: "Web Revamps",
-				href: "/",
+				slug: "web-revamps",
 				image: "/images/services/website.jpg",
 			},
 			{
 				title: "Search Engine Optimization (SEO)",
-				href: "/",
+				slug: "seo",
 				image: "/images/services/website.jpg",
 			},
 			{
 				title: "Website Management",
-				href: "/",
+				slug: "management",
 				image: "/images/services/website.jpg",
 			},
 		],
@@ -74,17 +74,17 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Social Media Creatives",
-				href: "/",
+				slug: "social-media",
 				image: "/images/services/social.jpg",
 			},
 			{
 				title: "Content Strategy",
-				href: "/",
+				slug: "content-strategy",
 				image: "/images/services/social.jpg",
 			},
 			{
 				title: "Paid Ads",
-				href: "/",
+				slug: "paid-ads",
 				image: "/images/services/social.jpg",
 			},
 		],
@@ -99,27 +99,27 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Offset & Digital Printing",
-				href: "/",
+				slug: "offset-and-digial",
 				image: "/images/services/printing.jpg",
 			},
 			{
 				title: "Merchandise",
-				href: "/",
+				slug: "merchandise",
 				image: "/images/services/printing.jpg",
 			},
 			{
 				title: "Custom Corporate Gifts",
-				href: "/",
+				slug: "custom-corporate-gifts",
 				image: "/images/services/printing.jpg",
 			},
 			{
 				title: "Stationary & Corporate Identity",
-				href: "/",
+				slug: "stationary-and-corporate-identity",
 				image: "/images/services/printing.jpg",
 			},
 			{
 				title: "Stickers",
-				href: "/",
+				slug: "stickers",
 				image: "/images/services/printing.jpg",
 			},
 		],
@@ -134,22 +134,22 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Motion Graphics",
-				href: "/",
+				slug: "motion-graphics",
 				image: "/images/services/motion.avif",
 			},
 			{
 				title: "Explainer Videos",
-				href: "/",
+				slug: "explainer-videos",
 				image: "/images/services/motion.avif",
 			},
 			{
 				title: "Brand Launch Videos",
-				href: "/",
+				slug: "brand-launch-videos",
 				image: "/images/services/motion.avif",
 			},
 			// {
 			// 	title: "Interactive Presentations",
-			// 	href: "/",
+			// 	slug: "/",
 			// 	image: "/images/services/motion.avif",
 			// },
 		],
@@ -164,47 +164,47 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Marketing & Growth Strategy",
-				href: "/",
+				slug: "marketing-and-growth-strategy",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Emails & Newsletters",
-				href: "/",
+				slug: "emails-and-newsletters",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Copywriting",
-				href: "/",
+				slug: "copywriting",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Technical Content Writing",
-				href: "/",
+				slug: "technical-content-writing",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Campaigns",
-				href: "/",
+				slug: "campaigns",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Social Media Management",
-				href: "/",
+				slug: "social-media-management",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Community, Events, Podcasts",
-				href: "/",
+				slug: "community-events-podcasts",
 				image: "/images/services/full-stack.webp",
 			},
 			{
 				title: "Strategic Partnerships",
-				href: "/",
+				slug: "strategic-partnerships",
 				image: "/images/services/full-stack.webp",
 			},
 			// {
 			// 	title: "Personal Brand Management",
-			// 	href: "/",
+			// 	slug: "/",
 			// 	image: "/images/services/full-stack.webp",
 			// },
 		],

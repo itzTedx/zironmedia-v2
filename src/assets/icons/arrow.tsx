@@ -17,3 +17,24 @@ export const IconArrowRightTag = (props: SVGProps) => {
 		</svg>
 	);
 };
+
+export const IconArrowLeft = (props: SVGProps) => {
+	return (
+		<svg
+			{...props}
+			fill="none"
+			height="24"
+			viewBox="0 0 24 24"
+			width="24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M10.25 6.75L4.75 12L10.25 17.25M19.25 12H5"
+				stroke="currentColor"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeWidth="1.5"
+			/>
+		</svg>
+	);
+};
