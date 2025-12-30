@@ -35,7 +35,7 @@ export default function ContactPage() {
 					<div className="space-y-9 py-4 md:py-6">
 						<div className="space-y-2">
 							<Badge>Let’s Build Something That Works for Your Brand</Badge>
-							<h1 className="font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
+							<h1 className="font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-7xl">
 								The right partner for your next project
 							</h1>
 							<p className="text-balance font-medium text-lg text-muted-foreground leading-relaxed *:text-foreground md:text-xl">
