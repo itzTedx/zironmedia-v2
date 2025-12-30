@@ -1,8 +1,11 @@
-import { CONTACT, SOCIALS } from "@/components/layout/data/constants";
+import Link from "next/link";
+
+import { SOCIALS } from "@/components/layout/data/constants";
 import { Noise } from "@/components/shared/noise";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { ContactForm } from "@/features/contact/components/contact-form";
+import { ServicesLists } from "@/features/views/home/components/service-list";
 
 export default function ContactPage() {
 	return (
@@ -36,22 +39,7 @@ export default function ContactPage() {
 							</p>
 						</div>
 
-						<div className="space-y-6">
-							{CONTACT.map((contact) => (
-								<div className="space-y-2" key={contact.label}>
-									<span className="font-mono text-muted-foreground text-xs uppercase leading-none tracking-tight">
-										{contact.label}
-										<span className="font-bold text-brand-secondary">.</span>
-									</span>
-									<a
-										className="block font-medium text-xl leading-none transition-colors hover:text-primary"
-										href={contact.href}
-									>
-										{contact.value}
-									</a>
-								</div>
-							))}
-						</div>
+						<ServicesLists />
 
 						<div className="space-y-4">
 							<p className="font-medium text-muted-foreground">Follow Us</p>
@@ -60,13 +48,13 @@ export default function ContactPage() {
 									const Icon = social.icon;
 									return (
 										<li key={social.label}>
-											<a
+											<Link
 												aria-label={social.label}
 												className="flex size-12 items-center justify-center rounded-lg bg-muted/20 text-foreground transition-colors hover:bg-primary hover:text-white"
 												href={social.href}
 											>
 												<Icon />
-											</a>
+											</Link>
 										</li>
 									);
 								})}
