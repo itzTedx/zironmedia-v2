@@ -1,31 +1,9 @@
-import { Route } from "next";
-import Image from "next/image";
-import Link from "next/link";
-
-import {
-	PreviewLinkCard,
-	PreviewLinkCardImage,
-	PreviewLinkCardPopup,
-	PreviewLinkCardPortal,
-	PreviewLinkCardPositioner,
-	PreviewLinkCardTrigger,
-} from "@/components/primitives/preview-link-card";
-import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
-import { SERVICES } from "@/features/services/constant";
-
-function slugify(text: string): string {
-	return text
-		.toLowerCase()
-		.replace(/[^\w\s-]/g, "")
-		.replace(/\s+/g, "-")
-		.replace(/-+/g, "-")
-		.trim();
-}
+import { ServicesLists } from "@/features/services/components/service-list";
 
 export default function ServicesPage() {
 	return (
@@ -90,81 +68,7 @@ export default function ServicesPage() {
 				</div>
 			</section>
 			<section className="dashed dashed-t relative">
-				<ul className="relative z-10">
-					{SERVICES.map((service) => (
-						<li
-							className="group border-t px-6 py-10 transition-all hover:bg-card hover:pb-14 md:px-0"
-							key={service.id}
-						>
-							<div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
-								<div className="relative h-fit overflow-hidden">
-									<div className="transition-transform md:group-hover:-translate-y-full">
-										<span className="text-2xl text-muted">
-											0{service.id}
-											<span className="font-bold text-primary">.</span>
-										</span>
-										<Link href={`/services/${slugify(service.title)}`}>
-											<h2 className="font-medium text-2xl transition-colors hover:text-primary md:text-3xl">
-												{service.title}
-											</h2>
-										</Link>
-										<p className="hidden opacity-0 md:block">
-											{service.description}
-										</p>
-									</div>
-									<div className="absolute top-0 hidden translate-y-[150%] transition-transform md:block md:group-hover:translate-y-0">
-										<Link href={`/services/${slugify(service.title)}`}>
-											<h2 className="font-medium text-3xl transition-colors hover:text-primary">
-												{service.title}
-											</h2>
-										</Link>
-										<p>{service.description}</p>
-									</div>
-									<p className="mt-2 text-muted-foreground md:hidden">
-										{service.description}
-									</p>
-								</div>
-
-								<ul className="space-y-3">
-									{service.lists.map((list) => (
-										<li className="text-lg" key={list.title}>
-											<PreviewLinkCard
-												followCursor="x"
-												href={`/services/${service.slug}/${list.slug}` as Route}
-												src={service.image}
-											>
-												<PreviewLinkCardTrigger delay={100}>
-													{list.title}
-												</PreviewLinkCardTrigger>
-												<PreviewLinkCardPortal>
-													<PreviewLinkCardPositioner>
-														<PreviewLinkCardPopup
-															href={
-																`/services/${service.slug}/${list.slug}` as Route
-															}
-														>
-															<PreviewLinkCardImage alt="Preview link card content" />
-														</PreviewLinkCardPopup>
-													</PreviewLinkCardPositioner>
-												</PreviewLinkCardPortal>
-											</PreviewLinkCard>
-										</li>
-									))}
-								</ul>
-
-								<div className="relative aspect-5/3 overflow-hidden rounded-xl transition-transform group-hover:scale-110">
-									<Noise />
-									<Image
-										alt={service.title}
-										className="object-cover"
-										fill
-										src={service.image}
-									/>
-								</div>
-							</div>
-						</li>
-					))}
-				</ul>
+				<ServicesLists />
 
 				<div className="dashed dashed-t-0 flex items-center justify-center py-12">
 					<Button className="text-muted-foreground" variant="secondary">

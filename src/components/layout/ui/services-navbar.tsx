@@ -1,5 +1,6 @@
 "use client";
 
+import { Route } from "next";
 import Link from "next/link";
 
 import { Submenu } from "../data/types";
@@ -14,7 +15,7 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 						<li key={sub.id}>
 							<Link
 								className="flex items-center gap-2 rounded-lg p-1 hover:bg-background"
-								href={sub.href}
+								href={`/services${sub.href}` as Route}
 							>
 								<div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-background">
 									<Icon className="size-8 text-muted" />
