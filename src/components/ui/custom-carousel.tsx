@@ -32,7 +32,7 @@ type DotButtonProps = {
 	onClick: () => void;
 };
 
-const transition: Transition = {
+const TRANSITION: Transition = {
 	type: "spring",
 	stiffness: 240,
 	damping: 24,
@@ -128,7 +128,7 @@ function MotionCarousel(props: PropType) {
 									}}
 									className="size-full select-none"
 									initial={false}
-									transition={transition}
+									transition={TRANSITION}
 								>
 									{children}
 								</motion.div>
@@ -168,7 +168,7 @@ function DotButton({ selected = false, onClick }: DotButtonProps) {
 			initial={false}
 			layout
 			onClick={onClick}
-			transition={transition}
+			transition={TRANSITION}
 			type="button"
 		>
 			<motion.span
@@ -180,10 +180,10 @@ function DotButton({ selected = false, onClick }: DotButtonProps) {
 				className="block size-3 whitespace-nowrap"
 				initial={false}
 				layout
-				transition={transition}
+				transition={TRANSITION}
 			/>
 		</motion.button>
 	);
 }
 
-export { MotionCarousel };
+export { MotionCarousel, useEmblaControls, DotButton, TRANSITION };

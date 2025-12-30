@@ -20,9 +20,14 @@ export const ServiceList = ({
 	service: (typeof SERVICES)[number];
 }) => {
 	return (
-		<div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+		<div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+			<Link
+				className="absolute inset-0 z-10"
+				href={`/services/${service.slug}` as Route}
+				title={service.title}
+			/>
 			<div className="relative h-fit overflow-hidden">
-				<div className="transition-transform md:group-hover:-translate-y-full">
+				<div className="transition-transform duration-300 ease-out md:group-hover:-translate-y-full">
 					<span className="text-2xl text-muted">
 						0{service.id}
 						<span className="font-bold text-primary">.</span>
@@ -30,7 +35,7 @@ export const ServiceList = ({
 					<h3 className="font-medium text-2xl md:text-3xl">{service.title}</h3>
 					<p className="hidden opacity-0 md:block">{service.description}</p>
 				</div>
-				<div className="absolute top-0 hidden translate-y-[150%] transition-transform md:block md:group-hover:translate-y-0">
+				<div className="absolute top-0 hidden translate-y-[150%] transition-transform duration-300 ease-out md:block md:group-hover:translate-y-0">
 					<h3 className="font-medium text-3xl">{service.title}</h3>
 					<p>{service.description}</p>
 				</div>
@@ -39,7 +44,7 @@ export const ServiceList = ({
 				</p>
 			</div>
 
-			<ul className="relative isolate z-10 space-y-3">
+			<ul className="relative isolate z-10 h-fit space-y-3">
 				{service.lists.map((list) => (
 					<li className="text-lg" key={list.title}>
 						<PreviewLinkCard
@@ -84,10 +89,6 @@ export const ServicesLists = () => {
 					className="group relative border-t px-6 py-10 transition-all hover:bg-card hover:pb-14 md:px-0"
 					key={service.id}
 				>
-					<Link
-						className="absolute inset-0 z-10"
-						href={`/services/${service.slug}` as Route}
-					/>
 					<ServiceList service={service} />
 				</li>
 			))}

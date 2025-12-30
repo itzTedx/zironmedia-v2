@@ -2,6 +2,7 @@
 
 import * as React from "react";
 
+import { EmblaCarouselType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel, {
 	type UseEmblaCarouselType,
@@ -48,79 +49,82 @@ function useCarousel() {
 	return context;
 }
 
-// type EmblaControls = {
-// 	selectedIndex: number;
-// 	scrollSnaps: number[];
-// 	prevDisabled: boolean;
-// 	nextDisabled: boolean;
-// 	onDotClick: (index: number) => void;
-// 	onPrev: () => void;
-// 	onNext: () => void;
-// };
+type EmblaControls = {
+	selectedIndex: number;
+	scrollSnaps: number[];
+	prevDisabled: boolean;
+	nextDisabled: boolean;
+	onDotClick: (index: number) => void;
+	onPrev: () => void;
+	onNext: () => void;
+};
 
 type DotButtonProps = {
 	selected?: boolean;
-	label: string;
 	onClick: () => void;
 };
 
-const transition: Transition = {
+const TRANSITION: Transition = {
 	type: "spring",
 	stiffness: 240,
 	damping: 24,
 	mass: 1,
 };
 
-// const useEmblaControls = (emblaApi: CarouselApi): EmblaControls => {
-// 	const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
-// 	const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
-// 	const [prevDisabled, setPrevDisabled] = React.useState(true);
-// 	const [nextDisabled, setNextDisabled] = React.useState(true);
+const useEmblaControls = (
+	emblaApi: EmblaCarouselType | undefined
+): EmblaControls => {
+	const [selectedIndex, setSelectedIndex] = React.useState(0);
+	const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+	const [prevDisabled, setPrevDisabled] = React.useState(true);
+	const [nextDisabled, setNextDisabled] = React.useState(true);
 
-// 	const onDotClick = React.useCallback(
-// 		(index: number) => emblaApi?.scrollTo(index),
-// 		[emblaApi]
-// 	);
+	const onDotClick = React.useCallback(
+		(index: number) => emblaApi?.scrollTo(index),
+		[emblaApi]
+	);
 
-// 	const onPrev = React.useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-// 	const onNext = React.useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+	const onPrev = React.useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+	const onNext = React.useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-// 	const updateSelectionState = (api: CarouselApi) => {
-// 		setSelectedIndex(api?.selectedScrollSnap() ?? 0);
-// 		setPrevDisabled(!api?.canScrollPrev());
-// 		setNextDisabled(!api?.canScrollNext());
-// 	};
+	const updateSelectionState = (api: EmblaCarouselType) => {
+		setSelectedIndex(api.selectedScrollSnap());
+		setPrevDisabled(!api.canScrollPrev());
+		setNextDisabled(!api.canScrollNext());
+	};
 
-// 	const onInit = React.useCallback((api: CarouselApi) => {
-// 		setScrollSnaps(api?.scrollSnapList() ?? [0]);
-// 		updateSelectionState(api);
-// 	}, []);
+	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to re-render when api prop changes
+	const onInit = React.useCallback((api: EmblaCarouselType) => {
+		setScrollSnaps(api.scrollSnapList());
+		updateSelectionState(api);
+	}, []);
 
-// 	const onSelect = React.useCallback((api: CarouselApi) => {
-// 		updateSelectionState(api);
-// 	}, []);
+	// biome-ignore lint/correctness/useExhaustiveDependencies: No need to re-render when api prop changes
+	const onSelect = React.useCallback((api: EmblaCarouselType) => {
+		updateSelectionState(api);
+	}, []);
 
-// 	React.useEffect(() => {
-// 		if (!emblaApi) return;
+	React.useEffect(() => {
+		if (!emblaApi) return;
 
-// 		onInit(emblaApi);
-// 		emblaApi.on("reInit", onInit).on("select", onSelect);
+		onInit(emblaApi);
+		emblaApi.on("reInit", onInit).on("select", onSelect);
 
-// 		return () => {
-// 			emblaApi.off("reInit", onInit).off("select", onSelect);
-// 		};
-// 	}, [emblaApi, onInit, onSelect]);
+		return () => {
+			emblaApi.off("reInit", onInit).off("select", onSelect);
+		};
+	}, [emblaApi, onInit, onSelect]);
 
-// 	return {
-// 		selectedIndex,
-// 		scrollSnaps,
-// 		prevDisabled,
-// 		nextDisabled,
-// 		onDotClick,
-// 		onPrev,
-// 		onNext,
-// 	};
-// };
+	return {
+		selectedIndex,
+		scrollSnaps,
+		prevDisabled,
+		nextDisabled,
+		onDotClick,
+		onPrev,
+		onNext,
+	};
+};
 
 function Carousel({
 	orientation = "horizontal",
@@ -322,18 +326,21 @@ function CarouselNext({
 	);
 }
 
-function DotButton({ selected = false, label, onClick }: DotButtonProps) {
+function DotButton({ selected = false, onClick }: DotButtonProps) {
 	return (
 		<motion.button
-			animate={{
-				width: selected ? 68 : 12,
-				height: selected ? 28 : 12,
-			}}
-			className="flex cursor-pointer select-none items-center justify-center rounded-full border-none bg-primary text-primary-foreground text-sm"
+			// animate={{
+			// 	width: selected ? 68 : 12,
+			// 	height: selected ? 28 : 12,
+			// }}
+			className={cn(
+				"flex cursor-pointer select-none items-center justify-center rounded-full border-none bg-primary shadow-sm transition-colors",
+				selected ? "bg-white" : "bg-surface"
+			)}
 			initial={false}
 			layout
 			onClick={onClick}
-			transition={transition}
+			transition={TRANSITION}
 			type="button"
 		>
 			<motion.span
@@ -342,13 +349,11 @@ function DotButton({ selected = false, label, onClick }: DotButtonProps) {
 					scale: selected ? 1 : 0,
 					filter: selected ? "blur(0)" : "blur(4px)",
 				}}
-				className="block whitespace-nowrap px-3 py-1"
+				className="block size-3 whitespace-nowrap"
 				initial={false}
 				layout
-				transition={transition}
-			>
-				{label}
-			</motion.span>
+				transition={TRANSITION}
+			/>
 		</motion.button>
 	);
 }
@@ -361,5 +366,7 @@ export {
 	CarouselPrevious,
 	CarouselNext,
 	useCarousel,
+	useEmblaControls,
 	DotButton,
+	TRANSITION,
 };
