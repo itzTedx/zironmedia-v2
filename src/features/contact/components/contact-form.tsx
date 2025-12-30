@@ -14,6 +14,7 @@ import {
 	FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { LoadingSwap } from "@/components/ui/loading-swap";
 import { Textarea } from "@/components/ui/textarea";
 
 import { submitContactForm } from "../actions";
@@ -78,7 +79,7 @@ export function ContactForm() {
 					render={({ field, fieldState }) => (
 						<Field data-invalid={fieldState.invalid}>
 							<FieldLabel htmlFor="contact-form-email">
-								Email Address <span className="text-destructive">*</span>
+								Email Address<span className="text-destructive">*</span>
 							</FieldLabel>
 							<Input
 								{...field}
@@ -109,10 +110,7 @@ export function ContactForm() {
 								placeholder="+971 58 171 1486"
 								type="tel"
 							/>
-							<FieldDescription>
-								Optional. Include your phone number if you'd like us to call
-								you.
-							</FieldDescription>
+
 							{fieldState.invalid && <FieldError errors={[fieldState.error]} />}
 						</Field>
 					)}
@@ -164,16 +162,8 @@ export function ContactForm() {
 				/>
 
 				<Field className="pt-2" orientation="horizontal">
-					<Button
-						disabled={isPending}
-						onClick={() => form.reset()}
-						type="button"
-						variant="outline"
-					>
-						Reset
-					</Button>
 					<Button disabled={isPending} form="contact-form" type="submit">
-						{isPending ? "Sending..." : "Send Message"}
+						<LoadingSwap isLoading={isPending}>Send Message</LoadingSwap>
 					</Button>
 				</Field>
 			</FieldGroup>
