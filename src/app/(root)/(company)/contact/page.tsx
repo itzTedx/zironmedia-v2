@@ -30,15 +30,15 @@ import { SERVICES } from "@/features/services/constant";
 export default function ContactPage() {
 	return (
 		<main>
-			<section className="dashed dashed-x mx-auto max-w-7xl py-12">
+			<section className="dashed dashed-x mx-auto max-w-7xl py-4 md:py-12">
 				<div className="container grid gap-4 md:grid-cols-2">
-					<div className="space-y-9 py-6">
+					<div className="space-y-9 py-4 md:py-6">
 						<div className="space-y-2">
 							<Badge>Let’s Build Something That Works for Your Brand</Badge>
-							<h1 className="font-bold font-display text-7xl text-primary uppercase leading-[0.9]">
+							<h1 className="font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
 								The right partner for your next project
 							</h1>
-							<p className="text-balance font-medium text-muted-foreground text-xl leading-relaxed *:text-foreground">
+							<p className="text-balance font-medium text-lg text-muted-foreground leading-relaxed *:text-foreground md:text-xl">
 								Whether you’re planning a{" "}
 								<span>
 									new launch, refreshing your brand, scaling your marketing,
@@ -108,9 +108,11 @@ export default function ContactPage() {
 			</section>
 
 			<section className="dashed dashed-y relative">
-				<div className="mx-auto grid max-w-7xl gap-4 py-16 md:grid-cols-3">
+				<div className="mx-auto grid max-w-7xl gap-4 px-6 py-9 md:grid-cols-3 md:px-0 md:py-16">
 					<div className="">
-						<h2>How we help you grow</h2>
+						<h2 className="font-semibold text-2xl tracking-tight">
+							How we help you grow
+						</h2>
 						<p>
 							We help businesses turn ideas into clear brand systems and growth
 							engines.
