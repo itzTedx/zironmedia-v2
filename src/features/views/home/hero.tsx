@@ -20,7 +20,7 @@ export const Hero = () => {
 				<h1 className="text-center font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
 					Turn your brand into a revenue machine
 				</h1>
-				<p className="text-balance text-center text-lg text-muted-foreground leading-relaxed md:text-xl">
+				<p className="text-balance text-center font-medium text-lg text-muted-foreground leading-relaxed md:text-xl">
 					We’re your full-stack creative & digital marketing partner from{" "}
 					<span className="text-foreground">
 						branding to websites, CRM software, social media, printing,
@@ -61,19 +61,19 @@ export const Hero = () => {
 					<div className="flex size-12 items-center justify-center rounded-lg bg-muted/20">
 						<IconClock className="size-8" />
 					</div>
-					48 Hours Delivery
+					<p>48 Hours Delivery</p>
 				</li>
 				<li className="dashed dashed-b md:dashed-b-0 md:dashed-x flex w-full items-center justify-center gap-2 p-6">
 					<div className="flex size-12 items-center justify-center rounded-lg bg-muted/20">
 						<IconClock className="size-8" />
 					</div>
-					One Partner for Digital & Print
+					<p>One Partner for Digital & Print</p>
 				</li>
 				<li className="flex w-full items-center justify-center gap-2 p-6">
 					<div className="flex size-12 items-center justify-center rounded-lg bg-muted/20">
 						<IconClock className="size-8" />
 					</div>
-					Scalable Creative Support
+					<p>Scalable Creative Support</p>
 				</li>
 			</ul>
 		</section>

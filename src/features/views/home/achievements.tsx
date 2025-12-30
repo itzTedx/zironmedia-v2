@@ -12,7 +12,7 @@ export const Achievements = () => {
 	return (
 		<section className="dashed dashed-y">
 			<header className="dashed dashed-t-0 mx-auto max-w-7xl p-6 text-center md:p-14">
-				<h2 className="font-display font-semibold text-4xl tracking-tight md:text-6xl">
+				<h2 className="font-display font-semibold text-4xl text-primary tracking-tight md:text-6xl">
 					Our Achievement
 				</h2>
 				<p className="text-">

@@ -207,9 +207,16 @@
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50 tracking-tight;
+		@apply border-border outline-ring/50;
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	h1 {
+		@apply tracking-tighter;
+	}
+	p {
+		@apply tracking-tight;
 	}
 }

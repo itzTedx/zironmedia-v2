@@ -32,7 +32,9 @@ export const ServiceList = ({
 						0{service.id}
 						<span className="font-bold text-primary">.</span>
 					</span>
-					<h3 className="font-medium text-2xl md:text-3xl">{service.title}</h3>
+					<h3 className="font-medium text-2xl tracking-tight md:text-3xl">
+						{service.title}
+					</h3>
 					<p className="hidden opacity-0 md:block">{service.description}</p>
 				</div>
 				<div className="absolute top-0 hidden translate-y-[150%] transition-transform duration-300 ease-out md:block md:group-hover:translate-y-0">
@@ -53,7 +55,7 @@ export const ServiceList = ({
 							src={list.image}
 						>
 							<PreviewLinkCardTrigger
-								className="transition-colors duration-300 ease-out hover:text-brand-secondary"
+								className="tracking-tight transition-colors duration-300 ease-out hover:text-brand-secondary"
 								delay={100}
 							>
 								{list.title}
