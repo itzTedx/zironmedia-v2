@@ -31,7 +31,7 @@ function Social({ social }: SocialProps) {
 	return (
 		<li>
 			<Link
-				className="flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-dark transition-[filter] hover:brightness-125"
+				className="flex size-12 items-center justify-center rounded-lg bg-gray-1300 text-white shadow-dark transition-[filter,background-color] duration-300 ease-out hover:bg-brand-secondary hover:brightness-125"
 				href={social.href}
 			>
 				<Icon />

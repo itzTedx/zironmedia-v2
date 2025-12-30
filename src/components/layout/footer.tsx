@@ -44,7 +44,10 @@ export const Footer = () => {
 										<ul className="space-y-4 font-medium">
 											{l.links.map((link) => (
 												<li key={link.label}>
-													<Link className="" href={link.href}>
+													<Link
+														className="transition-colors duration-300 ease-out hover:text-brand-secondary"
+														href={link.href}
+													>
 														{link.label}
 													</Link>
 												</li>
@@ -82,13 +85,21 @@ export const Footer = () => {
 							© {currentYear} Ziron Media. All rights reserved.
 						</p>
 						<Link href="/">
-							<Wordmark className="shrink-0 text-foreground" isMono />
+							<Wordmark
+								className="shrink-0 text-foreground transition-colors duration-300 ease-out hover:text-brand-secondary"
+								isMono
+							/>
 						</Link>
 
 						<ul className="flex w-full flex-wrap items-center justify-center gap-x-7 gap-y-2 md:justify-end">
 							{FOOTER_META.map((meta) => (
 								<li key={meta.label}>
-									<Link href={meta.href}>{meta.label}</Link>
+									<Link
+										className="transition-colors duration-300 ease-out hover:text-brand-secondary"
+										href={meta.href}
+									>
+										{meta.label}
+									</Link>
 								</li>
 							))}
 						</ul>

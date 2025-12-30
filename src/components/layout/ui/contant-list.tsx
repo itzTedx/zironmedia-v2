@@ -12,7 +12,7 @@ export const ContactList = () => {
 						<span className="font-bold text-brand-secondary">.</span>
 					</span>
 					<Link
-						className="font-medium text-xl leading-none"
+						className="font-medium text-xl leading-none transition-colors hover:text-brand-secondary"
 						href={contact.href}
 					>
 						{contact.value}

@@ -39,20 +39,24 @@ export const ServiceList = ({
 				</p>
 			</div>
 
-			<ul className="space-y-3">
+			<ul className="relative isolate z-10 space-y-3">
 				{service.lists.map((list) => (
-					<li className="isolate text-lg" key={list.title}>
+					<li className="text-lg" key={list.title}>
 						<PreviewLinkCard
 							followCursor="x"
 							href={`/services/${service.slug}/${list.slug}` as Route}
 							src={list.image}
 						>
-							<PreviewLinkCardTrigger delay={100}>
+							<PreviewLinkCardTrigger
+								className="transition-colors duration-300 ease-out hover:text-brand-secondary"
+								delay={100}
+							>
 								{list.title}
 							</PreviewLinkCardTrigger>
 							<PreviewLinkCardPortal>
-								<PreviewLinkCardPositioner>
+								<PreviewLinkCardPositioner side="inline-end">
 									<PreviewLinkCardPopup
+										className="overflow-hidden rounded-lg"
 										href={`/services/${service.slug}/${list.slug}` as Route}
 									>
 										<PreviewLinkCardImage alt="Preview link card content" />
