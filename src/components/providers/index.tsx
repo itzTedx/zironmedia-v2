@@ -1,5 +1,10 @@
-import SmoothScroll from "./lenis";
+import { LenisProvider } from "./lenis";
+import { BProgressProvider } from "./progress";
 
 export const Providers = ({ children }: { children: React.ReactNode }) => {
-	return <SmoothScroll>{children}</SmoothScroll>;
+	return (
+		<LenisProvider>
+			<BProgressProvider>{children}</BProgressProvider>
+		</LenisProvider>
+	);
 };

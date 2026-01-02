@@ -26,7 +26,7 @@ import {
 import { getStrictContext } from "@/lib/get-strict-context";
 
 type PreviewLinkCardContextType = {
-	href: string;
+	href: Route;
 	src: string;
 	width?: number;
 	height?: number;
@@ -36,7 +36,7 @@ const [PreviewLinkCardProvider, usePreviewLinkCard] =
 	getStrictContext<PreviewLinkCardContextType>("PreviewLinkCardContext");
 
 type PreviewLinkCardProps = PreviewCardPropsPrimitive & {
-	href: string;
+	href: Route;
 	src: string;
 	width?: number;
 	height?: number;
@@ -85,12 +85,10 @@ function PreviewLinkCard({
 	);
 }
 
-type PreviewLinkCardTriggerProps = PreviewCardTriggerPropsPrimitive &
-	React.ComponentProps<"a">;
+type PreviewLinkCardTriggerProps = PreviewCardTriggerPropsPrimitive;
 
 function PreviewLinkCardTrigger({
 	children,
-	href: hrefProp,
 	render,
 	...props
 }: PreviewLinkCardTriggerProps) {
@@ -99,7 +97,7 @@ function PreviewLinkCardTrigger({
 	return (
 		<PreviewCardTriggerPrimitive
 			data-slot="preview-link-card-trigger"
-			render={render ?? <a href={hrefProp ?? href}>{children}</a>}
+			render={render ?? <Link href={href}>{children}</Link>}
 			{...props}
 		/>
 	);
