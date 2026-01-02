@@ -109,7 +109,7 @@ export const SERVICES = [
 		lists: [
 			{
 				title: "Offset & Digital Printing",
-				slug: "offset-and-digial",
+				slug: "offset-and-digital",
 				image: "/images/services/printing.jpg",
 			},
 			{
