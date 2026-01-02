@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
+import { getArticles } from "../actions/query";
 import { ArticleCard } from "../components/article-card";
-import { ARTICLES } from "../data/constants";
 
 export const Articles = () => {
+	const articles = getArticles({ limit: 3 });
 	return (
 		<section className="dashed dashed-y relative py-9 md:py-14">
 			<header className="mx-auto mb-6 flex max-w-7xl flex-col gap-3 px-6 md:mb-14 md:flex-row md:items-center md:justify-between md:px-0">
@@ -18,8 +19,8 @@ export const Articles = () => {
 			</header>
 
 			<div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3 md:px-0">
-				{ARTICLES.map((article) => (
-					<ArticleCard article={article} key={article.id} />
+				{articles.map((article) => (
+					<ArticleCard article={article} key={article.slug} />
 				))}
 			</div>
 

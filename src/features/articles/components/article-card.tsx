@@ -4,9 +4,9 @@ import { Noise } from "@/components/shared/noise";
 
 import { cn } from "@/lib/utils";
 
-import { Article } from "../data/constants";
+import { ArticleMetadata } from "../actions/types";
 
-export const ArticleCard = ({ article }: { article: Article }) => {
+export const ArticleCard = ({ article }: { article: ArticleMetadata }) => {
 	return (
 		<div className="group/article">
 			<div
