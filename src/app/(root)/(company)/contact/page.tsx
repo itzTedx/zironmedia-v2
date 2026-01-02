@@ -109,24 +109,25 @@ export default function ContactPage() {
 
 			<section className="dashed dashed-y relative">
 				<div className="mx-auto grid max-w-7xl gap-4 px-6 py-9 md:grid-cols-3 md:px-0 md:py-16">
-					<div className="">
+					<div>
 						<h2 className="font-semibold text-2xl tracking-tight">
 							How we help you grow
 						</h2>
-						<div className="space-y-3 text-muted-foreground mt-4 text-balance">
+						<div className="mt-4 space-y-3 text-balance text-muted-foreground">
+							<p>
+								We help businesses turn ideas into clear brand systems and
+								growth engines.
+							</p>
 
-						<p>
-							We help businesses turn ideas into clear brand systems and growth
-							engines.
-						</p>
+							<p>
+								From branding and websites to marketing, motion, printing, and
+								full-stack execution - everything is handled under one roof,
+								with one accountable team.
+							</p>
 
-						<p>
-							From branding and websites to marketing, motion, printing, and
-							full-stack execution - everything is handled under one roof, with
-							one accountable team.
-						</p>
-
-						<p className="font-medium">No handoffs. No silos. Just progress.</p>
+							<p className="font-medium">
+								No handoffs. No silos. Just progress.
+							</p>
 						</div>
 					</div>
 					<div className="col-span-2 grid grid-cols-1 gap-1 md:grid-cols-3 md:gap-3">
@@ -174,6 +175,7 @@ export default function ContactPage() {
 						})}
 					</div>
 				</div>
+				<div />
 			</section>
 		</main>
 	);
