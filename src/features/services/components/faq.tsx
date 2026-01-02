@@ -147,7 +147,9 @@ function FaqContent({
 					itemScope
 					itemType="https://schema.org/Answer"
 				>
-					<div itemProp="text">{children}</div>
+					<div className="[&_a]:text-primary [&_a]:underline" itemProp="text">
+						{children}
+					</div>
 				</AccordionPanel>
 			</AccordionItem>
 		</FramePanel>
