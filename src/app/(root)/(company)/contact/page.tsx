@@ -113,6 +113,8 @@ export default function ContactPage() {
 						<h2 className="font-semibold text-2xl tracking-tight">
 							How we help you grow
 						</h2>
+						<div className="space-y-3 text-muted-foreground mt-4 text-balance">
+
 						<p>
 							We help businesses turn ideas into clear brand systems and growth
 							engines.
@@ -120,11 +122,12 @@ export default function ContactPage() {
 
 						<p>
 							From branding and websites to marketing, motion, printing, and
-							full-stack execution — everything is handled under one roof, with
+							full-stack execution - everything is handled under one roof, with
 							one accountable team.
 						</p>
 
-						<p>No handoffs. No silos. Just progress.</p>
+						<p className="font-medium">No handoffs. No silos. Just progress.</p>
+						</div>
 					</div>
 					<div className="col-span-2 grid grid-cols-1 gap-1 md:grid-cols-3 md:gap-3">
 						{SERVICES.map(({ icon: Icon, ...service }) => {
