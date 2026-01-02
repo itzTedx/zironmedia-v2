@@ -39,7 +39,7 @@ export default async function ServicePage({
 		<div>
 			<header />
 			<section className="py-12">
-				<article className="prose prose-stone max-w-none">
+				<article className="prose prose-stone max-w-none prose-a:text-primary prose-a:underline">
 					<MDXContent
 						components={{
 							Faq,
