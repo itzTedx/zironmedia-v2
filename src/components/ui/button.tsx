@@ -15,7 +15,7 @@ const buttonVariants = cva(
 				default:
 					"relative bg-primary text-white shadow-button-primary after:absolute after:inset-0 after:z-10 after:bg-linear-to-b after:from-white/15 hover:brightness-120",
 				outline:
-					"border-border bg-background/20 hover:border-white hover:bg-white/40 hover:text-white aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+					"border-border bg-surface hover:border-white hover:bg-white hover:shadow-sm aria-expanded:bg-muted aria-expanded:text-foreground",
 				secondary:
 					"bg-secondary text-primary shadow-sm aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
 				ghost:
