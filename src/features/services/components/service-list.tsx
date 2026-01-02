@@ -35,7 +35,7 @@ export const ServiceList = ({
 					<h3 className="font-medium text-2xl tracking-tight md:text-3xl">
 						{service.title}
 					</h3>
-					<p className="hidden text-muted-foreground opacity-0 md:block">
+					<p className="hidden text-balance text-muted-foreground opacity-0 md:block">
 						{service.description}
 					</p>
 				</div>

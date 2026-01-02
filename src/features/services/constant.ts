@@ -4,6 +4,7 @@ import { IconPlay } from "@/assets/icons/play";
 import { IconPrinter } from "@/assets/icons/printer";
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
+
 export const SERVICES = [
 	{
 		id: 1,
@@ -11,28 +12,28 @@ export const SERVICES = [
 		icon: IconTarget,
 		title: "Brand Strategy",
 		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		image: "/images/services/branding.jpg",
+			"Building strong, memorable brands through strategy, identity design, and consistent visual systems.",
+		image: "/images/services/logo-design.jpg",
 		lists: [
 			{
 				title: "Logo Design",
 				slug: "logo-design",
-				image: "/images/services/branding.jpg",
+				image: "/images/services/logo-design.jpg",
 			},
 			{
 				title: "Brand Guidelines",
 				slug: "brand-guidelines",
-				image: "/images/services/branding.jpg",
+				image: "/images/services/brand-guidelines.webp",
 			},
 			{
 				title: "Pitch Decks",
 				slug: "pitch-decks",
-				image: "/images/services/branding.jpg",
+				image: "/images/services/pitch-deck.png",
 			},
 			{
 				title: "Packaging Design",
 				slug: "packaging-design",
-				image: "/images/services/branding.jpg",
+				image: "/images/services/packaging.webp",
 			},
 			{
 				title: "Brand Revamps",
@@ -47,13 +48,13 @@ export const SERVICES = [
 		icon: IconDesktopPoint,
 		title: "Websites",
 		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
-		image: "/images/services/website.jpg",
+			"Designing and developing fast, scalable, and conversion-focused websites that grow with your business.",
+		image: "/images/services/web-dev.webp",
 		lists: [
 			{
 				title: "Website Design & Development",
 				slug: "design-and-dev",
-				image: "/images/services/website.jpg",
+				image: "/images/services/web-dev.webp",
 			},
 			{
 				title: "Web Revamps",
@@ -63,7 +64,7 @@ export const SERVICES = [
 			{
 				title: "Search Engine Optimization (SEO)",
 				slug: "seo",
-				image: "/images/services/website.jpg",
+				image: "/images/services/seo.webp",
 			},
 			{
 				title: "Website Management",
@@ -78,7 +79,7 @@ export const SERVICES = [
 		icon: IconSpeaker,
 		title: "Digital Marketing",
 		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+			"Driving visibility, engagement, and leads through data-driven digital marketing strategies.",
 		image: "/images/services/social.jpg",
 		lists: [
 			{
@@ -89,7 +90,7 @@ export const SERVICES = [
 			{
 				title: "Content Strategy",
 				slug: "content-strategy",
-				image: "/images/services/social.jpg",
+				image: "/images/services/content-strategy.webp",
 			},
 			{
 				title: "Paid Ads",
@@ -104,7 +105,7 @@ export const SERVICES = [
 		icon: IconPrinter,
 		title: "Printing & Corporate Gifts",
 		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+			"High-quality printing and branded merchandise that enhance visibility and leave a lasting impression.",
 		image: "/images/services/printing.jpg",
 		lists: [
 			{
@@ -140,7 +141,7 @@ export const SERVICES = [
 		icon: IconPlay,
 		title: "Motion Design",
 		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+			"Bringing stories to life through engaging motion graphics and impactful video content.",
 		image: "/images/services/motion.avif",
 		lists: [
 			{
@@ -158,11 +159,6 @@ export const SERVICES = [
 				slug: "brand-launch-videos",
 				image: "/images/services/motion.avif",
 			},
-			// {
-			// 	title: "Interactive Presentations",
-			// 	slug: "/",
-			// 	image: "/images/services/motion.avif",
-			// },
 		],
 	},
 	{
@@ -171,7 +167,7 @@ export const SERVICES = [
 		icon: IconCog,
 		title: "Full-stack Marketing",
 		description:
-			"Crafting visual identities that feel clear, timeless, and true to your brand.",
+			"End-to-end marketing solutions that align strategy, content, and execution for scalable growth.",
 		image: "/images/services/full-stack.webp",
 		lists: [
 			{
@@ -214,11 +210,6 @@ export const SERVICES = [
 				slug: "strategic-partnerships",
 				image: "/images/services/full-stack.webp",
 			},
-			// {
-			// 	title: "Personal Brand Management",
-			// 	slug: "/",
-			// 	image: "/images/services/full-stack.webp",
-			// },
 		],
 	},
 ] as const;

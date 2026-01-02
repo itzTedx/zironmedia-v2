@@ -14,17 +14,17 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 					return (
 						<li key={sub.id}>
 							<Link
-								className="flex items-center gap-2 rounded-lg p-1 hover:bg-background"
+								className="group flex items-center gap-2 rounded-lg p-1 hover:bg-background"
 								href={`/services${sub.href}` as Route}
 							>
-								<div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-background">
-									<Icon className="size-8 text-muted" />
+								<div className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-background">
+									<Icon className="size-8 text-muted transition-colors duration-300 group-hover:text-primary" />
 								</div>
 								<div className="space-y-1">
 									<p className="font-medium text-lg leading-none">
 										{sub.title}
 									</p>
-									<span className="line-clamp-1 text-muted-foreground text-xs leading-none">
+									<span className="line-clamp-2 text-muted-foreground text-xs leading-none">
 										{sub.description}
 									</span>
 								</div>
