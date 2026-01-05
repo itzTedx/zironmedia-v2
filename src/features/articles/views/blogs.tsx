@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
-import { getArticles } from "../actions/query";
-import { ArticleCard } from "../components/article-card";
+import { getBlogs } from "../actions/query";
+import { BlogCard } from "../components/blog-card";
 
-export const Articles = () => {
-	const articles = getArticles({ limit: 3 });
+export const Blogs = () => {
+	const blogs = getBlogs();
 	return (
 		<section className="dashed dashed-y relative py-9 md:py-14">
 			<header className="mx-auto mb-6 flex max-w-7xl flex-col gap-3 px-6 md:mb-14 md:flex-row md:items-center md:justify-between md:px-0">
@@ -14,13 +14,13 @@ export const Articles = () => {
 					Learn and Get Inspired
 				</h2>
 				<Button className="w-40 justify-between bg-foreground shadow-button-neutral">
-					More articles <IconArrowRightTag className="size-5" />
+					More blogs <IconArrowRightTag className="size-5" />
 				</Button>
 			</header>
 
 			<div className="mx-auto grid max-w-7xl gap-6 px-6 md:grid-cols-3 md:px-0">
-				{articles.map((article) => (
-					<ArticleCard article={article} key={article.slug} />
+				{blogs.map((article, i) => (
+					<BlogCard blog={article} index={i} key={article.slug} />
 				))}
 			</div>
 

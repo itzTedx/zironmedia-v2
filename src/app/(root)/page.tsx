@@ -1,4 +1,4 @@
-import { Articles } from "@/features/articles/views/articles";
+import { Blogs } from "@/features/articles/views/blogs";
 import { Achievements } from "@/features/views/home/achievements";
 import { Feedback } from "@/features/views/home/feedback";
 import { Hero } from "@/features/views/home/hero";
@@ -18,7 +18,7 @@ export default function Home() {
 
 			<VideoReel />
 			<WhyUs />
-			<Articles />
+			<Blogs />
 		</main>
 	);
 }

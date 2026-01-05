@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import fs from "fs";
@@ -42,6 +43,7 @@ export default async function ServicePage({
 				<article className="prose prose-stone max-w-none prose-a:text-primary prose-a:underline">
 					<MDXContent
 						components={{
+							a: (props) => <Link {...props} />,
 							Faq,
 							FaqContent,
 						}}
