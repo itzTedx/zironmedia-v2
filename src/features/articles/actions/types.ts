@@ -4,6 +4,9 @@ export type BlogMetadata = {
 	image: string;
 	isFeatured?: boolean;
 	slug: string;
+	date: string;
+	author: string;
+	tags: string[];
 };
 
 export type Blog = {
