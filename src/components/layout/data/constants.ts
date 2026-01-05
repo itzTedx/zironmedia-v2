@@ -70,7 +70,7 @@ export const NAV_LINKS: NavLink[] = [
 				id: "3",
 				title: "Blogs",
 				description: "Tap. Scan. Connect.",
-				href: "/",
+				href: "/blogs",
 			},
 			{
 				id: "4",

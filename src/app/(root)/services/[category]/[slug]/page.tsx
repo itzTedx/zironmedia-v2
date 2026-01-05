@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -39,13 +40,13 @@ export default async function ServicePage({
 	return (
 		<div>
 			<header>
-				{/* <div className="relative aspect-video h-12">
+				<div className="relative aspect-video">
 					<Image
 						alt={service.metadata.title}
 						fill
 						src={service.metadata.image}
 					/>
-				</div> */}
+				</div>
 			</header>
 			<section className="py-12">
 				<article className="prose prose-stone max-w-none prose-a:text-primary prose-a:underline">

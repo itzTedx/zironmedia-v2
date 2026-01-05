@@ -17,7 +17,7 @@ export const BlogCard = ({
 	return (
 		<Link
 			className={cn(
-				"group/blog relative h-fit",
+				"group/blog relative h-fit rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1.5))] bg-card p-1.5 transition-[box-shadow,translate] hover:-translate-y-4 hover:shadow-sm",
 				index === 0 && "order-3",
 				index === 2 && "order-1",
 				blog.isFeatured && "order-2"
@@ -26,19 +26,21 @@ export const BlogCard = ({
 		>
 			<div
 				className={cn(
-					"relative overflow-hidden rounded-2xl",
+					"relative overflow-hidden rounded-2xl shadow-sm",
 					blog.isFeatured ? "aspect-4/5" : "aspect-5/4"
 				)}
 			>
 				<Noise />
 				<Image
 					alt={blog.title}
-					className="object-cover transition-[scale] group-hover/blog:scale-110"
+					className="object-cover transition-[scale] group-hover/blog:scale-105"
 					fill
 					src={blog.image}
 				/>
 			</div>
-			<h3 className="p-3 font-medium text-2xl tracking-tight">{blog.title}</h3>
+			<h3 className="p-3 font-medium text-2xl tracking-tight transition-colors group-hover/blog:text-primary">
+				{blog.title}
+			</h3>
 		</Link>
 	);
 };
