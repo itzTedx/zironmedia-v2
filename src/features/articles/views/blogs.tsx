@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
@@ -13,8 +15,13 @@ export const Blogs = () => {
 				<h2 className="font-display font-semibold text-3xl tracking-tight md:text-5xl">
 					Learn and Get Inspired
 				</h2>
-				<Button className="w-40 justify-between bg-foreground shadow-button-neutral">
-					More blogs <IconArrowRightTag className="size-5" />
+				<Button
+					asChild
+					className="w-40 justify-between bg-foreground shadow-button-neutral"
+				>
+					<Link href="/blogs">
+						More blogs <IconArrowRightTag className="size-5" />
+					</Link>
 				</Button>
 			</header>
 

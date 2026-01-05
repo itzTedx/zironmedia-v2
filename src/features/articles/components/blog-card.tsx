@@ -32,7 +32,7 @@ export const BlogCard = ({
 			>
 				<Noise />
 				<Image
-					alt=""
+					alt={blog.title}
 					className="object-cover transition-[scale] group-hover/blog:scale-110"
 					fill
 					src={blog.image}

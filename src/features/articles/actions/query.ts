@@ -21,6 +21,16 @@ export function getBlogs(limit?: number): BlogMetadata[] {
 }
 
 export function getBlogBySlug(slug: string): Blog {
+	// Validate slug to prevent path traversal
+	if (
+		!slug ||
+		slug.includes("/") ||
+		slug.includes("\\") ||
+		slug.includes("..")
+	) {
+		notFound();
+	}
+
 	try {
 		const filePath = path.join(root("blogs"), `${slug}.mdx`);
 		const fileContent = fs.readFileSync(filePath, { encoding: "utf8" });
