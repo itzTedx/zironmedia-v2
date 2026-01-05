@@ -39,16 +39,24 @@ export default async function ServicePage({
 
 	return (
 		<div>
-			<header>
-				<div className="relative aspect-video">
-					<Image
-						alt={service.metadata.title}
-						fill
-						src={service.metadata.image}
-					/>
+			<header className="relative h-[calc(100svh-3.75rem)] w-full">
+				<div className="dashed dashed-x container relative z-20 flex h-full flex-col justify-end space-y-6 py-20">
+					<h1 className="font-medium text-7xl text-card">
+						{service.metadata.title}
+					</h1>
+					<p className="text-balance font-medium text-muted text-xl">
+						{service.metadata.description}
+					</p>
 				</div>
+				<div className="absolute inset-x-0 bottom-0 z-10 h-3/4 bg-linear-to-t from-foreground" />
+				<Image
+					alt={service.metadata.title}
+					className="pointer-events-none"
+					fill
+					src={service.metadata.image}
+				/>
 			</header>
-			<section className="py-12">
+			<section className="dashed dashed-x container py-12">
 				<article className="prose prose-stone max-w-none prose-a:text-primary prose-a:underline">
 					<MDXContent
 						components={{
