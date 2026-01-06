@@ -11,7 +11,7 @@ export default function ServicesPage() {
 			<section className="dashed dashed-b relative">
 				<header className="dashed dashed-x relative z-10 mx-auto max-w-7xl py-12 md:py-16">
 					<div className="container space-y-4">
-						<h1 className="max-w-5xl font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-8xl">
+						<h1 className="max-w-5xl font-black font-display text-4xl text-primary uppercase md:text-6xl lg:text-7xl">
 							Delivering results is really all that matters.
 						</h1>
 						<p className="max-w-5xl text-balance text-2xl text-muted-foreground leading-relaxed tracking-tight *:text-foreground">

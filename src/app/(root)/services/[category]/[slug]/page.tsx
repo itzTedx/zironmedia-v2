@@ -61,7 +61,7 @@ export default async function ServicePage({
 				/>
 			</header>
 
-			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-lg max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:py-12">
+			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-xl max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:py-12">
 				<MDXContent
 					components={{
 						a: (props) => <Link {...props} />,
