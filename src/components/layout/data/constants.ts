@@ -42,7 +42,7 @@ export const NAV_LINKS: NavLink[] = [
 		submenu: SERVICES.flatMap((ser) => ({
 			id: ser.id.toString(),
 			description: ser.description,
-			href: `/${ser.slug}` as Route,
+			href: `/services/${ser.slug}` as Route,
 			title: ser.title,
 			icon: ser.icon,
 		})),

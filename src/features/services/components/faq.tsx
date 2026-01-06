@@ -95,11 +95,11 @@ function Faq({ children }: { children: React.ReactNode }) {
 				</Script>
 			)}
 			<section
-				className="dashed container relative grid grid-cols-3 gap-4 py-12"
+				className="dashed container relative grid gap-4 py-12 md:grid-cols-3"
 				itemScope
 				itemType="https://schema.org/FAQPage"
 			>
-				<div className="not-prose sticky top-24 h-fit">
+				<div className="not-prose h-fit md:sticky md:top-24">
 					<Badge>Frequently Asked Questions</Badge>
 					<h2 className="my-3 font-semibold text-4xl text-foreground tracking-tight">
 						Still have questions?
@@ -121,7 +121,7 @@ function Faq({ children }: { children: React.ReactNode }) {
 
 function FaqItem({ children }: { children: React.ReactNode }) {
 	return (
-		<Accordion className="not-prose col-span-2 w-full">
+		<Accordion className="not-prose w-full md:col-span-2">
 			<Frame>{children}</Frame>
 		</Accordion>
 	);

@@ -41,9 +41,9 @@ export default async function ServicePage({
 
 	return (
 		<div>
-			<header className="relative h-[calc(100svh-3.75rem)] w-full">
+			<header className="relative w-full md:h-[calc(100svh-3.75rem)]">
 				<div className="dashed dashed-x container relative z-20 flex h-full flex-col justify-end space-y-6 py-20">
-					<h1 className="font-medium text-7xl text-card">
+					<h1 className="font-medium text-4xl text-card sm:text-5xl md:text-6xl lg:text-7xl">
 						{service.metadata.title}
 					</h1>
 					<p className="text-balance font-medium text-muted text-xl">

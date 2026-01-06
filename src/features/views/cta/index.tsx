@@ -14,23 +14,23 @@ interface CtaProps {
 
 export const Cta = ({ title, description, buttonText }: CtaProps) => {
 	return (
-		<section className="not-prose container py-12">
-			<div className="mask-origin-content mask-auto mask-[url(/images/cta-mask.svg)] mask-no-repeat mask-center relative space-y-3 overflow-hidden rounded-3xl bg-linear-to-b from-brand-600 to-80% to-brand-secondary-400 p-20 text-center text-white">
+		<section className="not-prose container md:py-12">
+			<div className="mask-origin-content mask-auto mask-[url(/images/cta-mask.svg)] mask-no-repeat mask-center relative space-y-3 overflow-hidden rounded-3xl bg-linear-to-b from-brand-600 to-80% to-brand-secondary-400 p-12 text-center text-white md:p-20">
 				<Noise className="opacity-20" />
 				<Badge className="border-white text-white uppercase" variant="outline">
 					Ready to grow? We’re ready to go
 				</Badge>
-				<h2 className="mx-auto max-w-3xl font-bold text-6xl uppercase tracking-tighter">
+				<h3 className="mx-auto max-w-4xl text-balance font-bold text-3xl uppercase tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
 					{title ?? "Ready to establish your brand standards?"}
-				</h2>
-				<p className="mx-auto mb-6 max-w-2xl text-balance text-xl">
+				</h3>
+				<p className="mx-auto mb-6 max-w-2xl md:text-xl">
 					{description ??
 						"Consistent branding builds recognition, trust, and value. Let's create brand guidelines that protect and strengthen your brand identity."}
 				</p>
 				<Button className="justify-between md:w-48" variant="secondary">
 					{buttonText ?? "Get in touch"} <IconSparkle />
 				</Button>
-				<div className="absolute left-1/2 z-10 mt-4 aspect-7/3 w-[75%] -translate-x-1/2 rounded-[calc(var(--radius-3xl)+calc(var(--spacing)*1.5)-1px)] border border-card/20 bg-card/10 p-2.5">
+				<div className="absolute left-1/2 z-10 mt-4 aspect-7/3 w-[90%] -translate-x-1/2 rounded-[calc(var(--radius-3xl)+calc(var(--spacing)*1.5)-1px)] border border-card/20 bg-card/10 p-1.5 md:w-[75%] md:p-2.5">
 					<div className="relative aspect-5/3 overflow-hidden rounded-2xl">
 						<Image
 							alt=""
@@ -40,7 +40,7 @@ export const Cta = ({ title, description, buttonText }: CtaProps) => {
 						/>
 					</div>
 				</div>
-				<p className="relative z-50 mt-52">
+				<p className="relative z-50 mt-36 md:mt-52">
 					Focused on growth, built for performance.
 				</p>
 				<div className="absolute bottom-0 left-0 z-20 h-1/3 w-full bg-linear-to-t from-brand-secondary to-[#B362FF]/0" />

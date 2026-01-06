@@ -15,7 +15,7 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 						<li key={sub.id}>
 							<Link
 								className="group flex items-center gap-2 rounded-lg p-1 hover:bg-background"
-								href={`/services${sub.href}` as Route}
+								href={sub.href as Route}
 							>
 								<div className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-background">
 									<Icon className="size-8 text-muted transition-colors duration-300 group-hover:text-primary" />
