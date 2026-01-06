@@ -107,33 +107,6 @@
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 }
 
-@keyframes move-x {
-	from {
-		transform: translateX(-100%);
-	}
-	to {
-		transform: translateX(100%);
-	}
-}
-
-@keyframes marquee {
-	from {
-		transform: translateX(0);
-	}
-	to {
-		transform: translateX(calc(-100% - var(--gap)));
-	}
-}
-
-@keyframes marquee-vertical {
-	from {
-		transform: translateY(0);
-	}
-	to {
-		transform: translateY(calc(-100% - var(--gap)));
-	}
-}
-
 :root {
 	--radius: 0.625rem;
 
@@ -216,7 +189,7 @@
 	}
 
 	h1 {
-		@apply tracking-tighter;
+		@apply tracking-tight;
 	}
 	p {
 		@apply tracking-tight;

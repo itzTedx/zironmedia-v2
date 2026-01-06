@@ -63,6 +63,33 @@
 	}
 }
 
+@keyframes move-x {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-100% - var(--gap)));
+	}
+}
+
+@keyframes marquee-vertical {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(calc(-100% - var(--gap)));
+	}
+}
+
 @utility extend-touch-target {
 	@media (pointer: coarse) {
 		@apply relative touch-manipulation after:absolute after:-inset-2;

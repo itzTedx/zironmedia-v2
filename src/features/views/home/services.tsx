@@ -10,7 +10,7 @@ export const Services = () => {
 	return (
 		<section className="relative">
 			<header className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-12 md:flex-row md:gap-6 md:px-0 md:py-16">
-				<h2 className="shrink-0 text-center font-display font-semibold text-4xl text-primary uppercase tracking-tight md:text-left md:text-6xl lg:text-8xl">
+				<h2 className="shrink-0 text-center font-bold font-display text-4xl text-primary uppercase tracking-tight md:text-left md:text-6xl lg:text-8xl">
 					With our services
 				</h2>
 				<p className="max-w-2xs text-balance text-center text-muted-foreground md:text-right">
