@@ -10,6 +10,7 @@ import { Noise } from "@/components/shared/noise";
 
 import { getServiceBySlug } from "@/features/services/actions/query";
 import { Faq, FaqContent } from "@/features/services/components/faq";
+import { Section } from "@/features/services/components/section";
 import { Cta } from "@/features/views/cta";
 
 export async function generateStaticParams() {
@@ -60,13 +61,14 @@ export default async function ServicePage({
 				/>
 			</header>
 
-			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:py-12">
+			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-lg max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:py-12">
 				<MDXContent
 					components={{
 						a: (props) => <Link {...props} />,
 						Cta,
 						Faq,
 						FaqContent,
+						Section,
 					}}
 					source={service.content}
 				/>
