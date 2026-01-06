@@ -18,6 +18,7 @@
 	--color-primary-secondary: var(--brand-400);
 
 	--color-brand-secondary: var(--brand-secondary);
+	--color-brand-secondary-400: var(--brand-secondary-400);
 
 	--color-secondary: var(--white);
 	--color-secondary-foreground: var(--secondary-foreground);
@@ -151,6 +152,7 @@
 	--brand-950: oklch(0.0824 0.0346 275.68);
 
 	--brand-secondary: oklch(0.5739 0.27695 299.6177);
+	--brand-secondary-400: oklch(0.6606 0.2265 304.68);
 
 	--gray-50: oklch(0.9854 0.0013 286.38);
 	--gray-100: oklch(0.9524 0.0013 286.37);

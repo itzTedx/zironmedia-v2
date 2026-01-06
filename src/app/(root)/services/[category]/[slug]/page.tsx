@@ -6,9 +6,11 @@ import fs from "fs";
 import path from "path";
 
 import MDXContent from "@/components/markdown/mdx-component";
+import { Noise } from "@/components/shared/noise";
 
 import { getServiceBySlug } from "@/features/services/actions/query";
 import { Faq, FaqContent } from "@/features/services/components/faq";
+import { Cta } from "@/features/views/cta";
 
 export async function generateStaticParams() {
 	const contentDir = path.join(process.cwd(), "src/content/services");
@@ -49,25 +51,26 @@ export default async function ServicePage({
 					</p>
 				</div>
 				<div className="absolute inset-x-0 bottom-0 z-10 h-3/4 bg-linear-to-t from-foreground" />
+				<Noise />
 				<Image
 					alt={service.metadata.title}
-					className="pointer-events-none"
+					className="pointer-events-none object-cover"
 					fill
 					src={service.metadata.image}
 				/>
 			</header>
-			<section className="dashed dashed-x container py-12">
-				<article className="prose prose-stone max-w-none prose-a:text-primary prose-a:underline">
-					<MDXContent
-						components={{
-							a: (props) => <Link {...props} />,
-							Faq,
-							FaqContent,
-						}}
-						source={service.content}
-					/>
-				</article>
-			</section>
+
+			<article className="prose prose-stone dashed dashed-x mx-auto max-w-7xl py-12 prose-a:text-primary prose-a:underline">
+				<MDXContent
+					components={{
+						a: (props) => <Link {...props} />,
+						Cta,
+						Faq,
+						FaqContent,
+					}}
+					source={service.content}
+				/>
+			</article>
 		</div>
 	);
 }
