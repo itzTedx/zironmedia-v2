@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -15,6 +16,7 @@ export const Cta = ({ title, description, buttonText }: CtaProps) => {
 	return (
 		<section className="not-prose container py-12">
 			<div className="mask-origin-content mask-auto mask-[url(/images/cta-mask.svg)] mask-no-repeat mask-center relative space-y-3 overflow-hidden rounded-3xl bg-linear-to-b from-brand-600 to-80% to-brand-secondary-400 p-20 text-center text-white">
+				<Noise className="opacity-20" />
 				<Badge className="border-white text-white uppercase" variant="outline">
 					Ready to grow? We’re ready to go
 				</Badge>
