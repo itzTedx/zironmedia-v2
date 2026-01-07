@@ -126,12 +126,12 @@ export const SERVICES = [
 			{
 				title: "Stationary & Corporate Identity",
 				slug: "stationary-and-corporate-identity",
-				image: "/images/services/printing.jpg",
+				image: "/images/services/stationary-corporate-identity.webp",
 			},
 			{
 				title: "Stickers",
 				slug: "stickers",
-				image: "/images/services/printing.jpg",
+				image: "/images/services/stickers.webp",
 			},
 		],
 	},
@@ -147,7 +147,7 @@ export const SERVICES = [
 			{
 				title: "Motion Graphics",
 				slug: "motion-graphics",
-				image: "/images/services/motion.avif",
+				image: "/images/services/motion-graphics.webp",
 			},
 			{
 				title: "Explainer Videos",
@@ -157,7 +157,7 @@ export const SERVICES = [
 			{
 				title: "Brand Launch Videos",
 				slug: "brand-launch-videos",
-				image: "/images/services/motion.avif",
+				image: "/images/services/brand-launch.webp",
 			},
 		],
 	},
@@ -173,42 +173,42 @@ export const SERVICES = [
 			{
 				title: "Marketing & Growth Strategy",
 				slug: "marketing-and-growth-strategy",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/marketing-growth.webp",
 			},
 			{
 				title: "Emails & Newsletters",
 				slug: "emails-and-newsletters",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/email-newsletter.webp",
 			},
 			{
 				title: "Copywriting",
 				slug: "copywriting",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/copy-writing.webp",
 			},
 			{
 				title: "Technical Content Writing",
 				slug: "technical-content-writing",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/tech-content-writing.webp",
 			},
 			{
 				title: "Campaigns",
 				slug: "campaigns",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/campaigns.webp",
 			},
 			{
 				title: "Social Media Management",
 				slug: "social-media-management",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/social-media-management.webp",
 			},
 			{
 				title: "Community, Events, Podcasts",
 				slug: "community-events-podcasts",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/events-podcasts.webp",
 			},
 			{
 				title: "Strategic Partnerships",
 				slug: "strategic-partnerships",
-				image: "/images/services/full-stack.webp",
+				image: "/images/services/strategic-partnerships.webp",
 			},
 		],
 	},
