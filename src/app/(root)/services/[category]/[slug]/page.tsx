@@ -9,9 +9,12 @@ import MDXContent from "@/components/markdown/mdx-component";
 import { Noise } from "@/components/shared/noise";
 import { Button } from "@/components/ui/button";
 
+import { IconArrowRightTag } from "@/assets/icons/arrow";
+
 import { getServiceBySlug } from "@/features/services/actions/query";
 import { Faq, FaqContent } from "@/features/services/components/faq";
 import { ImageGalley } from "@/features/services/components/image-gallery";
+import { LogoVariants } from "@/features/services/components/logo-variants";
 import { Section } from "@/features/services/components/section";
 import { Cta } from "@/features/views/cta";
 import { cn } from "@/lib/utils";
@@ -46,19 +49,24 @@ export default async function ServicePage({
 	return (
 		<div>
 			<header className="dashed dashed-b relative w-full">
-				<div className="dashed dashed-x container relative z-20 flex h-full flex-col justify-end space-y-6 py-12">
-					<h1 className="font-semibold text-4xl text-primary tracking-tighter sm:text-5xl md:text-6xl lg:text-8xl">
-						{service.metadata.title}
-					</h1>
-					<div className="grid grid-cols-[1fr_0.5fr]">
-						<p className="text-balance font-medium text-muted-foreground text-xl">
-							{service.metadata.description}
-						</p>
-						<div>
-							<Button>Book a call</Button>
+				<div className="dashed dashed-x container relative z-20 flex h-full flex-col justify-end space-y-4 pt-12 pb-20">
+					<div className="mx-auto max-w-5xl space-y-4">
+						<h1 className="font-semibold text-4xl text-primary tracking-tighter sm:text-5xl md:text-6xl lg:text-8xl">
+							{service.metadata.title}
+						</h1>
+						<div className="flex items-center justify-between">
+							<p className="text-balance font-medium text-muted-foreground text-xl">
+								{service.metadata.description}
+							</p>
+							<div>
+								<Button className="w-48 justify-between" size="lg">
+									Get started
+									<IconArrowRightTag className="size-5" />
+								</Button>
+							</div>
 						</div>
 					</div>
-					<div className="relative mt-6 aspect-video overflow-hidden rounded-3xl">
+					<div className="relative mt-9 aspect-video overflow-hidden rounded-3xl">
 						<Image
 							alt={service.metadata.title}
 							className="pointer-events-none object-cover"
@@ -92,6 +100,7 @@ export default async function ServicePage({
 							/>
 						),
 						ImageGalley,
+						LogoVariants,
 						Section,
 					}}
 					source={service.content}

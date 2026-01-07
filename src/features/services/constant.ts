@@ -95,7 +95,7 @@ export const SERVICES = [
 			{
 				title: "Paid Ads",
 				slug: "paid-ads",
-				image: "/images/services/social.jpg",
+				image: "/images/services/paid-ads.webp",
 			},
 		],
 	},
@@ -106,22 +106,22 @@ export const SERVICES = [
 		title: "Printing & Corporate Gifts",
 		description:
 			"High-quality printing and branded merchandise that enhance visibility and leave a lasting impression.",
-		image: "/images/services/printing.jpg",
+		image: "/images/services/corporate-gifts.webp",
 		lists: [
 			{
 				title: "Offset & Digital Printing",
 				slug: "offset-and-digital",
-				image: "/images/services/printing.jpg",
+				image: "/images/services/offset-digital.webp",
 			},
 			{
 				title: "Merchandise",
 				slug: "merchandise",
-				image: "/images/services/printing.jpg",
+				image: "/images/services/merchandise.webp",
 			},
 			{
 				title: "Custom Corporate Gifts",
 				slug: "custom-corporate-gifts",
-				image: "/images/services/printing.jpg",
+				image: "/images/services/corporate-gifts.webp",
 			},
 			{
 				title: "Stationary & Corporate Identity",

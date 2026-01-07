@@ -40,10 +40,14 @@ export const ServiceList = ({
 					</p>
 				</div>
 				<div className="absolute top-0 hidden translate-y-[150%] transition-transform duration-300 ease-out md:block md:group-hover:translate-y-0">
-					<h3 className="font-medium text-3xl">{service.title}</h3>
-					<p className="text-muted-foreground">{service.description}</p>
+					<h3 className="font-medium text-2xl tracking-tight md:text-3xl">
+						{service.title}
+					</h3>
+					<p className="text-balance text-muted-foreground">
+						{service.description}
+					</p>
 				</div>
-				<p className="mt-2 text-muted-foreground md:hidden">
+				<p className="mt-2 text-balance text-muted-foreground md:hidden">
 					{service.description}
 				</p>
 			</div>
