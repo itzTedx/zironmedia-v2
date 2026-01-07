@@ -49,7 +49,7 @@ export default async function ServicePage({
 	return (
 		<div>
 			<header className="dashed dashed-b relative w-full">
-				<div className="dashed dashed-x container relative z-20 flex h-full flex-col justify-end space-y-4 pt-12 pb-20">
+				<div className="dashed dashed-x container relative z-20 flex h-full max-w-7xl flex-col justify-end space-y-4 pt-12 pb-20">
 					<div className="mx-auto max-w-5xl space-y-4">
 						<h1 className="font-semibold text-4xl text-primary tracking-tighter sm:text-5xl md:text-6xl lg:text-8xl">
 							{service.metadata.title}
@@ -80,7 +80,7 @@ export default async function ServicePage({
 				<Noise />
 			</header>
 
-			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-xl max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:py-12">
+			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-xl max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:max-w-7xl [&>div]:py-12">
 				<MDXContent
 					components={{
 						a: (props) => <Link {...props} />,
