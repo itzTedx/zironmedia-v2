@@ -42,23 +42,28 @@ export default async function ServicePage({
 
 	return (
 		<div>
-			<header className="relative w-full md:h-[calc(100svh-3.75rem)]">
+			<header className="relative w-full border">
 				<div className="dashed dashed-x container relative z-20 flex h-full flex-col justify-end space-y-6 py-20">
-					<h1 className="font-medium text-4xl text-card sm:text-5xl md:text-6xl lg:text-7xl">
+					<h1 className="font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
 						{service.metadata.title}
 					</h1>
-					<p className="text-balance font-medium text-muted text-xl">
-						{service.metadata.description}
-					</p>
+					<div className="grid grid-cols-[1fr_0.5fr]">
+						<p className="text-balance font-medium text-muted text-xl">
+							{service.metadata.description}
+						</p>
+					</div>
+					<div className="relative mt-12 aspect-video overflow-hidden rounded-3xl">
+						<Image
+							alt={service.metadata.title}
+							className="pointer-events-none object-cover"
+							fill
+							src={service.metadata.image}
+						/>
+					</div>
 				</div>
-				<div className="absolute inset-x-0 bottom-0 z-10 h-3/4 bg-linear-to-t from-foreground" />
+				<div className="absolute inset-x-0 bottom-0 z-10 h-3/4 bg-linear-to-t from-card" />
+				<div className="absolute inset-x-0 top-0 z-10 h-3/4 bg-linear-to-b from-card" />
 				<Noise />
-				<Image
-					alt={service.metadata.title}
-					className="pointer-events-none object-cover"
-					fill
-					src={service.metadata.image}
-				/>
 			</header>
 
 			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-xl max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:py-12">
