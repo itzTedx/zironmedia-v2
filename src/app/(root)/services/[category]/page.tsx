@@ -19,6 +19,7 @@ import { IconArrowLeft, IconArrowRightTag } from "@/assets/icons/arrow";
 import { siteConfig } from "@/data/site-config";
 import { findServiceBySlug } from "@/features/services/actions/query";
 import { SERVICES } from "@/features/services/constant";
+import { Cta } from "@/features/views/cta";
 
 type PageProps = {
 	params: Promise<{ category: string }>;
@@ -131,7 +132,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 										<PreviewLinkCard
 											followCursor="x"
 											href={`/services/${service.slug}/${list.slug}` as Route}
-											src={service.image}
+											src={list.image}
 										>
 											<div className="flex items-center justify-between gap-4">
 												<div className="flex items-center gap-4">
@@ -165,25 +166,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 					</div>
 				</div>
 			</section>
-
-			<section className="dashed dashed-t relative bg-background py-24">
-				<div className="container">
-					<div className="mx-auto max-w-2xl space-y-8 text-center">
-						<h2 className="font-medium text-3xl md:text-4xl">
-							Ready to get started?
-						</h2>
-						<p className="text-lg text-muted-foreground">
-							Let's discuss how our {service.title.toLowerCase()} services can
-							help transform your brand and drive meaningful results.
-						</p>
-						<Button className="text-muted-foreground" variant="secondary">
-							Get in touch <IconArrowRightTag />
-						</Button>
-					</div>
-				</div>
-				<div className="absolute inset-x-0 top-0 -z-10 h-1/4 bg-linear-180 from-white" />
-				<div className="absolute inset-x-0 bottom-0 -z-10 h-1/4 bg-linear-0 from-white" />
-			</section>
+			<Cta />
 		</main>
 	);
 }

@@ -24,13 +24,14 @@ export default function ServicesPage() {
 			</section>
 			<section className="bg-card py-24">
 				<div className="container grid grid-cols-12 gap-6">
-					<div className="col-span-5">
+					<div className="col-span-5 space-y-3">
 						<Badge>
 							<div className="size-1.5 rounded-full bg-brand-secondary" /> What
 							we do
 						</Badge>
-						<h2 className="font-medium text-5xl leading-snug tracking-tight">
-							We turn first impressions into lasting engagement
+						<h2 className="font-semibold text-5xl tracking-tight">
+							We turn <span className="text-primary">first impressions</span>{" "}
+							into lasting engagement
 						</h2>
 					</div>
 					<div className="col-span-7 space-y-3">
