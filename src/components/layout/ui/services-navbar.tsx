@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Route } from "next";
 import Image from "next/image";
@@ -14,11 +14,39 @@ import { Submenu } from "../data/types";
 
 export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 	const [hoveredIdx, setHoveredIdx] = useState<string | null>(null);
+	const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-	const hoveredImage = submenu.find((menu) => menu.id === hoveredIdx);
+	const hoveredIndex = hoveredIdx
+		? submenu.findIndex((menu) => menu.id === hoveredIdx)
+		: -1;
+
+	// Scroll to the hovered image
+	useEffect(() => {
+		if (hoveredIndex >= 0 && scrollContainerRef.current) {
+			const container = scrollContainerRef.current;
+
+			// Use requestAnimationFrame to ensure layout is calculated
+			requestAnimationFrame(() => {
+				const items = Array.from(container.children) as HTMLElement[];
+
+				if (items[hoveredIndex]) {
+					const targetElement = items[hoveredIndex];
+
+					// offsetTop is relative to the offset parent (the scroll container)
+					// This accounts for all spacing and heights automatically
+					const scrollPosition = targetElement.offsetTop;
+
+					container.scrollTo({
+						top: scrollPosition,
+						behavior: "smooth",
+					});
+				}
+			});
+		}
+	}, [hoveredIdx, hoveredIndex]);
 
 	return (
-		<div className="grid w-2xl grid-cols-2 gap-4">
+		<div className="grid h-fit w-2xl grid-cols-2 gap-4">
 			<ul className="space-y-1.5">
 				{submenu.map((sub) => {
 					const Icon = sub.icon!;
@@ -65,52 +93,36 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 					);
 				})}
 			</ul>
-			<div className="relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-2xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-12 shadow-sm">
-				<AnimatePresence mode="wait">
-					{hoveredIdx && (
-						<motion.div
-							animate={{ opacity: 1 }}
-							className="absolute inset-x-0 bottom-0 z-9 h-1/2 bg-linear-to-t from-foreground to-transparent"
-							exit={{ opacity: 0.5 }}
-							initial={{ opacity: 0.5 }}
-							transition={{ duration: 0.1, ease: "easeIn" }}
-						/>
-					)}
-				</AnimatePresence>
-				<AnimatePresence mode="wait">
-					<motion.div
-						animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-						className="absolute inset-0 z-10"
-						exit={{ opacity: 0.5, x: -20, filter: "blur(10px)" }}
-						initial={{ opacity: 0.5, x: 20, filter: "blur(10px)" }}
-						key={hoveredIdx}
-						transition={{ duration: 0.1, ease: "easeIn" }}
-					>
-						<div className="relative z-50 flex h-full flex-col justify-end p-6">
-							<h2 className="font-medium text-2xl text-card tracking-tight">
-								{hoveredImage?.title}
-							</h2>
-							<p className="text-muted text-xs">{hoveredImage?.description}</p>
+			<div className="relative isolate">
+				{/* Scrollable container with all images stacked */}
+				<div
+					className="h-[416px] space-y-3 overflow-hidden overflow-y-scroll rounded-xl [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+					ref={scrollContainerRef}
+					style={{ scrollSnapType: "y mandatory" }}
+				>
+					{submenu.map((sub) => (
+						<div
+							className="relative aspect-4/3 shrink-0 overflow-hidden rounded-xl shadow-sm"
+							key={sub.id}
+							style={{ scrollSnapAlign: "start" }}
+						>
+							<Image
+								alt={sub.title}
+								className={cn("object-cover")}
+								fill
+								src={sub.image || "/images/services/logo-design.jpg"}
+							/>
+							{/* Title and description overlay */}
+							<div className="absolute inset-x-0 bottom-0 z-30 flex flex-col justify-end p-6">
+								<h2 className="font-medium text-2xl text-card tracking-tight">
+									{sub.title}
+								</h2>
+								<p className="text-muted text-xs">{sub.description}</p>
+							</div>
+							<div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/2 bg-linear-to-t from-foreground to-transparent" />
 						</div>
-					</motion.div>
-				</AnimatePresence>
-				<AnimatePresence mode="wait">
-					<motion.div
-						animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-						className="absolute inset-0"
-						exit={{ opacity: 0.5, x: -20, filter: "blur(10px)" }}
-						initial={{ opacity: 0.5, x: 20, filter: "blur(10px)" }}
-						key={hoveredIdx}
-						transition={{ duration: 0.1, ease: "easeIn" }}
-					>
-						<Image
-							alt="Service Image"
-							className={cn("object-cover")}
-							fill
-							src={hoveredImage?.image || "/images/services/logo-design.jpg"}
-						/>
-					</motion.div>
-				</AnimatePresence>
+					))}
+				</div>
 			</div>
 		</div>
 	);

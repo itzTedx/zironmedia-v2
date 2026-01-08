@@ -18,18 +18,18 @@ export const VideoReel = () => {
 						<LogoMono className="h-8 w-fit text-white md:h-10" />
 
 						<div className="max-w-sm space-y-4 md:space-y-8">
-							<h3 className="hidden text-balance font-medium text-background text-xl md:inline md:text-3xl">
+							<h3 className="hidden text-balance font-medium text-background text-xl md:block md:text-3xl">
 								Why every modern Business needs a strong digital presence?
 							</h3>
 							<div className="flex items-center gap-3">
 								<Button
-									className="border-white/60 text-white backdrop-blur-lg"
+									className="border-white/60 bg-card/30 text-white backdrop-blur-lg hover:text-foreground"
 									variant="outline"
 								>
 									Watch video <IconCaretRight />
 								</Button>
 								<Button
-									className="hidden px-0 text-white sm:px-4 md:inline-flex"
+									className="hidden px-0 text-white hover:text-card sm:pr-4 sm:pl-2 md:inline-flex"
 									variant="ghost"
 								>
 									<div className="flex size-6 items-center justify-center rounded-md bg-white/20">
