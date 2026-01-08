@@ -56,6 +56,7 @@ export const Navbar = () => {
 													{link.submenu.map((sub) => (
 														<ListItem
 															href={sub.href}
+															id={sub.id}
 															key={sub.title}
 															title={sub.title}
 														>

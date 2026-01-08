@@ -50,7 +50,7 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 											transition: { duration: 0.05 },
 										}}
 										className={cn(
-											"absolute inset-0 z-0 block h-full w-full rounded-xl bg-stone-100"
+											"absolute inset-0 z-0 block h-full w-full rounded-xl bg-gray-100/60"
 										)}
 										exit={{
 											opacity: 0,
