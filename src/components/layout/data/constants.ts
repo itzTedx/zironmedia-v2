@@ -60,13 +60,13 @@ export const NAV_LINKS: NavLink[] = [
 				id: "1",
 				title: "About us",
 				description: "Tap. Scan. Connect.",
-				href: "/",
+				href: "/about",
 			},
 			{
 				id: "2",
 				title: "FAQs",
 				description: "Tap. Scan. Connect.",
-				href: "/",
+				href: "/faqs",
 			},
 			{
 				id: "3",
