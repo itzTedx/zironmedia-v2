@@ -148,8 +148,9 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 												<IconArrowRightTag className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-primary" />
 											</div>
 											<PreviewLinkCardPortal>
-												<PreviewLinkCardPositioner>
+												<PreviewLinkCardPositioner side="inline-end">
 													<PreviewLinkCardPopup
+														className="overflow-hidden rounded-xl"
 														href={
 															`/services/${service.slug}/${list.slug}` as Route
 														}

@@ -1,5 +1,7 @@
 import { PropsWithChildren } from "react";
 
+import { cn } from "@/lib/utils";
+
 interface SectionProps {
 	children: React.ReactNode;
 	title: string;
@@ -25,4 +27,12 @@ function SectionContent({ children }: PropsWithChildren) {
 	return <div className="*:first:mt-0">{children}</div>;
 }
 
-export { Section, SectionTitle, SectionContent };
+function Group({ children, className, ...props }: React.ComponentProps<"div">) {
+	return (
+		<div className={cn("grid grid-cols-3 gap-3", className)} {...props}>
+			{children}
+		</div>
+	);
+}
+
+export { Section, SectionTitle, SectionContent, Group };

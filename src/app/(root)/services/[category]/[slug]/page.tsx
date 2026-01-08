@@ -12,10 +12,11 @@ import { Button } from "@/components/ui/button";
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 
 import { getServiceBySlug } from "@/features/services/actions/query";
+import { Card } from "@/features/services/components/card";
 import { Faq, FaqContent } from "@/features/services/components/faq";
 import { ImageGalley } from "@/features/services/components/image-gallery";
 import { LogoVariants } from "@/features/services/components/logo-variants";
-import { Section } from "@/features/services/components/section";
+import { Group, Section } from "@/features/services/components/section";
 import { Cta } from "@/features/views/cta";
 import { cn } from "@/lib/utils";
 
@@ -99,6 +100,8 @@ export default async function ServicePage({
 								)}
 							/>
 						),
+						Card,
+						Group,
 						ImageGalley,
 						LogoVariants,
 						Section,
