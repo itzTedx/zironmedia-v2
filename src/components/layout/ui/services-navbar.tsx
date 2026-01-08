@@ -18,18 +18,19 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 	const hoveredImage = submenu.find((menu) => menu.id === hoveredIdx);
 
 	return (
-		<div className="grid w-3xl grid-cols-[1fr_0.85fr] gap-4">
+		<div className="grid w-2xl grid-cols-2 gap-4">
 			<ul className="space-y-1.5">
 				{submenu.map((sub) => {
 					const Icon = sub.icon!;
 					return (
 						<li
+							className="relative"
 							key={sub.id}
 							onMouseEnter={() => setHoveredIdx(sub.id)}
 							onMouseLeave={() => setHoveredIdx(null)}
 						>
 							<Link
-								className="group flex items-center gap-2 rounded-lg p-1 hover:bg-background"
+								className="group relative z-10 flex items-center gap-2 rounded-xl p-1"
 								href={sub.href as Route}
 							>
 								<div className="flex size-14 shrink-0 items-center justify-center rounded-xl bg-background">
@@ -41,6 +42,25 @@ export const ServicesNavbar = ({ submenu }: { submenu: Submenu[] }) => {
 									</p>
 								</div>
 							</Link>
+							<AnimatePresence>
+								{hoveredIdx === sub.id && (
+									<motion.span
+										animate={{
+											opacity: 1,
+											transition: { duration: 0.05 },
+										}}
+										className={cn(
+											"absolute inset-0 z-0 block h-full w-full rounded-xl bg-stone-100"
+										)}
+										exit={{
+											opacity: 0,
+											transition: { duration: 0.01, delay: 0.05 },
+										}}
+										initial={{ opacity: 0 }}
+										layoutId="cardHoverEffect"
+									/>
+								)}
+							</AnimatePresence>
 						</li>
 					);
 				})}
