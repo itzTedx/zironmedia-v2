@@ -33,7 +33,7 @@ export const Footer = () => {
 					<div className="flex flex-col justify-between gap-12 md:flex-row md:gap-4">
 						<ContactList />
 
-						<div className="flex gap-12">
+						<div className="flex flex-wrap gap-9">
 							{FOOTER_LINKS.map((l) => (
 								<ul key={l.section}>
 									<li className="space-y-5">
@@ -91,7 +91,7 @@ export const Footer = () => {
 							/>
 						</Link>
 
-						<ul className="flex w-full flex-wrap items-center justify-center gap-2 md:justify-end">
+						<ul className="flex w-full flex-wrap items-center justify-center gap-4 md:justify-end">
 							{FOOTER_META.map((meta) => (
 								<li key={meta.label}>
 									<Link

@@ -35,7 +35,7 @@ export default function ContactPage() {
 					<div className="space-y-9 py-4 md:py-6">
 						<div className="space-y-2">
 							<Badge>Let’s Build Something That Works for Your Brand</Badge>
-							<h1 className="font-bold font-display text-4xl text-primary uppercase md:text-6xl lg:text-7xl">
+							<h1 className="text-balance font-black font-display text-4xl text-primary uppercase tracking-tight md:text-6xl">
 								The right partner for your next project
 							</h1>
 							<p className="text-balance font-medium text-lg text-muted-foreground leading-relaxed *:text-foreground md:text-xl">
@@ -108,7 +108,9 @@ export default function ContactPage() {
 			</section>
 
 			<section className="dashed dashed-y relative">
-				<div className="mx-auto grid max-w-7xl gap-4 px-6 py-9 md:grid-cols-3 md:px-0 md:py-16">
+				<div className="absolute inset-x-0 top-px h-1/2 bg-linear-to-b from-card" />
+				<div className="absolute inset-x-0 bottom-px h-1/2 bg-linear-to-t from-card" />
+				<div className="relative z-10 mx-auto grid max-w-7xl gap-4 px-6 py-9 md:grid-cols-3 md:px-0 md:py-16">
 					<div>
 						<h2 className="font-semibold text-2xl tracking-tight">
 							How we help you grow

@@ -46,12 +46,15 @@ export const Hero = () => {
 						</Link>
 					</Button>
 					<Button
+						asChild
 						className="justify-between text-muted-foreground md:w-52"
 						size="lg"
 						variant="secondary"
 					>
-						<span>See us in action</span>
-						<IconPlay className="hidden size-5 md:inline" />
+						<Link href="/our-works">
+							<span>See us in action</span>
+							<IconPlay className="hidden size-5 md:inline" />
+						</Link>
 					</Button>
 				</div>
 			</div>

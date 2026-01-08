@@ -50,8 +50,9 @@ export const NAV_LINKS: NavLink[] = [
 	},
 	{
 		label: "Our works",
-		href: "/",
+		href: "/our-works",
 	},
+
 	{
 		label: "Company",
 		submenu: [
@@ -73,13 +74,11 @@ export const NAV_LINKS: NavLink[] = [
 				description: "Tap. Scan. Connect.",
 				href: "/blogs",
 			},
-			{
-				id: "4",
-				title: "Contact",
-				description: "Tap. Scan. Connect.",
-				href: "/contact",
-			},
 		],
+	},
+	{
+		label: "Contact",
+		href: "/contact",
 	},
 ] as const;
 
@@ -123,6 +122,35 @@ export const FOOTER_LINKS = [
 		],
 	},
 	{
+		section: "SERVICES",
+		links: [
+			{
+				label: "Brand Strategy",
+				href: "/services/branding",
+			},
+			{
+				label: "Websites",
+				href: "/services/websites",
+			},
+			{
+				label: "Digital Marketing",
+				href: "/services/marketing",
+			},
+			{
+				label: "Printing & Corporate Gifts",
+				href: "/services/printing",
+			},
+			{
+				label: "Motion Design",
+				href: "/services/motion",
+			},
+			{
+				label: "Full-stack marketing",
+				href: "/services/full-stack",
+			},
+		],
+	},
+	{
 		section: "RESOURCES",
 		links: [
 			{
@@ -159,22 +187,22 @@ export const PARTNERS = [
 export const SOCIALS: Social[] = [
 	{
 		label: "Linkedin",
-		href: "/",
+		href: "https://www.linkedin.com/company/ziron-media",
 		icon: IconSocialLinkedIn,
 	},
 	{
-		label: "Facebook",
-		href: "/",
-		icon: IconSocialFacebook,
-	},
-	{
 		label: "Instagram",
-		href: "/",
+		href: "https://www.instagram.com/ziron_media/",
 		icon: IconSocialInstagram,
 	},
 	{
+		label: "Facebook",
+		href: "https://www.facebook.com/zironmedia",
+		icon: IconSocialFacebook,
+	},
+	{
 		label: "Whatsapp",
-		href: "/",
+		href: "https://wa.me/971581711486",
 		icon: IconSocialWhatsapp,
 	},
 ] as const;
