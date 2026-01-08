@@ -20,7 +20,11 @@ function NavigationMenu({
 			{...props}
 		>
 			{children}
-			<NavigationMenuPositioner />
+			<NavigationMenuPositioner
+				align="center"
+				positionMethod="fixed"
+				sticky={true}
+			/>
 		</NavigationMenuPrimitive.Root>
 	);
 }

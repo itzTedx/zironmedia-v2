@@ -14,6 +14,7 @@ export type Submenu = {
 	title: string;
 	description: string;
 	href: Route;
+	image?: string;
 	badge?: string;
 };
 

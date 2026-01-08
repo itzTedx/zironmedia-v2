@@ -144,7 +144,9 @@ export default function ContactPage() {
 												<li key={list.slug}>
 													<PreviewLinkCard
 														followCursor="x"
-														href={`/services/${service.slug}/${list.slug}`}
+														href={
+															`/services/${service.slug}/${list.slug}` as Route
+														}
 														src={list.image}
 													>
 														<PreviewLinkCardTrigger

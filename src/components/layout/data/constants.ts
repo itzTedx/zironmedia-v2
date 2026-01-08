@@ -44,6 +44,7 @@ export const NAV_LINKS: NavLink[] = [
 			description: ser.description,
 			href: `/services/${ser.slug}` as Route,
 			title: ser.title,
+			image: ser.image,
 			icon: ser.icon,
 		})),
 	},
