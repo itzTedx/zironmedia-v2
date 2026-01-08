@@ -214,10 +214,14 @@ export const FOOTER_META: FooterMeta[] = [
 	},
 	{
 		label: "Privacy Policy",
-		href: "/",
+		href: "/privacy-policy",
+	},
+	{
+		label: "Terms of service",
+		href: "/terms-of-service",
 	},
 	{
 		label: "Sitemap",
-		href: "/",
+		href: "/sitemap.xml" as Route,
 	},
 ];
