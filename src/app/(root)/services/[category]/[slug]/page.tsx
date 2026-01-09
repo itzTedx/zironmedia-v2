@@ -50,13 +50,13 @@ export default async function ServicePage({
 	return (
 		<div>
 			<header className="dashed dashed-b relative w-full">
-				<div className="dashed dashed-x container relative z-20 flex h-full max-w-7xl flex-col justify-end space-y-4 pt-12 pb-20">
+				<div className="md:dashed dashed-x container relative z-20 flex h-full max-w-7xl flex-col justify-end space-y-4 pt-12 pb-20">
 					<div className="mx-auto max-w-5xl space-y-4">
 						<h1 className="font-semibold text-4xl text-primary tracking-tighter sm:text-5xl md:text-6xl lg:text-8xl">
 							{service.metadata.title}
 						</h1>
-						<div className="flex items-center justify-between">
-							<p className="text-balance font-medium text-muted-foreground text-xl">
+						<div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
+							<p className="text-balance font-medium text-lg text-muted-foreground md:text-xl">
 								{service.metadata.description}
 							</p>
 							<div>

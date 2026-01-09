@@ -33,7 +33,7 @@ export const SERVICES = [
 			{
 				title: "Packaging Design",
 				slug: "packaging-design",
-				image: "/images/services/packaging.webp",
+				image: "/images/services/package/package-2.webp",
 			},
 			{
 				title: "Brand Revamps",
