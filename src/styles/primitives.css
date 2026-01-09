@@ -219,3 +219,13 @@
 @utility dashed-r-0 {
 	--dash-right: 0;
 }
+
+@utility stripe {
+	background: repeating-linear-gradient(
+		45deg,
+		var(--color-strong) 0,
+		var(--color-strong) 2px,
+		transparent 2px,
+		transparent 10px
+	);
+}

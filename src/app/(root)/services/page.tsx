@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -23,7 +25,7 @@ export default function ServicesPage() {
 				</header>
 			</section>
 			<section className="bg-card py-24">
-				<div className="container grid grid-cols-12 gap-6">
+				<div className="mx-auto grid max-w-7xl grid-cols-12 gap-6">
 					<div className="col-span-5 space-y-3">
 						<Badge>
 							<div className="size-1.5 rounded-full bg-brand-secondary" /> What
@@ -71,13 +73,22 @@ export default function ServicesPage() {
 			<section className="dashed dashed-t relative">
 				<ServicesLists />
 
-				<div className="dashed dashed-t-0 flex items-center justify-center py-12">
-					<Button className="text-muted-foreground" variant="secondary">
-						Build your vision with us <IconArrowRightTag />
-					</Button>
+				<div className="dashed dashed-y">
+					<div className="dashed dashed-x container flex max-w-7xl items-center justify-center py-12">
+						<Button
+							asChild
+							className="text-muted-foreground"
+							size="lg"
+							variant="secondary"
+						>
+							<Link href="/contact">
+								Build your vision with us <IconArrowRightTag />
+							</Link>
+						</Button>
+					</div>
 				</div>
-				<div className="absolute inset-x-0 top-0 -z-10 h-1/4 bg-linear-180 from-white" />
-				<div className="absolute inset-x-0 bottom-0 -z-10 h-1/4 bg-linear-0 from-white" />
+				{/* <div className="absolute inset-x-0 top-0 -z-10 h-1/4 bg-linear-180 from-white" />
+				<div className="absolute inset-x-0 bottom-0 -z-10 h-1/4 bg-linear-0 from-white" /> */}
 			</section>
 		</main>
 	);

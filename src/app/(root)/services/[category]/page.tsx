@@ -43,7 +43,7 @@ export async function generateMetadata({
 		};
 	}
 
-	const title = `${service.title} | ${siteConfig.name}`;
+	const title = `${service.title} - ${siteConfig.name}`;
 	const description = service.description;
 
 	return {
@@ -108,15 +108,15 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 				</header>
 			</section>
 
-			<section className="bg-card py-24">
-				<div className="container">
-					<div className="mx-auto max-w-4xl space-y-12">
+			<section className="bg-card">
+				<div className="dashed dashed-x container max-w-7xl">
+					<div className="dashed dashed-x mx-auto max-w-5xl space-y-12 py-24">
 						<div className="space-y-8">
-							<div className="space-y-4">
-								<h2 className="font-medium text-3xl md:text-4xl">
+							<div className="px-12">
+								<h2 className="font-semibold text-3xl text-primary md:text-4xl">
 									What we offer
 								</h2>
-								<p className="text-lg text-muted-foreground">
+								<p className="pt-2 text-lg text-muted-foreground">
 									Explore our comprehensive range of{" "}
 									{service.title.toLowerCase()} solutions designed to elevate
 									your brand and drive results.
@@ -126,7 +126,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 							<ul className="space-y-4">
 								{service.lists.map((list, index) => (
 									<li
-										className="group border-border border-b pb-4 transition-colors last:border-0 hover:border-primary"
+										className="group dashed dashed-b px-12 pb-4 transition-colors last:border-0 hover:border-primary"
 										key={list.title}
 									>
 										<PreviewLinkCard
@@ -167,6 +167,7 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 					</div>
 				</div>
 			</section>
+
 			<Cta />
 		</main>
 	);
