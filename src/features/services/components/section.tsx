@@ -17,7 +17,7 @@ function Section({ children, title }: SectionProps) {
 
 function SectionTitle({ children }: PropsWithChildren) {
 	return (
-		<h2 className="not-prose h-fit text-balance font-semibold text-5xl text-primary leading-tight tracking-tight md:sticky md:top-20">
+		<h2 className="not-prose h-fit text-balance font-semibold text-5xl text-primary leading-[1.125] tracking-tight md:sticky md:top-20">
 			{children}
 		</h2>
 	);

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
+import { BreakpointIndicator } from "@/components/layout/breakpoint-indicator";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
@@ -62,6 +63,7 @@ export default function RootLayout({
 					<Navbar />
 					{children}
 					<Footer />
+					<BreakpointIndicator />
 				</body>
 			</Providers>
 		</html>

@@ -95,25 +95,27 @@ function Faq({ children }: { children: React.ReactNode }) {
 				</Script>
 			)}
 			<section
-				className="dashed container relative grid gap-4 py-12 md:grid-cols-3"
+				className="dashed dashed-y"
 				itemScope
 				itemType="https://schema.org/FAQPage"
 			>
-				<div className="not-prose h-fit md:sticky md:top-24">
-					<Badge>Frequently Asked Questions</Badge>
-					<h2 className="my-3 font-semibold text-4xl text-foreground tracking-tight">
-						Still have questions?
-					</h2>
-					<p className="mb-6 text-balance text-lg text-muted-foreground leading-normal">
-						Have other questions or just want to chat? Book a call and let's
-						figure it out together.
-					</p>
-					<Button className="text-foreground" variant="outline">
-						<IconCalender className="text-muted-foreground" />
-						Book a call
-					</Button>
+				<div className="dashed dashed-x container relative grid max-w-7xl gap-4 py-12 md:grid-cols-3">
+					<div className="not-prose h-fit md:sticky md:top-24">
+						<Badge>Frequently Asked Questions</Badge>
+						<h2 className="my-3 font-semibold text-4xl text-foreground tracking-tight">
+							Still have questions?
+						</h2>
+						<p className="mb-6 text-balance text-lg text-muted-foreground leading-normal">
+							Have other questions or just want to chat? Book a call and let's
+							figure it out together.
+						</p>
+						<Button className="text-foreground" variant="outline">
+							<IconCalender className="text-muted-foreground" />
+							Book a call
+						</Button>
+					</div>
+					<FaqItem>{children}</FaqItem>
 				</div>
-				<FaqItem>{children}</FaqItem>
 			</section>
 		</>
 	);
