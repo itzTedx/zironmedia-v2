@@ -45,29 +45,26 @@ const StickyCard = ({
 			ref={container}
 		>
 			<motion.div
-				className="relative grid w-5xl origin-top gap-6 overflow-hidden rounded-4xl bg-card p-9 md:grid-cols-2"
+				className="relative grid origin-top gap-6 overflow-hidden rounded-4xl bg-card p-6 shadow-sm md:w-5xl md:grid-cols-2 md:p-9"
 				style={{
 					scale,
 					top: `calc(-12vh + ${i * 20 + 250}px)`,
 				}}
 			>
-				<Link
-					className="absolute inset-0 z-10"
-					href={`/services/${slug}` as Route}
-					title={title}
-				/>
 				<span className="pointer-events-none absolute bottom-6 left-6 z-20 text-6xl text-muted">
 					0{id}
 					<span className="font-bold text-brand-secondary">.</span>
 				</span>
 				<Icon className="pointer-events-none absolute -bottom-20 -left-12 size-72 text-muted/10" />
-				<div className="relative z-50">
-					<h3 className="font-semibold text-2xl text-primary tracking-tight md:text-4xl">
-						{title}
-					</h3>
-					<p className="text-balance text-lg text-muted-foreground">
-						{description}
-					</p>
+				<div className="relative z-40">
+					<Link href={`/services/${slug}` as Route}>
+						<h3 className="font-semibold text-2xl text-primary tracking-tight md:text-4xl">
+							{title}
+						</h3>
+						<p className="text-balance text-muted-foreground md:text-lg">
+							{description}
+						</p>
+					</Link>
 
 					<ul className="relative isolate z-50 mt-4 flex flex-wrap gap-3 text-white">
 						{lists.map((list) => (
@@ -82,7 +79,7 @@ const StickyCard = ({
 										delay={100}
 									>
 										<Badge
-											className="bg-card transition-transform hover:scale-102"
+											className="bg-card text-sm transition-transform hover:scale-102 md:text-base"
 											size="lg"
 											variant="outline"
 										>
@@ -105,10 +102,13 @@ const StickyCard = ({
 					</ul>
 				</div>
 
-				<div className="relative aspect-4/3 overflow-hidden rounded-xl transition-transform group-hover:scale-110">
+				<Link
+					className="relative aspect-video overflow-hidden rounded-xl transition-transform group-hover:scale-110 md:aspect-4/3"
+					href={`/services/${slug}` as Route}
+				>
 					<Noise />
 					<Image alt={title} className="object-cover" fill src={image} />
-				</div>
+				</Link>
 				{/* <div className="absolute inset-x-0 top-0 z-10 h-1/2 bg-linear-to-b from-foreground" /> */}
 			</motion.div>
 		</div>
@@ -124,7 +124,7 @@ const ServicesStickyCards = () => {
 
 	return (
 		<div
-			className="relative flex w-full flex-col items-center justify-center pb-[35vh]"
+			className="relative flex w-full flex-col items-center justify-center px-4 pb-[30vh] md:px-0 md:pb-[35vh]"
 			ref={container}
 		>
 			<div className="absolute top-0 left-1/2 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
@@ -137,7 +137,7 @@ const ServicesStickyCards = () => {
 						i={i}
 						key={`p_${i + 1}`}
 						progress={scrollYProgress}
-						range={[i * 0.25, 1]}
+						range={[i * 0.2, 1]}
 						service={service}
 						targetScale={targetScale}
 					/>
