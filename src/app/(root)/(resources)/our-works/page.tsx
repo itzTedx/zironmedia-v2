@@ -64,20 +64,32 @@ export default function WorksPage() {
 						))}
 					</TabsList>
 					<TabsPanel value="all">
-						<Frame>
-							<FrameHeader className="flex-row items-center justify-between px-1.5 py-2">
-								<FrameTitle className="text-xl">
-									Engineering a Smarter Digital Presence for Enterprise Growth.
-								</FrameTitle>
-								<div className="flex items-center gap-2">
+						<Frame className="gap-3">
+							<FrameHeader className="items-center gap-3 px-1.5 py-2 md:flex-row md:justify-between">
+								<div className="space-y-3 md:space-y-0">
 									<Badge
-										className="transition-colors duration-300"
+										className="transition-colors duration-300 md:hidden"
 										render={<Link href="/services/websites" />}
 										variant="ghost"
 									>
 										Website Design & Dev
 									</Badge>
-									<Button variant="secondary">See Case Study</Button>
+									<FrameTitle className="text-xl">
+										Engineering a Smarter Digital Presence for Enterprise
+										Growth.
+									</FrameTitle>
+								</div>
+								<div className="flex w-full items-center gap-2 md:w-auto">
+									<Badge
+										className="hidden transition-colors duration-300 md:inline-flex"
+										render={<Link href="/services/websites" />}
+										variant="ghost"
+									>
+										Website Design & Dev
+									</Badge>
+									<Button className="w-full md:inline-flex" variant="secondary">
+										See Case Study
+									</Button>
 								</div>
 							</FrameHeader>
 
@@ -86,8 +98,8 @@ export default function WorksPage() {
 									<Image alt="" fill src="/images/works/direct-ls.webp" />
 								</div>
 							</FramePanel>
-							<FrameFooter>
-								<p>
+							<FrameFooter className="px-1.5 py-2">
+								<p className="text-sm md:text-base">
 									"Ziron Media delivered a modern, fast, and professional
 									website that perfectly reflects our brand. Their attention to
 									detail and technical expertise made the entire process smooth
