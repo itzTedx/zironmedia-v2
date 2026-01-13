@@ -15,7 +15,7 @@ const badgeVariants = cva(
 			size: {
 				default:
 					"h-7 min-w-6 px-[calc(--spacing(3.5)-1px)] text-sm shadow-sm sm:h-8 sm:min-w-9 sm:text-sm",
-				lg: "h-6.5 min-w-6.5 px-[calc(--spacing(1.5)-1px)] text-base sm:h-5.5 sm:min-w-5.5 sm:text-sm",
+				lg: "h-8 min-w-8 px-[calc(--spacing(4)-1px)] text-base sm:h-9 sm:min-w-9 sm:text-base",
 				sm: "h-5 w-fit min-w-5 px-[calc(--spacing(2)-1px)] text-xs sm:text-[.625rem]",
 			},
 			variant: {
@@ -28,7 +28,7 @@ const badgeVariants = cva(
 				outline:
 					"border-primary text-primary [button,a&]:hover:bg-accent/50 dark:[button,a&]:hover:bg-input/48",
 				secondary:
-					"bg-secondary text-secondary-foreground [button,a&]:hover:bg-secondary/90",
+					"bg-brand-secondary text-secondary [button,a&]:hover:bg-secondary/90",
 				success: "bg-success/8 text-success-foreground dark:bg-success/16",
 				warning: "bg-warning/8 text-warning-foreground dark:bg-warning/16",
 			},

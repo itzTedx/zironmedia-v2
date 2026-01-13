@@ -142,7 +142,7 @@ export const SERVICES = [
 		title: "Motion Design",
 		description:
 			"Bringing stories to life through engaging motion graphics and impactful video content.",
-		image: "/images/services/motion.avif",
+		image: "/images/services/motion.webp",
 		lists: [
 			{
 				title: "Motion Graphics",
