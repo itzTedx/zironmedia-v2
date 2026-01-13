@@ -9,7 +9,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
 import { Video } from "@/components/ui/video-player";
 
-import { inter, mono, open } from "@/assets/fonts";
+import { inter, interTight, mono } from "@/assets/fonts";
 
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
@@ -59,7 +59,7 @@ export default function RootLayout({
 					className={cn(
 						"antialiased",
 						inter.variable,
-						open.className,
+						interTight.className,
 						mono.variable
 					)}
 				>

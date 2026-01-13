@@ -71,7 +71,7 @@ export default function ContactPage() {
 						</Card>
 						<FrameHeader>
 							<FrameTitle>
-								<p>
+								<p className="text-muted-foreground">
 									Prefer to hop on a call?{" "}
 									<Link className="text-primary hover:underline" href="/">
 										Book a call

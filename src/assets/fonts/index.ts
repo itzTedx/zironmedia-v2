@@ -1,7 +1,8 @@
-import { Chivo_Mono, Geist } from "next/font/google";
+import { Chivo_Mono, Geist, Inter_Tight } from "next/font/google";
 import localFont from "next/font/local";
 
 export const geist = Geist();
+export const interTight = Inter_Tight();
 
 export const youth = localFont({
 	variable: "--font-display",
@@ -75,42 +76,6 @@ export const clash = localFont({
 		{
 			weight: "700",
 			path: "./clash-grotesk/ClashGrotesk-Bold.woff2",
-		},
-	],
-	fallback: [
-		"-apple-system",
-		"BlinkMacSystemFont",
-		"Segoe UI",
-		"Roboto",
-		"Oxygen",
-		"Ubuntu",
-		"Cantarell",
-		"Helvetica Neue",
-		"Arial",
-		"sans-serif",
-	],
-});
-
-export const open = localFont({
-	variable: "--font-sans",
-	display: "swap",
-	preload: true,
-	src: [
-		{
-			weight: "400",
-			path: "./open-runde/OpenRunde-Regular.woff2",
-		},
-		{
-			weight: "500",
-			path: "./open-runde/OpenRunde-Medium.woff2",
-		},
-		{
-			weight: "600",
-			path: "./open-runde/OpenRunde-Semibold.woff2",
-		},
-		{
-			weight: "700",
-			path: "./open-runde/OpenRunde-Bold.woff2",
 		},
 	],
 	fallback: [
