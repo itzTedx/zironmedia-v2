@@ -4,10 +4,13 @@ import Link from "next/link";
 
 import MDXContent from "@/components/markdown/mdx-component";
 import { Badge } from "@/components/ui/badge";
+import { PageTOC, PageTOCItems, TOCProvider } from "@/components/ui/toc";
 
 import { getBlogBySlug, getBlogs } from "@/features/articles/actions/query";
 import { Blogs } from "@/features/articles/views/blogs";
 import { Faq, FaqContent } from "@/features/services/components/faq";
+import { slugify } from "@/lib/slugify";
+import { cn } from "@/lib/utils";
 
 export function generateStaticParams() {
 	const blogs = getBlogs();
@@ -36,7 +39,7 @@ export default async function BlogPage({ params }: PageProps<"/blogs/[slug]">) {
 	return (
 		<main>
 			<header>
-				<div className="dashed dashed-x container space-y-12 py-12">
+				<div className="dashed dashed-x container mx-auto max-w-7xl space-y-12 py-12">
 					<div className="mx-auto grid max-w-4xl">
 						<div className="col-span-2 space-y-3">
 							<div className="flex items-center gap-3">
@@ -49,7 +52,7 @@ export default async function BlogPage({ params }: PageProps<"/blogs/[slug]">) {
 								<div className="size-1.5 rounded-full bg-brand-secondary" />{" "}
 								<p className="text-muted-foreground">6 min read</p>
 							</div>
-							<h1 className="text-balance font-display font-semibold text-4xl text-primary uppercase sm:text-5xl md:text-6xl">
+							<h1 className="text-balance font-bold font-display text-4xl text-primary uppercase sm:text-5xl md:text-6xl">
 								{blog.metadata.title}
 							</h1>
 							<div className="flex flex-wrap gap-3 md:gap-4">
@@ -67,8 +70,8 @@ export default async function BlogPage({ params }: PageProps<"/blogs/[slug]">) {
 					</div>
 				</div>
 				<div className="dashed dashed-y relative py-12">
-					<div className="container">
-						<div className="relative z-10 aspect-7/3 overflow-hidden rounded-2xl shadow-sm">
+					<div className="container max-w-7xl">
+						<div className="relative z-10 aspect-video overflow-hidden rounded-2xl shadow-sm">
 							<Image
 								alt={blog.metadata.title}
 								className="object-cover"
@@ -80,15 +83,56 @@ export default async function BlogPage({ params }: PageProps<"/blogs/[slug]">) {
 					<div className="pointer-events-none absolute inset-0 mb-px bg-linear-0 from-white" />
 				</div>
 			</header>
-			<section className="dashed dashed-x container grid py-12">
-				<article className="prose prose-stone prose-lg mx-auto max-w-prose prose-hr:border-muted/60 prose-a:text-primary prose-a:underline">
-					<MDXContent
-						components={{ a: (props) => <Link {...props} />, Faq, FaqContent }}
-						source={blog.content}
-					/>
-				</article>
-			</section>
+			<TOCProvider>
+				<section className="dashed dashed-x mx-auto grid max-w-7xl grid-cols-[auto_20rem]">
+					<article className="prose prose-stone prose-lg prose-headings:mt-0 max-w-none prose-hr:border-muted/60 prose-a:text-primary">
+						<MDXContent
+							components={{
+								a: (props) => (
+									<Link
+										{...props}
+										className={cn(
+											"group no-underline! relative items-center",
+											"before:pointer-events-none before:absolute before:top-[1.3em] before:left-0 before:h-[0.072em] before:w-full before:bg-current before:content-['']",
+											"prose-headings:text-primary before:origin-right before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out",
+											"hover:before:origin-left hover:before:scale-x-100"
+										)}
+									/>
+								),
+								h1: (props) => <h1 id={slugify(props.children)} {...props} />,
+								h2: (props) => <h2 id={slugify(props.children)} {...props} />,
+								h3: (props) => <h3 id={slugify(props.children)} {...props} />,
+								h4: (props) => <h4 id={slugify(props.children)} {...props} />,
+								h5: (props) => <h5 id={slugify(props.children)} {...props} />,
+								h6: (props) => <h6 id={slugify(props.children)} {...props} />,
+								Section: (props) => <Section {...props} />,
+								Faq,
+								FaqContent,
+							}}
+							source={blog.content}
+						/>
+					</article>
+
+					<aside className="dashed dashed-x dashed-r-0 h-full shrink-0 px-px">
+						<div className="h-full bg-floating px-6 py-12">
+							<PageTOC className="sticky top-20 h-fit">
+								<p className="font-medium text-sm">On This Page</p>
+								<PageTOCItems variant="clerk" />
+							</PageTOC>
+						</div>
+					</aside>
+				</section>
+			</TOCProvider>
+
 			<Blogs />
 		</main>
+	);
+}
+
+function Section(props: React.ComponentProps<"div">) {
+	return (
+		<section className="dashed last:dashed-b-0 dashed-t pt-9 pb-4">
+			<div {...props} className="mx-auto max-w-prose" />
+		</section>
 	);
 }

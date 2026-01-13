@@ -86,7 +86,7 @@ export const Navbar = () => {
 						<Link href="/contact">
 							<span className="hidden md:inline">Start a project</span>
 							<span className="md:hidden">Contact</span>
-							<IconCaretRight className="hidden md:block" />
+							<IconCaretRight className="hidden transition-transform duration-200 ease-in group-hover/button:translate-x-1 md:block" />
 						</Link>
 					</Button>
 					<MobileNav />

@@ -17,10 +17,11 @@ export const Blogs = () => {
 				</h2>
 				<Button
 					asChild
-					className="w-40 justify-between bg-foreground shadow-button-neutral"
+					className="group w-40 justify-between bg-foreground shadow-button-neutral"
 				>
 					<Link href="/blogs">
-						More blogs <IconArrowRightTag className="size-5" />
+						More blogs{" "}
+						<IconArrowRightTag className="size-5 transition-transform duration-300 ease-in group-hover:translate-x-1" />
 					</Link>
 				</Button>
 			</header>

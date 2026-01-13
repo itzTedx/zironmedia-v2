@@ -32,7 +32,7 @@ export const Hero = () => {
 				<div className="relative z-99 flex w-full items-center gap-4 md:w-auto">
 					<Button
 						asChild
-						className="w-full flex-1 justify-between gap-2 md:w-60"
+						className="group w-full flex-1 justify-between gap-2 md:w-60"
 						size="lg"
 					>
 						<Link href="/services">
@@ -42,18 +42,18 @@ export const Hero = () => {
 									- it’s free
 								</span>
 							</span>
-							<IconArrowRightTag className="size-5" />
+							<IconArrowRightTag className="size-5 transition-transform duration-300 ease-in group-hover:translate-x-1" />
 						</Link>
 					</Button>
 					<Button
 						asChild
-						className="justify-between text-muted-foreground md:w-52"
+						className="group justify-between text-muted-foreground md:w-52"
 						size="lg"
 						variant="secondary"
 					>
 						<Link href="/our-works">
 							<span>See us in action</span>
-							<IconPlay className="hidden size-5 md:inline" />
+							<IconPlay className="hidden size-5 transition-transform duration-300 ease-in group-hover:translate-x-1 md:inline" />
 						</Link>
 					</Button>
 				</div>

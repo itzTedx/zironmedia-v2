@@ -15,6 +15,7 @@ import { Frame, FramePanel } from "@/components/ui/frame";
 import { IconCalender } from "@/assets/icons/calender";
 
 import { slugify } from "@/lib/slugify";
+import { cn } from "@/lib/utils";
 
 interface FaqItem {
 	question: string;
@@ -50,7 +51,13 @@ function extractTextFromChildren(children: React.ReactNode): string {
 	return "";
 }
 
-function Faq({ children }: { children: React.ReactNode }) {
+function Faq({
+	children,
+	compact,
+}: {
+	children: React.ReactNode;
+	compact?: boolean;
+}) {
 	// Extract FAQ items from children
 	const faqItems: FaqItem[] = [];
 
@@ -99,7 +106,12 @@ function Faq({ children }: { children: React.ReactNode }) {
 				itemScope
 				itemType="https://schema.org/FAQPage"
 			>
-				<div className="dashed dashed-x container relative grid max-w-7xl gap-4 py-12 md:grid-cols-3">
+				<div
+					className={cn(
+						"container relative grid max-w-7xl gap-4 py-12",
+						compact ? "md:grid-cols-2" : "dashed dashed-x md:grid-cols-3"
+					)}
+				>
 					<div className="not-prose h-fit md:sticky md:top-24">
 						<Badge>Frequently Asked Questions</Badge>
 						<h2 className="my-3 font-semibold text-4xl text-foreground tracking-tight">
@@ -114,16 +126,24 @@ function Faq({ children }: { children: React.ReactNode }) {
 							Book a call
 						</Button>
 					</div>
-					<FaqItem>{children}</FaqItem>
+					<FaqItem className={cn(compact ? "md:col-span-1" : "md:col-span-2")}>
+						{children}
+					</FaqItem>
 				</div>
 			</section>
 		</>
 	);
 }
 
-function FaqItem({ children }: { children: React.ReactNode }) {
+function FaqItem({
+	children,
+	className,
+}: {
+	children: React.ReactNode;
+	className?: string;
+}) {
 	return (
-		<Accordion className="not-prose w-full md:col-span-2">
+		<Accordion className={cn("not-prose w-full", className)}>
 			<Frame>{children}</Frame>
 		</Accordion>
 	);

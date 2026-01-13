@@ -1,7 +1,6 @@
-import { Chivo_Mono, Geist, Inter_Tight } from "next/font/google";
+import { Chivo_Mono, Inter_Tight } from "next/font/google";
 import localFont from "next/font/local";
 
-export const geist = Geist();
 export const interTight = Inter_Tight();
 
 export const youth = localFont({
