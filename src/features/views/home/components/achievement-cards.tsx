@@ -6,11 +6,25 @@ import Integrations from "@/components/ui/integrations";
 
 import { IconPlay } from "@/assets/icons/play";
 
+import { cn } from "@/lib/utils";
+
 import { GrowthChart } from "./chart";
+
+function Card({ className, ...props }: React.ComponentProps<"div">) {
+	return (
+		<div
+			className={cn(
+				"relative aspect-4/3 overflow-hidden rounded-5xl bg-linear-0 from-gray-100 to-gray-50 transition [corner-shape:squircle]",
+				className
+			)}
+			{...props}
+		/>
+	);
+}
 
 export const BrandServed = () => {
 	return (
-		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-100 to-gray-50 transition">
+		<Card>
 			<Noise />
 			<Image
 				alt="Our website service we did for Direct Logic Systems"
@@ -37,13 +51,13 @@ export const BrandServed = () => {
 			/>
 
 			<div className="pointer-events-none absolute inset-0 bg-linear-0 from-brand-300 to-brand-100 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
-		</div>
+		</Card>
 	);
 };
 
 export const Experience = () => {
 	return (
-		<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-linear-0 from-gray-100 to-gray-50 transition">
+		<Card>
 			<Noise className="opacity-20" />
 			<div className="absolute top-12 left-1/2 z-20 -translate-x-1/2 transition-transform group-hover/card:-translate-y-6 group-hover/card:scale-90">
 				<svg
@@ -65,13 +79,13 @@ export const Experience = () => {
 				<Integrations />
 			</div>
 			<div className="pointer-events-none absolute inset-0 bg-linear-0 from-fuchsia-300 to-fuchsia-100 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
-		</div>
+		</Card>
 	);
 };
 
 export const Growth = () => {
 	return (
-		<div className="relative flex aspect-4/3 flex-col overflow-hidden rounded-2xl bg-linear-0 from-gray-100 to-gray-50 p-4 transition">
+		<Card>
 			<Noise />
 			<p className="relative z-50 p-6 font-medium text-3xl transition-colors group-hover/card:text-green-800">
 				Growth
@@ -115,7 +129,7 @@ export const Growth = () => {
 				</svg>
 			</div> */}
 			<div className="pointer-events-none absolute inset-0 bg-linear-0 from-green-300 to-green-50 opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />
-		</div>
+		</Card>
 	);
 };
 

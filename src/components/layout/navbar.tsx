@@ -82,7 +82,11 @@ export const Navbar = () => {
 					</NavigationMenu>
 				</div>
 				<div className="flex items-center gap-2">
-					<Button asChild variant="secondary">
+					<Button
+						asChild
+						className="bg-floating text-primary"
+						variant="secondary"
+					>
 						<Link href="/contact">
 							<span className="hidden md:inline">Start a project</span>
 							<span className="md:hidden">Contact</span>

@@ -11,7 +11,7 @@ export const VideoReel = () => {
 	return (
 		<section className="dashed dashed-t">
 			<div className="dashed dashed-x mx-auto flex max-w-7xl items-center justify-center p-6 md:p-20">
-				<div className="relative max-w-5xl overflow-hidden rounded-3xl shadow-lg">
+				<div className="relative max-w-5xl overflow-hidden rounded-5xl shadow-lg [corner-shape:squircle]">
 					<Noise />
 					<Image alt="" height={576} src="/images/reel.png" width={1024} />
 					<div className="absolute top-0 z-10 flex size-full flex-col justify-between p-6 md:p-12">

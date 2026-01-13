@@ -13,7 +13,7 @@ export const Hero = () => {
 		<section className="dashed dashed-x relative mx-auto max-w-7xl">
 			<Noise className="opacity-50" />
 			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-12 md:px-0 md:py-16">
-				<Badge className="gap-2 text-gray-1000 uppercase tracking-normal">
+				<Badge className="gap-2 uppercase tracking-normal">
 					<div className="size-1.5 rounded-full bg-violet-500" /> Ready to grow?
 					We’re ready to go
 				</Badge>
@@ -47,9 +47,9 @@ export const Hero = () => {
 					</Button>
 					<Button
 						asChild
-						className="group justify-between text-muted-foreground md:w-52"
+						className="group justify-between md:w-52"
 						size="lg"
-						variant="secondary"
+						variant="outline"
 					>
 						<Link href="/our-works">
 							<span>See us in action</span>

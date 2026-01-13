@@ -17,7 +17,7 @@ export const Footer = () => {
 	return (
 		<footer className="relative pt-12">
 			<section className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 md:px-0 lg:grid-cols-[1fr_2fr]">
-				<div className="relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-2xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-12 shadow-sm">
+				<div className="squircle relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-5xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-12 shadow-sm">
 					<Noise className="opacity-50" />
 					<Link href="/">
 						<LogoMono className="h-10 w-fit text-white" />
@@ -31,7 +31,7 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="space-y-12 rounded-2xl bg-card p-6 shadow-sm md:space-y-20 md:p-12">
+				<div className="squircle space-y-12 rounded-5xl bg-card p-6 shadow-sm md:space-y-20 md:p-12">
 					<div className="flex flex-col justify-between gap-12 md:flex-row md:gap-4">
 						<ContactList />
 

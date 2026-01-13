@@ -83,7 +83,7 @@ const features = [
 
 export const WhyUs = () => {
 	return (
-		<section className="dashed dashed-b-0 mx-auto max-w-7xl">
+		<section className="dashed dashed-b-0 mx-auto max-w-7xl p-px">
 			<header className="dashed dashed-b space-y-1.5 p-9 text-center md:space-y-3 md:p-14">
 				<h2 className="font-display font-semibold text-3xl text-primary tracking-tight md:text-6xl">
 					Why choose us
@@ -94,16 +94,20 @@ export const WhyUs = () => {
 				</p>
 			</header>
 			<div className="mx-auto max-w-6xl px-4 py-9 md:px-0 md:py-14">
-				<div className="sr-only grid grid-cols-4 gap-6 pb-3 md:not-sr-only">
+				<div className="sr-only mb-3 grid grid-cols-4 gap-6 md:not-sr-only">
 					<div />
 					<div>
 						<Wordmark />
 					</div>
-					<p className="text-xs sm:text-base">In-House Team</p>
-					<p className="text-xs sm:text-base">Other Agencies</p>
+					<p className="text-muted-foreground text-xs sm:text-base">
+						In-House Team
+					</p>
+					<p className="text-muted-foreground text-xs sm:text-base">
+						Other Agencies
+					</p>
 				</div>
 
-				<Frame>
+				<Frame className="mt-3">
 					<Table>
 						<TableHeader className="md:sr-only">
 							<TableRow className="pb-6">

@@ -39,16 +39,18 @@ const StickyCard = ({
 	const scale = useTransform(progress, range, [1, targetScale]);
 	const { description, id, icon: Icon, image, lists, slug, title } = service;
 
+	// const isMobile = useIsMobile
+
 	return (
 		<div
 			className="sticky top-0 flex items-center justify-center"
 			ref={container}
 		>
 			<motion.div
-				className="relative grid origin-top gap-6 overflow-hidden rounded-4xl bg-card p-6 shadow-sm md:w-5xl md:grid-cols-2 md:p-9"
+				className="squircle relative grid origin-top gap-6 overflow-hidden rounded-5xl bg-card p-6 shadow-sm md:w-7xl md:grid-cols-2 md:p-9"
 				style={{
 					scale,
-					top: `calc(-12vh + ${i * 20 + 250}px)`,
+					top: `calc(-12vh + ${i * 20 + 300}px)`,
 				}}
 			>
 				<span className="pointer-events-none absolute bottom-6 left-6 z-20 text-6xl text-muted">
@@ -124,12 +126,9 @@ const ServicesStickyCards = () => {
 
 	return (
 		<div
-			className="relative flex w-full flex-col items-center justify-center px-4 pb-[30vh] md:px-0 md:pb-[35vh]"
+			className="relative flex w-full flex-col items-center justify-center px-4 pb-[35vh] md:px-0 md:pt-20 md:pb-[30vh]"
 			ref={container}
 		>
-			<div className="absolute top-0 left-1/2 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center">
-				<span className="absolute top-full left-1/2 h-16 w-px bg-linear-to-b from-background to-foreground/25" />
-			</div>
 			{SERVICES.map((service, i) => {
 				const targetScale = Math.max(0.5, 1 - (SERVICES.length - i - 1) * 0.1);
 				return (

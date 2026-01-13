@@ -87,7 +87,10 @@ export default function WorksPage() {
 									>
 										Website Design & Dev
 									</Badge>
-									<Button className="w-full md:inline-flex" variant="secondary">
+									<Button
+										className="w-full md:inline-flex md:w-auto"
+										variant="secondary"
+									>
 										See Case Study
 									</Button>
 								</div>

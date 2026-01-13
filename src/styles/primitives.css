@@ -63,6 +63,11 @@
 	}
 }
 
+@utility squircle {
+	/* biome-ignore lint/correctness/noUnknownProperty: its a valid css property */
+	corner-shape: squircle;
+}
+
 @keyframes move-x {
 	from {
 		transform: translateX(-100%);
