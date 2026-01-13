@@ -1,5 +1,3 @@
-import { Suspense } from "react";
-
 import dynamic from "next/dynamic";
 
 import { Blogs } from "@/features/articles/views/blogs";
@@ -17,9 +15,6 @@ const Video = dynamic(() =>
 export default function Home() {
 	return (
 		<main>
-			<Suspense>
-				<Video />
-			</Suspense>
 			<Hero />
 			<Feedback />
 

@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
+import { Suspense } from "react";
+
 import { BreakpointIndicator } from "@/components/layout/breakpoint-indicator";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { Providers } from "@/components/providers";
+import { Video } from "@/components/ui/video-player";
 
-import { geist, inter, mono } from "@/assets/fonts";
+import { inter, mono, open } from "@/assets/fonts";
 
 import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
@@ -56,12 +59,16 @@ export default function RootLayout({
 					className={cn(
 						"antialiased",
 						inter.variable,
-						geist.className,
+						open.className,
 						mono.variable
 					)}
 				>
 					<Navbar />
+
 					{children}
+					<Suspense>
+						<Video />
+					</Suspense>
 					<Footer />
 					<BreakpointIndicator />
 				</body>

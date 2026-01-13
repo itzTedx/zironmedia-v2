@@ -84,7 +84,17 @@ export default async function ServicePage({
 			<article className="prose prose-stone [&>div]:dashed [&>div]:dashed-x prose-xl max-w-none prose-a:text-primary prose-a:underline [&>div]:container [&>div]:max-w-7xl [&>div]:py-12">
 				<MDXContent
 					components={{
-						a: (props) => <Link {...props} />,
+						a: (props) => (
+							<Link
+								{...props}
+								className={cn(
+									"group no-underline! relative items-center",
+									"before:pointer-events-none before:absolute before:top-[1.3em] before:left-0 before:h-[0.072em] before:w-full before:bg-current before:content-['']",
+									"before:origin-right before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out",
+									"hover:before:origin-left hover:before:scale-x-100"
+								)}
+							/>
+						),
 						hr: (props) => (
 							<hr className="dashed border-transparent" {...props} />
 						),

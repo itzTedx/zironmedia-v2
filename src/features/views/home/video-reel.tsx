@@ -29,7 +29,7 @@ export const VideoReel = () => {
 									Watch video <IconCaretRight />
 								</Button>
 								<Button
-									className="hidden px-0 text-white hover:text-card sm:pr-4 sm:pl-2 md:inline-flex"
+									className="group hidden px-0 text-white hover:text-card sm:pr-4 sm:pl-2 md:inline-flex"
 									variant="ghost"
 								>
 									<div className="flex size-6 items-center justify-center rounded-md bg-white/20">
