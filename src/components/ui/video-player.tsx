@@ -141,7 +141,7 @@ export const Video = () => {
 	};
 
 	return (
-		<section className="fixed right-6 bottom-9 z-99999 flex aspect-video h-32 items-center justify-center overflow-hidden rounded-xl bg-card shadow-lg">
+		<section className="fixed right-6 bottom-9 z-9999 flex aspect-video h-32 items-center justify-center overflow-hidden rounded-xl bg-card shadow-lg">
 			<AnimatePresence>
 				{showVideoPopOver && (
 					<VideoPopOver setShowVideoPopOver={setShowVideoPopOver} />

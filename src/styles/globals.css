@@ -183,6 +183,80 @@
 	--warning-foreground: var(--color-amber-700);
 }
 
+.dark {
+	--radius: 0.625rem;
+
+	--background: oklch(0.147 0.004 49.25);
+	--foreground: oklch(1 0 0);
+
+	--card-foreground: oklch(1 0 0);
+	--card: oklch(0.147 0.004 49.25);
+
+	--popover-foreground: oklch(1 0 0);
+	--popover: oklch(0.147 0.004 49.25);
+
+	--primary-foreground: oklch(0.216 0.006 56.043);
+	--primary: oklch(0.985 0.001 106.423);
+
+	--secondary-foreground: var(--gray-1000);
+	--secondary: var(--gray-300);
+
+	--muted-foreground: oklch(0.97 0.001 106.424);
+	--muted: oklch(0.553 0.013 58.071);
+
+	--accent-foreground: oklch(0.97 0.001 106.424);
+	--accent: oklch(0.216 0.006 56.043);
+
+	--border: oklch(0.923 0.003 48.717);
+	--input: var(--gray-1000);
+	--ring: var(--brand-400);
+
+	--white: oklch(1 0 0);
+	--black: oklch(0.1398 0 0);
+
+	--brand-950: oklch(0.9747 0.0119 259.82);
+	--brand-900: oklch(0.8845 0.056272 274.1607);
+	--brand-800: oklch(0.7907 0.1063 276.03);
+	--brand-700: oklch(0.6926 0.1631 277.39);
+	--brand-600: oklch(0.6001 0.2207 278.29);
+	--brand-500: oklch(0.5174 0.2736 276.98);
+	--brand-400: oklch(0.4394 0.2527 276.86);
+	--brand-300: oklch(0.3501 0.1992 277.06);
+	--brand-200: oklch(0.2606 0.1331 276.82);
+	--brand-100: oklch(0.1712 0.0749 277.38);
+	--brand-50: oklch(0.0824 0.0346 275.68);
+
+	--brand-secondary: oklch(0.5739 0.27695 299.6177);
+	--brand-secondary-400: oklch(0.6606 0.2265 304.68);
+
+	--gray-1500: oklch(0.9854 0.0013 286.38);
+	--gray-1400: oklch(0.9524 0.0013 286.37);
+	--gray-1300: oklch(0.9197 0.004 286.32);
+	--gray-1200: oklch(0.8786 0.0082 293.89);
+	--gray-1100: oklch(0.8229 0.0084 293.88);
+	--gray-1000: oklch(0.741 0.01 292.73);
+	--gray-900: oklch(0.6471 0.0133 291.14);
+	--gray-800: oklch(0.5422 0.0139 291.04);
+	--gray-700: oklch(0.4408 0.018 293.99);
+	--gray-600: oklch(0.3932 0.0202 293.09);
+	--gray-500: oklch(0.3296 0.0158 290.61);
+	--gray-400: oklch(0.2979 0.0162 290.48);
+	--gray-300: oklch(0.2602 0.013 292.02);
+	--gray-200: oklch(0.2291 0.0115 285.46);
+	--gray-100: oklch(0.1947 0.0101 294.62);
+	--gray-50: oklch(0.1652 0.0062 285.7);
+
+	--destructive: oklch(0.577 0.245 27.325);
+	--destructive-foreground: var(--color-red-700);
+	--info: var(--color-blue-500);
+	--info-foreground: var(--color-blue-700);
+	--success: var(--color-green-600);
+	--success-secondary: var(--color-green-800);
+	--success-foreground: var(--color-green-100);
+	--warning: var(--color-amber-500);
+	--warning-foreground: var(--color-amber-700);
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;

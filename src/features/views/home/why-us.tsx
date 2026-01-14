@@ -172,7 +172,6 @@ export const WhyUs = () => {
 					</Table>
 				</Frame>
 			</div>
-			<div className="dashed dashed-t mx-auto max-w-7xl p-9" />
 		</section>
 	);
 };
