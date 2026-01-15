@@ -18,7 +18,7 @@ type WithAsChild<Base extends object> =
 	| (Base & { asChild?: false | undefined });
 
 type SlotProps<T extends HTMLElement = HTMLElement> = {
-	// biome-ignore lint/suspicious/noExplicitAny: We can't expect a type for children passing
+	// biome-ignore lint/suspicious/noExplicitAny: We cant expect a type
 	children?: any;
 } & DOMMotionProps<T>;
 
@@ -65,23 +65,28 @@ function Slot<T extends HTMLElement = HTMLElement>({
 	ref,
 	...props
 }: SlotProps<T>) {
+	const isValidChild = React.isValidElement(children);
+
 	const isAlreadyMotion =
+		isValidChild &&
 		typeof children.type === "object" &&
 		children.type !== null &&
 		isMotionComponent(children.type);
 
-	const Base = React.useMemo(
-		() =>
-			isAlreadyMotion
-				? (children.type as React.ElementType)
-				: motion.create(children.type as React.ElementType),
-		[isAlreadyMotion, children.type]
-	);
+	const Base = React.useMemo(() => {
+		if (!isValidChild) return null;
 
-	if (!React.isValidElement(children)) return null;
+		return isAlreadyMotion
+			? (children.type as React.ElementType)
+			: motion.create(children.type as React.ElementType);
+	}, [isValidChild, isAlreadyMotion, children?.type]);
+
+	// ✅ early return AFTER hooks
+	if (!isValidChild || !Base) {
+		return <>{children}</>;
+	}
 
 	const { ref: childRef, ...childProps } = children.props as AnyProps;
-
 	const mergedProps = mergeProps(childProps, props);
 
 	return (

@@ -18,6 +18,7 @@ export const PRODUCTS: Submenu[] = [
 		icon: IconNfc,
 		title: "Ziron Tap",
 		description: "Tap. Scan. Connect.",
+		badge: "New • Get Early Access",
 		href: "/",
 	},
 	{
@@ -25,7 +26,7 @@ export const PRODUCTS: Submenu[] = [
 		icon: IconNfc,
 		title: "Ziron CRM",
 		description: "Tap. Scan. Connect.",
-		badge: "New • Get Early Access",
+		badge: "Coming soon",
 		href: "/",
 	},
 ];
