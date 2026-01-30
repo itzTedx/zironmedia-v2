@@ -1,7 +1,7 @@
 import { Route } from "next";
 import Link from "next/link";
 
-import { ContactList } from "@/components/layout/ui/contant-list";
+import { ContactList } from "@/components/layout/ui/contact-list";
 import { Socials } from "@/components/layout/ui/socials";
 import {
 	PreviewLinkCard,

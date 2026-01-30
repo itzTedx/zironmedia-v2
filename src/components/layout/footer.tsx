@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import { Noise } from "../shared/noise";
 import { FOOTER_LINKS, FOOTER_META, PARTNERS } from "./data/constants";
-import { ContactList } from "./ui/contant-list";
+import { ContactList } from "./ui/contact-list";
 import { Socials } from "./ui/socials";
 
 // Static copyright year to avoid re-computation
