@@ -42,6 +42,9 @@ export const metadata: Metadata = {
 	verification: {
 		google: "H82IdVplopSwcjY_hXhk8ggR9RwBclOsumEZDHP-c6E",
 	},
+	other: {
+		"msvalidate.01": "A8C503B4FF428B289DA437C18B34BBE3",
+	},
 };
 
 export const viewport: Viewport = {
