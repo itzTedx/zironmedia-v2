@@ -72,7 +72,7 @@ export const ServiceList = ({
 										className="overflow-hidden rounded-lg"
 										href={`/services/${service.slug}/${list.slug}` as Route}
 									>
-										<PreviewLinkCardImage alt="Preview link card content" />
+										<PreviewLinkCardImage alt={service.alt} />
 									</PreviewLinkCardPopup>
 								</PreviewLinkCardPositioner>
 							</PreviewLinkCardPortal>

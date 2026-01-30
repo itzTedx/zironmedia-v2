@@ -56,14 +56,14 @@ export const Feedback = () => {
 												<div className="relative aspect-4/3 overflow-hidden rounded-2xl bg-surface md:aspect-7/4">
 													<Noise className="opacity-20" />
 													<Image
-														alt="Maxline global feedback about ziron media"
+														alt="Client testimonial card from Maxline Global praising Ziron Media’s social media work"
 														className="absolute top-14 left-1/2 z-20 -translate-x-[15%] rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[12%] group-hover/card:rotate-3 group-hover/card:scale-115"
 														height={200}
 														src={item.image1}
 														width={170}
 													/>
 													<Image
-														alt="Maxline global feedback about ziron media"
+														alt="Client testimonial card from Maxline Global highlighting increased reach and engagement"
 														className="absolute top-12 left-1/2 z-10 -translate-x-[85%] -rotate-9 rounded-xl transition-[rotate,scale,translate] duration-500 group-hover/card:-translate-x-[88%] group-hover/card:-translate-y-2 group-hover/card:-rotate-3 group-hover/card:scale-115"
 														height={200}
 														src={item.image2}

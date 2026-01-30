@@ -27,7 +27,7 @@ export const BrandServed = () => {
 		<Card>
 			<Noise />
 			<Image
-				alt="Our website service we did for Direct Logic Systems"
+				alt="Website redesign for Direct Logic Systems by Ziron Media"
 				className="absolute top-14 left-1/2 z-30 -translate-x-1/2 rounded-lg object-contain transition-[scale,translate] duration-300 ease-out group-hover/card:-translate-y-20 group-hover/card:scale-75"
 				height={280}
 				src="/images/direct.jpg"
@@ -35,7 +35,7 @@ export const BrandServed = () => {
 			/>
 
 			<Image
-				alt="Our website service we did for Direct Logic Systems"
+				alt="Website redesign for Maxline Global Logistics by Ziron Media"
 				className="absolute top-14 left-1/2 z-20 -translate-x-1/2 rounded-lg object-contain transition-[scale,translate] duration-300 ease-out group-hover/card:-translate-x-[calc(50%+5rem)] group-hover/card:-translate-y-20 group-hover/card:scale-60"
 				height={280}
 				src="/images/maxline.jpg"
@@ -43,7 +43,7 @@ export const BrandServed = () => {
 			/>
 
 			<Image
-				alt="Our website service we did for Direct Logic Systems"
+				alt="Website design and development for Qordz by Ziron Media"
 				className="absolute top-14 left-1/2 z-10 -translate-x-1/2 rounded-lg object-contain transition-[scale,translate] duration-300 ease-out group-hover/card:translate-x-[calc(-50%+5rem)] group-hover/card:-translate-y-20 group-hover/card:scale-60"
 				height={280}
 				src="/images/qordx.jpg"

@@ -174,14 +174,17 @@ export const PARTNERS = [
 	{
 		title: "Google Partner",
 		src: "/images/partner/google.svg",
+		alt: "Google Partner badge",
 	},
 	{
 		title: "Meta Partner",
 		src: "/images/partner/meta.svg",
+		alt: "Meta Business Partner badge",
 	},
 	{
 		title: "Tiktok Partner",
 		src: "/images/partner/tiktok.svg",
+		alt: "TikTok Marketing Partner badge",
 	},
 ] as const;
 

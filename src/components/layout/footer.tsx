@@ -69,7 +69,7 @@ export const Footer = () => {
 							{PARTNERS.map((partner) => (
 								<li key={partner.title}>
 									<Image
-										alt={partner.title}
+										alt={partner.alt}
 										height={30}
 										src={partner.src}
 										width={80}

@@ -11,6 +11,7 @@ export const SERVICES = [
 		slug: "branding",
 		icon: IconTarget,
 		title: "Brand Strategy",
+		alt: "Brand strategy services—logo design, visual identity, and brand guidelines",
 		description:
 			"Building strong, memorable brands through strategy, identity design, and consistent visual systems.",
 		image: "/images/services/logo-design.jpg",
@@ -49,6 +50,7 @@ export const SERVICES = [
 		title: "Websites",
 		description:
 			"Designing and developing fast, scalable, and conversion-focused websites that grow with your business.",
+		alt: "Website design and development-fast, scalable, conversion-focused sites",
 		image: "/images/services/web-dev.webp",
 		lists: [
 			{
@@ -80,6 +82,7 @@ export const SERVICES = [
 		title: "Digital Marketing",
 		description:
 			"Driving visibility, engagement, and leads through data-driven digital marketing strategies.",
+		alt: "Digital marketing services—SEO, social media, content, and paid ads",
 		image: "/images/services/social.jpg",
 		lists: [
 			{
@@ -106,6 +109,7 @@ export const SERVICES = [
 		title: "Printing & Corporate Gifts",
 		description:
 			"High-quality printing and branded merchandise that enhance visibility and leave a lasting impression.",
+		alt: "Printing and corporate gifts—branded merchandise and marketing collateral",
 		image: "/images/services/corporate-gifts.webp",
 		lists: [
 			{
@@ -142,6 +146,7 @@ export const SERVICES = [
 		title: "Motion Design",
 		description:
 			"Bringing stories to life through engaging motion graphics and impactful video content.",
+		alt: "Motion design—explainer videos, motion graphics, and brand videos",
 		image: "/images/services/motion.webp",
 		lists: [
 			{
@@ -168,6 +173,7 @@ export const SERVICES = [
 		title: "Full-stack Marketing",
 		description:
 			"End-to-end marketing solutions that align strategy, content, and execution for scalable growth.",
+		alt: "Full‑stack marketing—end‑to‑end strategy, content, and campaign execution",
 		image: "/images/services/full-stack.webp",
 		lists: [
 			{
