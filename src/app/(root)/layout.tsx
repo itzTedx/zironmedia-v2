@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 		creator: "@",
 	},
 	metadataBase: new URL(siteConfig.url),
-	alternates: { canonical: "/" },
+
 	verification: {
 		google: "H82IdVplopSwcjY_hXhk8ggR9RwBclOsumEZDHP-c6E",
 	},
