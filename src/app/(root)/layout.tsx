@@ -15,7 +15,7 @@ import { siteConfig } from "@/data/site-config";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-	title: siteConfig.name,
+	title: siteConfig.title,
 	description: siteConfig.description,
 	authors: [{ name: siteConfig.shortName, url: siteConfig.url }],
 	creator: siteConfig.shortName,
@@ -24,26 +24,28 @@ export const metadata: Metadata = {
 		locale: "en_AE",
 		alternateLocale: "en_US",
 		url: siteConfig.url,
-		title: siteConfig.name,
+		title: siteConfig.title,
 		description: siteConfig.description,
-		siteName: siteConfig.name,
+		siteName: siteConfig.title,
 		images: [siteConfig.ogImage],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: siteConfig.name,
+		title: siteConfig.title,
 		description: siteConfig.description,
 		images: [siteConfig.ogImage],
 		creator: "@",
 	},
 	metadataBase: new URL(siteConfig.url),
 	alternates: { canonical: "/" },
+	verification: {
+		google: "H82IdVplopSwcjY_hXhk8ggR9RwBclOsumEZDHP-c6E",
+	},
 };
 
 export const viewport: Viewport = {
 	themeColor: "#401CD8",
 };
-
 export default function RootLayout({
 	children,
 }: Readonly<{

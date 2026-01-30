@@ -9,10 +9,6 @@ import { Services } from "@/features/views/home/services";
 import { VideoReel } from "@/features/views/home/video-reel";
 import { WhyUs } from "@/features/views/home/why-us";
 
-// const Video = dynamic(() =>
-// 	import("@/features/views/home/video").then((mod) => mod.Video)
-// );
-
 export default function Home() {
 	return (
 		<main>

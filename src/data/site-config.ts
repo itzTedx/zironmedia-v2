@@ -1,10 +1,19 @@
+export const BASE_URL =
+	process.env.BASE_URL ?? ("http://localhost:3000" as const);
+
 export const siteConfig = {
-	name: "Ziron Media: Digital Marketing Agency for Online Growth ",
+	title: "Ziron Media: Dubai Digital Marketing Agency for Growth",
 	shortName: "Ziron Media",
 	description:
-		"Ziron Media, a Dubai-based digital marketing agency, offers SEO, PPC, branding, social media management, web design, and lead generation to elevate your business with data-driven strategies.",
-
-	url: "https://www.zironmedia.com",
+		"Dubai-based digital marketing agency for SEO, Digital & Offset Printing, Web design and development, and social media that drive leads and revenue. Book a free strategy call today.",
+	keywords: [
+		"digital marketing agency Dubai",
+		"SEO services Dubai",
+		"PPC management",
+		"web design Dubai",
+		"social media marketing",
+	],
+	url: BASE_URL,
 	logo: "/favicon.svg",
 	ogImage: "/og.jpg",
 	links: {
