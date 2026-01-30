@@ -43,7 +43,7 @@ export async function generateMetadata({
 		};
 	}
 
-	const title = `${service.title} - ${siteConfig.name}`;
+	const title = `${service.title} - ${siteConfig.shortName}`;
 	const description = service.description;
 
 	return {
