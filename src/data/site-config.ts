@@ -15,7 +15,7 @@ export const siteConfig = {
 	],
 	url: BASE_URL,
 	logo: "/favicon.svg",
-	ogImage: "/og.jpg",
+	ogImage: "/images/og.jpg",
 	links: {
 		// twitter: "https://x.com/itzTedx_",
 		linkedin: "https://www.linkedin.com/company/ziron-media",
