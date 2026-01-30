@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 	title: siteConfig.title,
 	description: siteConfig.description,
 	authors: [{ name: siteConfig.shortName, url: siteConfig.url }],
+	keywords: siteConfig.keywords,
 	creator: siteConfig.shortName,
 	openGraph: {
 		type: "website",
