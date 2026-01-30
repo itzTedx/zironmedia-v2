@@ -14,7 +14,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
 	return (
 		<div
 			className={cn(
-				"relative aspect-4/3 overflow-hidden rounded-5xl bg-linear-0 from-gray-100 to-gray-50 transition [corner-shape:squircle]",
+				"squircle relative aspect-4/3 overflow-hidden rounded-5xl bg-linear-0 from-gray-100 to-gray-50 transition",
 				className
 			)}
 			{...props}

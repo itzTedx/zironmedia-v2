@@ -86,7 +86,7 @@ export const WhyUs = () => {
 		<section className="dashed dashed-b-0 mx-auto max-w-7xl p-px">
 			<header className="dashed dashed-b space-y-1.5 p-9 text-center md:space-y-3 md:p-14">
 				<h2 className="font-display font-semibold text-3xl text-primary tracking-tight md:text-6xl">
-					Why choose us
+					Why Choose Ziron Media
 				</h2>
 				<p className="mx-auto max-w-md text-balance">
 					Check out what Ziron Media offers vs employees and other agencies.

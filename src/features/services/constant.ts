@@ -143,7 +143,7 @@ export const SERVICES = [
 		id: 5,
 		slug: "motion",
 		icon: IconPlay,
-		title: "Motion Design",
+		title: "Motion Design & Video",
 		description:
 			"Bringing stories to life through engaging motion graphics and impactful video content.",
 		alt: "Motion design—explainer videos, motion graphics, and brand videos",

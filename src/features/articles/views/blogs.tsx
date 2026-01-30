@@ -13,7 +13,7 @@ export const Blogs = () => {
 		<section className="dashed dashed-y relative py-9 md:py-14">
 			<header className="mx-auto mb-6 flex max-w-7xl flex-col gap-3 px-6 md:mb-14 md:flex-row md:items-center md:justify-between md:px-0">
 				<h2 className="font-display font-semibold text-3xl tracking-tight md:text-5xl">
-					Learn and Get Inspired
+					Marketing Insights & Resources
 				</h2>
 				<Button
 					asChild

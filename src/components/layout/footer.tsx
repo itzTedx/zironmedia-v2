@@ -24,7 +24,7 @@ export const Footer = () => {
 					</Link>
 					<div className="space-y-8">
 						<h4 className="text-balance font-display font-medium text-2xl text-background leading-snug">
-							We Build Digital Experiences That{" "}
+							We Build high‑converting Digital Experiences That{" "}
 							<span className="text-brand-200">Convert Better, Faster.</span>
 						</h4>
 						<Socials />
