@@ -50,6 +50,20 @@ export function ContactForm() {
 
 		await submitContactForm(formData);
 
+		// Identify session and track event with Umami
+		type Umami = {
+			identify: (id: string, data?: Record<string, string | number>) => void;
+			track: (e: string, d?: Record<string, string | number>) => void;
+		};
+		const umami = typeof window !== "undefined" ? (window as Window & { umami?: Umami }).umami : undefined;
+		if (umami) {
+			umami.identify(data.email, { name: data.name, subject: data.subject });
+			umami.track("Signup button", {
+				email: data.email,
+				id: typeof crypto !== "undefined" && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36),
+			});
+		}
+
 		setIsPending(false);
 	}
 

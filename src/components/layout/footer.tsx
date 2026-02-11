@@ -19,7 +19,7 @@ export const Footer = () => {
 			<section className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 md:px-0 lg:grid-cols-[1fr_2fr]">
 				<div className="squircle relative isolate flex flex-col justify-between gap-4 overflow-hidden rounded-5xl bg-linear-[180deg,#B362FF_-8.23%,#401CD8_44.8%,#1A1162_100%] p-12 shadow-sm">
 					<Noise className="opacity-50" />
-					<Link href="/">
+					<Link data-umami-event="Footer - Logo" href="/">
 						<LogoMono className="h-10 w-fit text-white" />
 					</Link>
 					<div className="space-y-8">
@@ -48,6 +48,7 @@ export const Footer = () => {
 												<li key={link.label}>
 													<Link
 														className="relative text-primary transition-colors duration-300 ease-out before:pointer-events-none before:absolute before:top-[1.3em] before:left-0 before:h-[0.05em] before:w-full before:origin-right before:scale-x-0 before:bg-current before:transition-transform before:duration-300 before:ease-in-out before:content-[''] hover:text-brand-secondary hover:before:origin-left hover:before:scale-x-100"
+														data-umami-event={`Footer - ${link.label}`}
 														href={link.href}
 													>
 														{link.label}
@@ -86,7 +87,10 @@ export const Footer = () => {
 						<p className="w-full">
 							© {currentYear} Ziron Media. All rights reserved.
 						</p>
-						<Link href="/">
+						<Link
+							data-umami-event="Footer - Wordmark"
+							href="/"
+						>
 							<Wordmark
 								className="shrink-0 text-foreground transition-colors duration-300 ease-out hover:text-brand-secondary"
 								isMono
@@ -103,6 +107,7 @@ export const Footer = () => {
 											"before:origin-right before:scale-x-0 before:transition-transform before:duration-300 before:ease-in-out",
 											"hover:before:origin-left hover:before:scale-x-100"
 										)}
+										data-umami-event={`Footer - ${meta.label}`}
 										href={meta.href}
 									>
 										{meta.label}

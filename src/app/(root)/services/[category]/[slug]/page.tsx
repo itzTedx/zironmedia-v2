@@ -60,7 +60,11 @@ export default async function ServicePage({
 								{service.metadata.description}
 							</p>
 							<div>
-								<Button className="w-48 justify-between" size="lg">
+								<Button
+									className="w-48 justify-between"
+									data-umami-event="Service page - Get started"
+									size="lg"
+								>
 									Get started
 									<IconArrowRightTag className="size-5" />
 								</Button>

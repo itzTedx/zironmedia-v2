@@ -18,6 +18,7 @@ export const Blogs = () => {
 				<Button
 					asChild
 					className="group w-40 justify-between bg-foreground shadow-button-neutral"
+					data-umami-event="Home - More blogs"
 				>
 					<Link href="/blogs">
 						More blogs{" "}

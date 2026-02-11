@@ -121,7 +121,11 @@ function Faq({
 							Have other questions or just want to chat? Book a call and let's
 							figure it out together.
 						</p>
-						<Button className="text-foreground" variant="outline">
+						<Button
+							className="text-foreground"
+							data-umami-event="FAQ - Book a call"
+							variant="outline"
+						>
 							<IconCalender className="text-muted-foreground" />
 							Book a call
 						</Button>

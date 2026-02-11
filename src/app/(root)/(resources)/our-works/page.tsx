@@ -33,6 +33,7 @@ export default function WorksPage() {
 					<Button
 						asChild
 						className="group w-full flex-1 justify-between gap-2 md:w-60"
+						data-umami-event="Our works - Get started"
 						size="lg"
 					>
 						<Link href="/services">
@@ -69,7 +70,12 @@ export default function WorksPage() {
 								<div className="space-y-3 md:space-y-0">
 									<Badge
 										className="transition-colors duration-300 md:hidden"
-										render={<Link href="/services/websites" />}
+										render={
+											<Link
+												href="/services/websites"
+												data-umami-event="Our works - Website Design & Dev"
+											/>
+										}
 										variant="ghost"
 									>
 										Website Design & Dev
@@ -82,13 +88,19 @@ export default function WorksPage() {
 								<div className="flex w-full items-center gap-2 md:w-auto">
 									<Badge
 										className="hidden transition-colors duration-300 md:inline-flex"
-										render={<Link href="/services/websites" />}
+										render={
+											<Link
+												href="/services/websites"
+												data-umami-event="Our works - Website Design & Dev"
+											/>
+										}
 										variant="ghost"
 									>
 										Website Design & Dev
 									</Badge>
 									<Button
 										className="w-full md:inline-flex md:w-auto"
+										data-umami-event="Our works - See case study"
 										variant="secondary"
 									>
 										See Case Study

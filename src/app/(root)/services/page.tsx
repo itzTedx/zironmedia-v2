@@ -78,6 +78,7 @@ export default function ServicesPage() {
 						<Button
 							asChild
 							className="text-muted-foreground"
+							data-umami-event="Services - Build your vision"
 							size="lg"
 							variant="secondary"
 						>

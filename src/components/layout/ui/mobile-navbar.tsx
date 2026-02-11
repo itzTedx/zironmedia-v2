@@ -36,6 +36,7 @@ export function MobileNav() {
 					className={cn(
 						"extend-touch-target text-white hover:bg-white md:hidden"
 					)}
+					data-umami-event="Mobile nav - Open menu"
 					size="icon-sm"
 					variant="ghost"
 				>
@@ -88,9 +89,16 @@ export function MobileNav() {
 					</div>
 				</nav>
 				<DrawerFooter>
-					<Button size="lg" variant="default">
-						Start a project
-						<IconCaretRight className="hidden md:block" />
+					<Button
+						asChild
+						data-umami-event="Mobile nav - Start a project"
+						size="lg"
+						variant="default"
+					>
+						<Link href="/contact">
+							Start a project
+							<IconCaretRight className="hidden md:block" />
+						</Link>
 					</Button>
 				</DrawerFooter>
 			</DrawerContent>

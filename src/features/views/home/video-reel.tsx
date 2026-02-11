@@ -29,12 +29,14 @@ export const VideoReel = () => {
 							<div className="flex items-center gap-3">
 								<Button
 									className="border-white/60 bg-card/30 text-white backdrop-blur-lg hover:text-foreground"
+									data-umami-event="Video reel - Watch video"
 									variant="outline"
 								>
 									Watch video <IconCaretRight />
 								</Button>
 								<Button
 									className="group hidden px-0 text-white hover:text-card sm:pr-4 sm:pl-2 md:inline-flex"
+									data-umami-event="Video reel - Read case study"
 									variant="ghost"
 								>
 									<div className="flex size-6 items-center justify-center rounded-md bg-white/20">

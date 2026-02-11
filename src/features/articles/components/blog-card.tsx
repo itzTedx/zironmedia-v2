@@ -22,6 +22,8 @@ export const BlogCard = ({
 				index === 2 && "order-1",
 				blog.isFeatured && "order-2"
 			)}
+			data-umami-event="Blog card"
+			data-umami-event-slug={blog.slug}
 			href={`/blogs/${blog.slug}`}
 		>
 			<div

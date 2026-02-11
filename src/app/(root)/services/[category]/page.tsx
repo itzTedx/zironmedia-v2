@@ -78,7 +78,12 @@ export default async function ServiceCategoryPage({ params }: PageProps) {
 				<header className="dashed dashed-x relative z-10 mx-auto max-w-7xl py-12 md:py-16">
 					<div className="container grid grid-cols-2 gap-6">
 						<div>
-							<Button asChild className="flex w-fit gap-2" variant="ghost">
+							<Button
+								asChild
+								className="flex w-fit gap-2"
+								data-umami-event="Services category - Back to services"
+								variant="ghost"
+							>
 								<Link href="/services">
 									<IconArrowLeft
 										aria-hidden="true"
