@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 
 import { Suspense } from "react";
 
+import Script from "next/script";
+
 import { BreakpointIndicator } from "@/components/layout/breakpoint-indicator";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
@@ -56,6 +58,11 @@ export default function RootLayout({
 		<html lang="en">
 			<head>
 				<meta content="Ziron Media" name="apple-mobile-web-app-title" />
+				<Script
+					data-website-id="469aba3d-49c8-4e9e-9732-396c34a105da"
+					defer
+					src="https://analytics.alliedgulf.me/script.js"
+				/>
 			</head>
 			<Providers>
 				<body
