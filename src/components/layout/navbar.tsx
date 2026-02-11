@@ -85,6 +85,8 @@ export const Navbar = () => {
 					<Button
 						asChild
 						className="bg-floating text-primary"
+						data-umami-event="Signup button"
+						id="signup-button"
 						variant="secondary"
 					>
 						<Link href="/contact">

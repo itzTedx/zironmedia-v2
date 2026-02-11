@@ -41,6 +41,7 @@ export const Hero = () => {
 					<Button
 						asChild
 						className="group w-full flex-1 justify-between gap-2 md:w-60"
+						data-umami-event="Hero - Get started"
 						size="lg"
 					>
 						<Link href="/services">
@@ -56,6 +57,7 @@ export const Hero = () => {
 					<Button
 						asChild
 						className="group justify-between md:w-52"
+						data-umami-event="Hero - See us in action"
 						size="lg"
 						variant="outline"
 					>
