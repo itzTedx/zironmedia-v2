@@ -6,15 +6,16 @@ import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 import { IconDesktopPoint } from "@/assets/icons/desktop";
+import { IconNfc } from "@/assets/icons/nfc";
+import { IconPaint } from "@/assets/icons/paint";
 import { IconPlay } from "@/assets/icons/play";
 import { IconPointer } from "@/assets/icons/pointer";
-import { IconPrinter } from "@/assets/icons/printer";
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
 
 import { cn } from "@/lib/utils";
 
-import { ServicesCarousel } from "./components/services-carousel";
+import { IndustriesCarousel } from "./components/industries-carousel";
 import { StarsBackground } from "./components/stars-background";
 
 export const Services = () => {
@@ -65,22 +66,24 @@ export const Services = () => {
 			<div className="dashed-b-0 dashed container grid max-w-7xl gap-4 py-12 md:grid-cols-3 md:py-16 lg:py-20">
 				<Link
 					className="overflow-hidden rounded-2xl bg-orange-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/branding"
+					href="/services/full-stack/marketing-and-growth-strategy"
 				>
 					<div className="space-y-3 p-9">
 						<div className="flex items-center gap-3">
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-orange-100">
 								<IconTarget className="size-6 text-orange-500" />
 							</div>
-							<h3 className="font-medium text-xl">Branding</h3>
+							<h3 className="font-medium text-xl">
+								Digital Marketing Strategy
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Logo design, UI/UX, brand identity, video marketing, and visual
-							storytelling that elevate brand perception.
+							Customized growth blueprints aligned with your goals, audience
+							behavior, and competition in Abu Dhabi & Dubai markets.
 						</p>
 					</div>
 					<Image
-						alt="Branding service showcase by Ziron pro"
+						alt="Digital Marketing Strategy service showcase by Ziron pro"
 						height={720}
 						src="/images/bento/branding.webp"
 						width={800}
@@ -89,14 +92,88 @@ export const Services = () => {
 
 				<Link
 					className="overflow-hidden rounded-2xl bg-green-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/websites"
+					href="/services/websites/seo"
 				>
 					<div className="space-y-3 p-9">
 						<div className="flex items-center gap-3">
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-green-100">
 								<IconDesktopPoint className="size-6 text-green-500" />
 							</div>
-							<h3 className="font-medium text-xl">Web Design & Development</h3>
+							<h3 className="font-medium text-xl">
+								Search Engine Optimization (SEO)
+							</h3>
+						</div>
+						<p className="text-muted-foreground">
+							Technical SEO, local SEO, content optimization, and authority
+							building to dominate Google rankings.
+						</p>
+					</div>
+					<Image
+						alt="SEO service showcase by Ziron pro"
+						height={720}
+						src="/images/bento/web-dev-design.webp"
+						width={800}
+					/>
+				</Link>
+
+				<Link
+					className="overflow-hidden rounded-2xl bg-fuchsia-50 shadow-md transition-[box-shadow_scale] hover:scale-102 hover:shadow-lg"
+					href="/services/marketing/paid-ads"
+				>
+					<div className="space-y-3 p-9">
+						<div className="flex items-center gap-3">
+							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-fuchsia-100">
+								<IconSpeaker className="size-6 text-fuchsia-500" />
+							</div>
+							<h3 className="font-medium text-xl">Paid Media & Performance</h3>
+						</div>
+						<p className="text-muted-foreground">
+							ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok
+							campaigns designed for predictable lead flow.
+						</p>
+					</div>
+					<Image
+						alt="Paid Media performance creatives by Ziron pro"
+						height={720}
+						src="/images/bento/social-media-creatives.webp"
+						width={800}
+					/>
+				</Link>
+
+				<Link
+					className="overflow-hidden rounded-2xl bg-cyan-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
+					href="/services/full-stack/social-media-management"
+				>
+					<div className="space-y-3 p-9">
+						<div className="flex items-center gap-3">
+							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-cyan-100">
+								<IconPlay className="size-6 text-cyan-500" />
+							</div>
+							<h3 className="font-medium text-xl">Social Media Marketing</h3>
+						</div>
+						<p className="text-muted-foreground">
+							Strategic content, reels, paid promotions, and community
+							management to build brand authority.
+						</p>
+					</div>
+					<Image
+						alt="Social Media Marketing showcase by Ziron pro"
+						height={720}
+						src="/images/bento/paid-ads.webp"
+						width={800}
+					/>
+				</Link>
+
+				<Link
+					className="overflow-hidden rounded-2xl bg-blue-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
+					href="/services/websites/website-development"
+				>
+					<div className="space-y-3 p-9">
+						<div className="flex items-center gap-3">
+							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-blue-100">
+								<IconDesktopPoint className="size-6 text-blue-500" />
+							</div>
+							<h3 className="font-medium text-xl">Website Design & Dev</h3>
 						</div>
 						<p className="text-muted-foreground">
 							High-converting, mobile-first, SEO-optimized websites built for
@@ -112,81 +189,6 @@ export const Services = () => {
 				</Link>
 
 				<Link
-					className="overflow-hidden rounded-2xl bg-fuchsia-50 shadow-md transition-[box-shadow_scale] hover:scale-102 hover:shadow-lg"
-					href="/services/marketing"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-fuchsia-100">
-								<IconSpeaker className="size-6 text-fuchsia-500" />
-							</div>
-							<h3 className="font-medium text-xl">Digital Marketing</h3>
-						</div>
-						<p className="text-muted-foreground">
-							ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok
-							campaigns designed for predictable lead flow.
-						</p>
-					</div>
-					<Image
-						alt="Digital marketing campaign creatives by Ziron pro"
-						height={720}
-						src="/images/bento/social-media-creatives.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-cyan-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/printing"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-cyan-100">
-								<IconPrinter className="size-6 text-cyan-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Printing & Corporate Gifts
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							NFC digital business cards for instant contact sharing, lead
-							capture, and CRM integration — perfect for UAE sales teams,
-							events, and exhibitions.
-						</p>
-					</div>
-					<Image
-						alt="Printing and corporate gifts showcase by Ziron pro"
-						height={720}
-						src="/images/bento/paid-ads.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-blue-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/motion"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-blue-100">
-								<IconPlay className="size-6 text-blue-500" />
-							</div>
-							<h3 className="font-medium text-xl">Motion Design & Video</h3>
-						</div>
-						<p className="text-muted-foreground">
-							Strategic content, reels, paid promotions, and community
-							management to build brand authority.
-						</p>
-					</div>
-					<Image
-						alt="Motion design and video service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/paid-ads.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
 					className="overflow-hidden rounded-2xl bg-purple-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
 					href="/services/full-stack"
 				>
@@ -195,39 +197,105 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-purple-100">
 								<IconPointer className="size-6 text-purple-500" />
 							</div>
-							<h3 className="font-medium text-xl">Conversion optimization</h3>
+							<h3 className="font-medium text-xl">CRM & Sales Automation</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Smart CRM systems, lead tracking, pipeline management, email
-							automation, and WhatsApp workflows that convert enquiries into
-							customers automatically.
+							Smart CRM systems, pipeline management, email automation, and
+							WhatsApp workflows that convert enquiries automatically.
 						</p>
 					</div>
 					<Image
-						alt="Conversion optimization service showcase by Ziron pro"
+						alt="CRM Integration service showcase by Ziron pro"
 						height={720}
 						src="/images/bento/conversion.webp"
 						width={800}
 					/>
 				</Link>
+
+				<Link
+					className="overflow-hidden rounded-2xl bg-rose-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
+					href="/services/printing"
+				>
+					<div className="space-y-3 p-9">
+						<div className="flex items-center gap-3">
+							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-rose-100">
+								<IconNfc className="size-6 text-rose-500" />
+							</div>
+							<h3 className="font-medium text-xl">NFC Smart Business Cards</h3>
+						</div>
+						<p className="text-muted-foreground">
+							Instant contact sharing, lead capture, and CRM integration,
+							perfect for sales teams, events, and UAE networking.
+						</p>
+					</div>
+					<Image
+						alt="NFC Smart Business Cards showcase by Ziron pro"
+						height={720}
+						src="/images/bento/branding.webp"
+						width={800}
+					/>
+				</Link>
+
+				<Link
+					className="overflow-hidden rounded-2xl bg-indigo-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
+					href="/services/full-stack/campaigns"
+				>
+					<div className="space-y-3 p-9">
+						<div className="flex items-center gap-3">
+							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-indigo-100">
+								<IconTarget className="size-6 text-indigo-500" />
+							</div>
+							<h3 className="font-medium text-xl">Lead Gen & Funnels</h3>
+						</div>
+						<p className="text-muted-foreground">
+							Conversion-driven marketing funnels that attract, nurture, and
+							convert high-quality leads into loyal customers.
+						</p>
+					</div>
+					<Image
+						alt="Lead Generation & Funnel service showcase by Ziron pro"
+						height={720}
+						src="/images/bento/conversion.webp"
+						width={800}
+					/>
+				</Link>
+
+				<Link
+					className="overflow-hidden rounded-2xl bg-amber-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
+					href="/services/branding"
+				>
+					<div className="space-y-3 p-9">
+						<div className="flex items-center gap-3">
+							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-amber-100">
+								<IconPaint className="size-6 text-amber-500" />
+							</div>
+							<h3 className="font-medium text-xl">Branding & Creative</h3>
+						</div>
+						<p className="text-muted-foreground">
+							Logo design, UI/UX, brand identity, video marketing, and visual
+							storytelling that elevate brand perception.
+						</p>
+					</div>
+					<Image
+						alt="Branding and creative service showcase by Ziron pro"
+						height={720}
+						src="/images/bento/branding.webp"
+						width={800}
+					/>
+				</Link>
 			</div>
 
-			<div className="dashed container max-w-7xl py-12 md:py-16 lg:py-20">
-				<h2 className="mb-6 text-center font-medium text-4xl">
-					Tailored Services <br /> for Every{" "}
-					<span className="text-primary">Industry.</span>
-				</h2>
+			<div className="dashed pb-12 md:pb-16 lg:pb-20">
+				<Header
+					description="From real estate to startups, we deliver performance-driven growth solutions tailored to your industry dynamics across Abu Dhabi, Dubai, and the UAE."
+					title="Industries We Serve"
+				/>
 
-				<ServicesCarousel />
+				<div className="container max-w-7xl px-6 md:px-0">
+					<IndustriesCarousel />
+				</div>
 			</div>
-			{/* <div className="dashed-x dashed container grid max-w-7xl gap-4 py-12 md:grid-cols-3 md:py-16 lg:py-20">
-				<WebDevelopmentGrid />
-				<BrandingGrid />
-				<AllServicesGrid />
-				<LogoGrid />
-				<MotionGraphicsGrid />
-			</div> */}
-			{/* <ServicesLists /> */}
+
 			<div className="relative overflow-hidden bg-[radial-gradient(ellipse_at_bottom,var(--color-brand-950)_0%,#000_100%)]">
 				<div className="dashed dashed-b-0 container relative z-10 flex max-w-7xl flex-col items-center justify-center gap-6 py-12 md:flex-row">
 					<h4 className="text-center font-medium text-3xl text-muted">
@@ -238,7 +306,8 @@ export const Services = () => {
 						size="xl"
 						variant="secondary"
 					>
-						Book Your Free 30-Minute Growth Consultation <IconArrowRightTag />
+						Book Your Free 30-Minute Growth Consultation Today{" "}
+						<IconArrowRightTag />
 					</Button>
 				</div>
 				<StarsBackground

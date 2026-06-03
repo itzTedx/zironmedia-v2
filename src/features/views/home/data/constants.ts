@@ -14,23 +14,24 @@ const CURRENT_YEAR = new Date().getFullYear();
 export const ACHIEVEMENTS = [
 	{
 		id: 1,
-		title: "2k+ Brands Served",
+		title: "600% Increase in Organic Traffic",
 		description:
-			"Helping businesses across various industries achieve their goals",
-		card: BrandServed,
+			"Advanced SEO strategy helped a UAE brand dominate competitive search terms.",
+		card: Growth,
 	},
 	{
 		id: 2,
-		title: `${CURRENT_YEAR - COMPANY_START_YEAR} Years of Experience`,
+		title: "5X Lead Growth via Paid Ads",
 		description:
-			"Proven expertise in design, marketing & technology to every project",
+			"Optimized campaigns reduced CPL and increased qualified enquiries.",
 		card: Experience,
 	},
 	{
 		id: 3,
-		title: "100,000+ Growth for Brands",
-		description: "Through smarter processes and scalable solutions",
-		card: Growth,
+		title: "Complete Digital Transformation",
+		description:
+			"Website + SEO + CRM automation created a full-funnel growth engine.",
+		card: BrandServed,
 	},
 ];
 

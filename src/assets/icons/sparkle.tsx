@@ -1,6 +1,7 @@
-export const IconSparkle = () => {
+export const IconSparkle = (props: SVGProps) => {
 	return (
 		<svg
+			{...props}
 			fill="none"
 			height="16"
 			viewBox="0 0 16 16"

@@ -21,11 +21,13 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 	) : (
 		<>
 			AI-Powered Digital Marketing & Growth Agency{" "}
-			<span className="text-brand-400">in Abu Dhabi & Dubai</span>
+			<span className="text-brand-400">in Abu Dhabi And Dubai</span>
 		</>
 	);
 
-	const headingNode = heading ?? "We Make Your Brand a Revenue Machine";
+	const headingNode =
+		heading ??
+		"We Make Your Brand As a Revenue Machine With Top Notch Marketing Solutions in Under The Sun";
 
 	const subheadingNode = subheading ? (
 		subheading
@@ -33,10 +35,13 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 		<>
 			Partnering for Smart Growth & Measurable Business Success.{" "}
 			<span className="text-card">
-				Top Notch Marketing Solutions powered by strategy, creativity, AI, and
-				performance marketing.
+				At ZironPro, we don’t just market brands, we engineer scalable digital
+				growth systems powered by strategy, creativity, AI, and performance
+				marketing.
 			</span>{" "}
-			Serving startups, SMEs, and enterprise brands across the UAE.
+			As a leading digital marketing agency serving Abu Dhabi and Dubai, we help
+			startups, SMEs, and enterprise brands attract the right audience, convert
+			leads into customers, and build long-term brand authority.
 		</>
 	);
 
@@ -45,32 +50,32 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 			<Noise className="opacity-20" />
 			<div className="dashed dashed-x relative mx-auto max-w-7xl">
 				<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-16 md:px-0 lg:py-20">
-					<Badge className="gap-2">
-						<span className="size-1.5 rounded-full bg-brand-400" />{" "}
+					<Badge className="h-auto min-h-7 max-w-[90vw] flex-wrap justify-center gap-2 whitespace-normal text-balance px-3 py-1.5 text-center md:max-w-none">
+						<span className="size-1.5 shrink-0 rounded-full bg-brand-400" />{" "}
 						<h1 className="tracking-wide">{badgeNode}</h1>
 					</Badge>
 
-					<h2 className="text-center font-bold font-display text-4xl text-primary text-shadow-[-1px_-1px_var(--color-brand-600)] uppercase md:text-6xl lg:text-7xl">
+					<h2 className="text-center font-bold font-display text-4xl text-primary text-shadow-[-1px_-1px_var(--color-brand-600)] uppercase md:text-5xl lg:text-6xl">
 						{headingNode}
 					</h2>
 					<p className="text-balance text-center font-medium text-muted leading-relaxed sm:text-lg md:text-xl">
 						{subheadingNode}
 					</p>
 
-					<div className="relative z-99 flex w-full items-center gap-4 md:w-auto">
+					<div className="relative z-99 flex w-full flex-col items-center gap-4 sm:flex-row md:w-auto">
 						<Button
-							className="group w-full flex-1 justify-between gap-2 md:w-48"
-							data-label="Hero - Get started"
+							className="group h-auto w-full justify-between gap-4 whitespace-normal px-6 py-3 text-left sm:w-auto sm:py-0 sm:text-center"
+							data-label="Hero - Book Consultation"
 							data-location="hero_primary"
 							data-track="cta_click"
-							render={<Link href="/services" />}
+							render={<Link href="/contact" />}
 							size="xl"
 						>
-							<span>Get started </span>
-							<IconArrowRightTag className="size-5 transition-transform duration-300 ease-in group-hover:translate-x-1" />
+							<span>Book Your Free 30-Minute Growth Consultation Today</span>
+							<IconArrowRightTag className="size-5 shrink-0 transition-transform duration-300 ease-in group-hover:translate-x-1" />
 						</Button>
 						<Button
-							className="group text-card hover:text-brand-900"
+							className="group w-full text-card hover:text-brand-900 sm:w-auto"
 							data-label="Hero - See us in action"
 							data-location="hero_secondary"
 							data-track="cta_click"
@@ -79,7 +84,6 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 							variant="outline"
 						>
 							<span>See us in action</span>
-							{/* <IconPlay className="hidden size-5 transition-transform duration-300 ease-in group-hover:translate-x-1 md:inline" /> */}
 						</Button>
 					</div>
 				</div>
