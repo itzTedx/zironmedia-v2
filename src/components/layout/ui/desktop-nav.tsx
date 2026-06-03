@@ -98,8 +98,8 @@ export const DesktopNav = () => {
 								) : link.label === "Services" ? (
 									<ServicesNavbar submenu={link.submenu} />
 								) : link.label === "Company" ? (
-									<div className="grid w-lg grid-cols-[1fr_.75fr] gap-2">
-										<div className="space-y-3 rounded-lg border bg-card p-2 shadow">
+									<div className="grid w-md grid-cols-[1fr_.55fr] gap-2">
+										<div className="space-y-3 rounded-lg border border-border/50 bg-card p-2">
 											{companyLinks.map((item, i) => (
 												<NavigationMenuLink
 													className="rounded-sm p-0"

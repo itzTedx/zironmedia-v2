@@ -4,8 +4,6 @@ import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import { IconArrowRightTag } from "@/assets/icons/arrow";
-
 import { Featured } from "./featured";
 
 interface HeroProps {
@@ -64,24 +62,24 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 
 					<div className="relative z-99 flex w-full flex-col items-center gap-4 sm:flex-row md:w-auto">
 						<Button
-							className="group h-auto w-full justify-between gap-4 whitespace-normal px-6 py-3 text-left sm:w-auto sm:py-0 sm:text-center"
+							className="group h-auto w-full justify-between gap-4 whitespace-normal py-3 text-left duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:px-6 sm:w-auto sm:py-0 sm:text-center"
 							data-label="Hero - Book Consultation"
 							data-location="hero_primary"
 							data-track="cta_click"
 							render={<Link href="/contact" />}
-							size="xl"
+							size="lg"
 						>
-							<span>Book Your Free 30-Minute Growth Consultation Today</span>
-							<IconArrowRightTag className="size-5 shrink-0 transition-transform duration-300 ease-in group-hover:translate-x-1" />
+							{/* <PhoneIcon className="size-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-3" /> */}
+							<span>Book a call</span>
 						</Button>
 						<Button
-							className="group w-full text-card hover:text-brand-900 sm:w-auto"
+							className="group w-full bg-card text-secondary duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:px-6 sm:w-auto"
 							data-label="Hero - See us in action"
 							data-location="hero_secondary"
 							data-track="cta_click"
 							render={<Link href="/our-works" />}
-							size="xl"
-							variant="outline"
+							size="lg"
+							variant="ghost"
 						>
 							<span>See us in action</span>
 						</Button>
