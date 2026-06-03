@@ -30,7 +30,7 @@ export const Services = () => {
 				</p>
 			</header> */}
 			<Header
-				description="Best Digital Marketing & CRM Company in Abu Dhabi, Dubai. From strategy to scale — we engineer integrated growth ecosystems that generate consistent revenue."
+				description="Best Digital Marketing & CRM Company in Abu Dhabi, Dubai. From strategy to scale we engineer integrated growth ecosystems that generate consistent revenue."
 				title="What We Do"
 			>
 				<div className="flex items-center gap-4 sm:justify-center">

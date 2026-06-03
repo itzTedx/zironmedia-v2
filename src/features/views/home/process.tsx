@@ -43,7 +43,7 @@ export const Process = () => {
 				title="Our Process: From Strategy to Scale"
 			/>
 
-			<div className="dashed-x dashed-b-0 container mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
+			<div className="dashed-x dashed container mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-5">
 					{steps.map((step, idx) => {
 						return (
