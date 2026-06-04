@@ -23,9 +23,14 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 		</>
 	);
 
-	const headingNode =
-		heading ??
-		"We Make Your Brand As a Revenue Machine With Top Notch Marketing Solutions in Under The Sun";
+	const headingNode = heading ?? (
+		<>
+			We Make Your Brand As a Revenue Machine
+			<span className="mt-3 block font-semibold text-xl normal-case sm:text-2xl md:text-3xl lg:text-4xl">
+				With Top Notch Marketing Solutions in Under The Sun
+			</span>
+		</>
+	);
 
 	const subheadingNode = subheading ? (
 		subheading
