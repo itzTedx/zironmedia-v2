@@ -15,9 +15,9 @@ export const CtaBanner = () => {
 				<Badge className="bg-card" variant="outline">
 					Ready to grow? We’re ready to go
 				</Badge>
-				<h3 className="mx-auto mt-4 mb-3 max-w-4xl text-balance font-bold text-3xl uppercase sm:text-4xl md:text-5xl lg:text-6xl">
+				<h2 className="mx-auto mt-4 mb-3 max-w-4xl text-balance font-bold text-3xl uppercase sm:text-4xl md:text-5xl lg:text-6xl">
 					Ready to Grow Your Business Online?
-				</h3>
+				</h2>
 				<p className="mx-auto mb-6 max-w-2xl md:text-xl">
 					If you’re looking for a digital marketing agency in Abu Dhabi, small
 					business brands, offering SEO services Dubai affordable, paid ads,
@@ -31,7 +31,10 @@ export const CtaBanner = () => {
 					render={<Link className="gap-4" href="/contact" />}
 					variant="secondary"
 				>
-					Let’s Build Your Growth Engine <IconArrowRightTag />
+					<h2 className="inline font-inherit text-inherit">
+						Let’s Build Your Growth Engine
+					</h2>{" "}
+					<IconArrowRightTag />
 				</Button>
 				<div className="absolute left-1/2 z-10 aspect-7/3 w-[80%] -translate-x-1/2 rounded-[calc(var(--radius-3xl)+--spacing(1.5)-1px)] border border-card/20 bg-card/10 p-1.5 md:w-[85%] md:p-2.5 2xl:w-[50%]">
 					<div className="relative aspect-5/3 overflow-hidden rounded-2xl">

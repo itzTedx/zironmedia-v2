@@ -29,7 +29,7 @@ import { cn } from "@/lib/utils";
 const INDUSTRIES = [
 	{
 		id: 1,
-		title: "Real Estate & Property",
+		title: "Real Estate & Property Development",
 		slug: "real-estate-construction",
 		icon: IconTarget,
 		bg: MEDIA.services.bg.branding,
@@ -162,9 +162,9 @@ export const IndustriesCarousel = () => {
 								<Noise />
 								<industry.icon className="relative z-10 size-16 text-card/90" />
 							</div>
-							<h3 className="mt-4 mb-2 line-clamp-1 font-medium text-xl">
+							<h4 className="mt-4 mb-2 line-clamp-1 font-medium text-xl">
 								{industry.title}
-							</h3>
+							</h4>
 							<p className="line-clamp-2 text-muted-foreground text-sm">
 								{industry.description}
 							</p>

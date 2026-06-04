@@ -31,12 +31,6 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 		subheading
 	) : (
 		<>
-			Partnering for Smart Growth & Measurable Business Success.{" "}
-			<span className="text-card">
-				At ZironPro, we don’t just market brands, we engineer scalable digital
-				growth systems powered by strategy, creativity, AI, and performance
-				marketing.
-			</span>{" "}
 			As a leading digital marketing agency serving Abu Dhabi and Dubai, we help
 			startups, SMEs, and enterprise brands attract the right audience, convert
 			leads into customers, and build long-term brand authority.
@@ -70,7 +64,7 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 							size="lg"
 						>
 							{/* <PhoneIcon className="size-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-3" /> */}
-							<span>Book consultation now</span>
+							<span>Book Growth Consultation Today</span>
 						</Button>
 
 						<Button

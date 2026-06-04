@@ -72,7 +72,17 @@ export const Experts = () => {
 				title="Meet The ZironPro Experts"
 			/>
 
-			{/* <div className="dashed-x dashed-b-0 container mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
+			{/* <div className="dashed dashed-x container max-w-7xl px-6 pb-8 font-medium md:px-0">
+				<p className="text-balance text-muted-foreground leading-relaxed">
+					Our in-house team includes:{" "}
+					<span className="text-foreground">
+						Digital Strategists • SEO Specialists • Performance Marketers •
+						Developers • Designers • CRM & Automation Experts
+					</span>
+				</p>
+			</div>
+
+			<div className="dashed-x dashed-b-0 container mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{expertRoles.map((role) => {
 						const Icon = role.icon;
@@ -91,7 +101,7 @@ export const Experts = () => {
 											role.bgColor
 										)}
 									>
-										<Icon className="size-6" />
+										<Icon className={cn("size-6", role.color)} />
 									</div>
 									<h3 className="font-semibold text-foreground text-xl leading-snug">
 										{role.title}

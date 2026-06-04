@@ -74,7 +74,7 @@ export const Services = () => {
 								<IconTarget className="size-6 text-orange-500" />
 							</div>
 							<h3 className="font-medium text-xl">
-								Digital Marketing Strategy
+								Digital Marketing Strategy Abu Dhabi, Dubai
 							</h3>
 						</div>
 						<p className="text-muted-foreground">
@@ -100,7 +100,7 @@ export const Services = () => {
 								<IconDesktopPoint className="size-6 text-green-500" />
 							</div>
 							<h3 className="font-medium text-xl">
-								Search Engine Optimization (SEO)
+								Search Engine Optimization (SEO) Abu Dhabi, Dubai
 							</h3>
 						</div>
 						<p className="text-muted-foreground">
@@ -125,7 +125,9 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-fuchsia-100">
 								<IconSpeaker className="size-6 text-fuchsia-500" />
 							</div>
-							<h3 className="font-medium text-xl">Paid Media & Performance</h3>
+							<h3 className="font-medium text-xl">
+								Paid Media & Performance Marketing Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
 							ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok
@@ -149,7 +151,9 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-cyan-100">
 								<IconPlay className="size-6 text-cyan-500" />
 							</div>
-							<h3 className="font-medium text-xl">Social Media Marketing</h3>
+							<h3 className="font-medium text-xl">
+								Social Media Marketing Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
 							Strategic content, reels, paid promotions, and community
@@ -173,7 +177,9 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-blue-100">
 								<IconDesktopPoint className="size-6 text-blue-500" />
 							</div>
-							<h3 className="font-medium text-xl">Website Design & Dev</h3>
+							<h3 className="font-medium text-xl">
+								Website Design & Development Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
 							High-converting, mobile-first, SEO-optimized websites built for
@@ -197,11 +203,14 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-purple-100">
 								<IconPointer className="size-6 text-purple-500" />
 							</div>
-							<h3 className="font-medium text-xl">CRM & Sales Automation</h3>
+							<h3 className="font-medium text-xl">
+								CRM Integration & Sales Automation Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Smart CRM systems, pipeline management, email automation, and
-							WhatsApp workflows that convert enquiries automatically.
+							We implement smart CRM systems, lead tracking, pipeline
+							management, email automation, and WhatsApp workflows that convert
+							enquiries into customers automatically.
 						</p>
 					</div>
 					<Image
@@ -221,11 +230,15 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-rose-100">
 								<IconNfc className="size-6 text-rose-500" />
 							</div>
-							<h3 className="font-medium text-xl">NFC Smart Business Cards</h3>
+							<h3 className="font-medium text-xl">
+								NFC Smart Business Cards Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Instant contact sharing, lead capture, and CRM integration,
-							perfect for sales teams, events, and UAE networking.
+							ZironPro provides NFC digital business cards that allow instant
+							contact sharing, lead capture, and CRM integration, perfect for
+							sales teams, events, exhibitions, and corporate networking in the
+							UAE.
 						</p>
 					</div>
 					<Image
@@ -245,11 +258,13 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-indigo-100">
 								<IconTarget className="size-6 text-indigo-500" />
 							</div>
-							<h3 className="font-medium text-xl">Lead Gen & Funnels</h3>
+							<h3 className="font-medium text-xl">
+								Lead Generation & Funnel Optimization Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
-							Conversion-driven marketing funnels that attract, nurture, and
-							convert high-quality leads into loyal customers.
+							Conversion-driven funnels that attract, nurture, and convert
+							high-quality leads.
 						</p>
 					</div>
 					<Image
@@ -269,7 +284,9 @@ export const Services = () => {
 							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-amber-100">
 								<IconPaint className="size-6 text-amber-500" />
 							</div>
-							<h3 className="font-medium text-xl">Branding & Creative</h3>
+							<h3 className="font-medium text-xl">
+								Branding, Creative & Video Production Abu Dhabi, Dubai
+							</h3>
 						</div>
 						<p className="text-muted-foreground">
 							Logo design, UI/UX, brand identity, video marketing, and visual
