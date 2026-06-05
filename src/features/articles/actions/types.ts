@@ -13,6 +13,9 @@ export type BlogMetadata = {
 	author: string;
 	tags: string[];
 	category: string;
+	dateModified?: string;
+	articleBody?: string;
+	isAccessibleForFree?: boolean;
 };
 
 export type Blog = {

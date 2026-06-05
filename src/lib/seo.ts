@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type {
 	AggregateRating,
 	Article,
+	BlogPosting,
 	BreadcrumbList,
 	FAQPage,
 	ItemList,
@@ -93,6 +94,20 @@ type ArticleSchemaParams = {
 	image?: string;
 	datePublished: string;
 	authorName: string;
+};
+
+type BlogPostingSchemaParams = {
+	title: string;
+	description: string;
+	path: string;
+	image?: string;
+	datePublished: string;
+	dateModified?: string;
+	authorName: string;
+	category?: string;
+	tags?: string[];
+	wordCount?: number;
+	articleBody?: string;
 };
 
 type ServiceSchemaParams = {
@@ -418,6 +433,70 @@ export function buildArticleSchema({
 			},
 		},
 		mainEntityOfPage: absoluteUrl(path),
+	};
+}
+
+export function buildBlogPostingSchema({
+	title,
+	description,
+	path,
+	image,
+	datePublished,
+	dateModified,
+	authorName,
+	category,
+	tags = [],
+	wordCount,
+	articleBody,
+}: BlogPostingSchemaParams): WithContext<BlogPosting> {
+	const absoluteImageUrl = image
+		? image.startsWith("http")
+			? image
+			: absoluteUrl(image)
+		: undefined;
+
+	const author = authorName.toLowerCase().includes("ziron")
+		? {
+				"@type": "Organization" as const,
+				name: "Ziron Pro",
+			}
+		: {
+				"@type": "Person" as const,
+				name: authorName,
+			};
+
+	return {
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		mainEntityOfPage: {
+			"@type": "WebPage",
+			"@id": absoluteUrl(path),
+		},
+		headline: title,
+		description: safeTrim(description),
+		image: absoluteImageUrl ? [absoluteImageUrl] : [],
+		author,
+		publisher: {
+			"@type": "Organization",
+			name: "Ziron Pro",
+			logo: {
+				"@type": "ImageObject",
+				url: absoluteUrl("/logo.png"),
+			},
+		},
+		datePublished,
+		dateModified: dateModified ?? datePublished,
+		...(category ? { articleSection: category } : {}),
+		...(tags.length > 0 ? { keywords: tags } : {}),
+		about: {
+			"@type": "Thing",
+			name: tags[0] ?? category ?? "Digital Marketing",
+		},
+		...(articleBody ? { articleBody: safeTrim(articleBody) } : {}),
+		inLanguage: "en",
+		isAccessibleForFree: true,
+		...(wordCount !== undefined ? { wordCount } : {}),
+		url: absoluteUrl(path),
 	};
 }
 

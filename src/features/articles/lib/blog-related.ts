@@ -128,3 +128,22 @@ export function blogDateToIso(dateStr: string): string | undefined {
 	if (Number.isNaN(t)) return undefined;
 	return new Date(t).toISOString();
 }
+
+export function stripMarkdown(markdown: string): string {
+	return (
+		markdown
+			// Remove HTML/JSX tags but keep their inner text
+			.replace(/<\/?[^>]+(>|$)/g, "")
+			// Remove headers
+			.replace(/^#+\s+/gm, "")
+			// Remove links [text](url) -> text
+			.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+			// Remove bold/italic/inline-code/strike-through
+			.replace(/[*_`~]/g, "")
+			// Remove image markdown
+			.replace(/!\[([^\]]*)\]\([^)]+\)/g, "$1")
+			// Replace multiple spaces/newlines
+			.replace(/\s+/g, " ")
+			.trim()
+	);
+}

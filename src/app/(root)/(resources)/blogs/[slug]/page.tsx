@@ -8,11 +8,12 @@ import {
 	getFallbackServices,
 	getRelatedBlogs,
 	getRelatedServices,
+	stripMarkdown,
 } from "@/features/articles/lib/blog-related";
 import { BlogDetailPageView } from "@/features/articles/views/blog-detail-page-view";
 import { JsonLdScript } from "@/features/seo/json-ld-script";
 import {
-	buildArticleSchema,
+	buildBlogPostingSchema,
 	buildBreadcrumbSchema,
 	buildWebPageSchema,
 	createPageMetadata,
@@ -72,20 +73,43 @@ export default async function BlogPage({ params }: PageProps<"/blogs/[slug]">) {
 		{ name: "Blogs", path: "/blogs" },
 		{ name: blog.metadata.title, path: canonicalPath },
 	]);
-	const articleSchema = buildArticleSchema({
-		title: blog.metadata.meta.title,
-		description: blog.metadata.meta.description,
+	const publishedIso = blogDateToIso(blog.metadata.date);
+	const formattedDatePublished = publishedIso
+		? publishedIso.split("T")[0]
+		: blog.metadata.date;
+
+	const modifiedIso = blog.metadata.dateModified
+		? blogDateToIso(blog.metadata.dateModified)
+		: publishedIso;
+	const formattedDateModified = modifiedIso
+		? modifiedIso.split("T")[0]
+		: formattedDatePublished;
+
+	const wordCount = blog.content
+		? blog.content.split(/\s+/).filter(Boolean).length
+		: 0;
+
+	const articleBody = blog.metadata.articleBody || stripMarkdown(blog.content);
+
+	const blogPostingSchema = buildBlogPostingSchema({
+		title: blog.metadata.title,
+		description: blog.metadata.description,
 		path: canonicalPath,
 		image: blog.metadata.image,
-		datePublished: blog.metadata.date,
+		datePublished: formattedDatePublished,
+		dateModified: formattedDateModified,
 		authorName: blog.metadata.author,
+		category: blog.metadata.category,
+		tags: blog.metadata.tags,
+		wordCount,
+		articleBody,
 	});
 
 	return (
 		<>
 			<JsonLdScript data={webPageSchema} id="schema-blog-webpage" />
 			<JsonLdScript data={breadcrumbSchema} id="schema-blog-breadcrumb" />
-			<JsonLdScript data={articleSchema} id="schema-blog-article" />
+			<JsonLdScript data={blogPostingSchema} id="schema-blog-article" />
 			<BlogDetailPageView
 				blog={blog}
 				canonicalPath={canonicalPath}
