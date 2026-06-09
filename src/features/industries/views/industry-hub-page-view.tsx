@@ -1,11 +1,13 @@
 import type { Route } from "next";
 import Link from "next/link";
 
-import { Header } from "@/components/shared/header";
+import { Badge } from "@/components/ui/badge";
 
 import { IndustryIcon } from "@/features/industries/components/industry-icon";
 
-interface IndustryHubItem {
+import { IndustriesHeroSection } from "../components/hero-section";
+
+export interface IndustryHubItem {
 	slug: string;
 	title: string;
 	description: string;
@@ -19,22 +21,23 @@ interface IndustryHubPageViewProps {
 export function IndustryHubPageView({ industries }: IndustryHubPageViewProps) {
 	return (
 		<main>
-			<Header
+			{/* <Header
 				description="Our expertise spans across multiple industries in the UAE, allowing us to understand sector-specific challenges and deliver strategic, results-driven solutions."
 				title="Industries We Serve"
-			/>
-
-			<section className="dashed dashed-y">
-				<div className="dashed dashed-x container mx-auto max-w-7xl">
-					<div className="px-6 py-8 md:px-0">
-						<p className="mx-auto max-w-3xl text-center text-muted-foreground leading-relaxed">
-							We partner with businesses across every major sector in the UAE —
-							from property developers in Dubai to healthcare providers in
-							Sharjah to tech startups scaling out of Abu Dhabi. Each industry
-							gets a strategy built around its market dynamics, compliance
-							requirements, and buyer behaviour.
-						</p>
-					</div>
+			/> */}
+			<IndustriesHeroSection industries={industries} />
+			<section className="dashed dashed-t">
+				<div className="dashed dashed-x container mx-auto max-w-7xl py-12">
+					<Badge size="sm">Across Every Emirate</Badge>
+					<p className="mt-6 text-balance text-lg md:text-xl">
+						We partner with businesses across every major sector in the UAE from
+						property developers in Dubai to healthcare providers in Sharjah to
+						tech startups scaling out of Abu Dhabi.
+						<br />
+						<br />
+						Each industry gets a strategy built around its market dynamics,
+						compliance requirements, and buyer behaviour.
+					</p>
 				</div>
 			</section>
 

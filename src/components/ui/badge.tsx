@@ -15,8 +15,8 @@ const badgeVariants = cva(
 			size: {
 				default:
 					"h-7 min-w-6 px-[calc(--spacing(3.5)-1px)] text-xs shadow-sm sm:h-8 sm:min-w-9 sm:text-sm",
-				lg: "h-8 min-w-8 px-[calc(--spacing(4)-1px)] text-base sm:h-9 sm:min-w-9 sm:text-base",
-				sm: "h-5 w-fit min-w-5 px-[calc(--spacing(2)-1px)] text-xs sm:text-[.625rem]",
+				lg: "h-8 min-w-8 px-[calc(--spacing(4)-1px)] text-base sm:h-9 sm:min-w-9",
+				sm: "h-6 w-fit min-w-6 rounded-sm px-[calc(--spacing(2)-1px)] text-xs",
 			},
 			variant: {
 				default:
