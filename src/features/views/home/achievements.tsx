@@ -51,7 +51,8 @@ export const Achievements = () => {
 				<div className="dashed dashed-x container mx-auto max-w-7xl">
 					<div className="group flex flex-col gap-4 py-12 md:grid md:grid-cols-5">
 						<h2 className="shrink-0 text-balance font-medium text-muted-foreground">
-							Trusted by fast-growing brands across Abu Dhabi, Dubai, and the UAE
+							Trusted by fast-growing brands across Abu Dhabi, Dubai, and the
+							UAE
 						</h2>
 						<div className="mask-[linear-gradient(to_right,transparent_0%,black_4%,black_96%,transparent_100%)] md:col-span-4">
 							<Marquee className="[--duration:25s] [--gap:3.5rem]">

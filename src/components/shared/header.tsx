@@ -26,18 +26,18 @@ export const Header = ({
 			<div
 				className={cn(
 					"container flex flex-col gap-4 sm:flex-row sm:items-center",
-					children ? "sm:justify-between" : "sm:justify-center"
+					children ? "sm:justify-between" : ""
 				)}
 			>
 				<div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-					<h2 className="font-display font-semibold text-4xl text-gray-1000 leading-[0.9] tracking-tighter sm:text-5xl lg:text-6xl xl:text-7xl">
+					<h2 className="font-display font-semibold text-4xl text-gray-1000 leading-[0.9] tracking-tight sm:text-5xl lg:text-6xl">
 						{title}
 					</h2>
 					<span
 						aria-hidden="true"
 						className="hidden h-10 w-px bg-gray-300 sm:block"
 					/>
-					<p className="max-w-2xs text-balance text-base text-muted-foreground">
+					<p className="max-w-xl text-balance text-base text-muted-foreground">
 						{description}
 					</p>
 				</div>
