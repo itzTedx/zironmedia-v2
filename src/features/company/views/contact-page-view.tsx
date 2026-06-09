@@ -14,7 +14,7 @@ import {
 	FrameTitle,
 } from "@/components/ui/frame";
 
-import { ADDRESS, OFFICE_HOURS } from "@/data/constant";
+import { ADDRESS, OFFICE_HOURS } from "@/data/office-details";
 import { ContactForm } from "@/features/contact/contact-form";
 import { ContactFaqs } from "@/features/contact/views/contact-faqs";
 import { ContactHeader } from "@/features/contact/views/contact-header";

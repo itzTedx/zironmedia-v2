@@ -1,7 +1,6 @@
 import { Blogs } from "@/features/articles/views/blogs";
 import { Achievements } from "@/features/views/home/achievements";
 import { CtaBanner } from "@/features/views/home/cta-banner";
-import { Experts } from "@/features/views/home/experts";
 import { FAQ } from "@/features/views/home/faq";
 import { Hero } from "@/features/views/home/hero";
 import { Process } from "@/features/views/home/process";
@@ -19,7 +18,7 @@ export function HomePageView() {
 			<Process />
 			<VideoReel />
 			<WhyUs />
-			<Experts />
+			{/* <Experts /> */}
 			<Blogs />
 			<FAQ />
 			<CtaBanner />

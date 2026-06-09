@@ -40,11 +40,11 @@ export const Process = () => {
 		<section className="dashed dashed-y">
 			<Header
 				description="We don’t believe in random posting or guesswork. We build integrated growth ecosystems that generate consistent revenue."
-				title="Our Process: From Strategy to Scale"
+				title="Our Process"
 			/>
 
-			<div className="dashed-x dashed container mx-auto max-w-7xl px-6 py-12 md:py-16 lg:py-20">
-				<div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+			<div className="dashed-x dashed container mx-auto max-w-7xl py-12 md:py-16 lg:py-20">
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-5">
 					{steps.map((step, idx) => {
 						return (
 							<div

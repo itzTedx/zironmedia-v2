@@ -8,9 +8,6 @@ import {
 	Growth,
 } from "../components/achievement-cards";
 
-const COMPANY_START_YEAR = 2019;
-const CURRENT_YEAR = new Date().getFullYear();
-
 export const ACHIEVEMENTS = [
 	{
 		id: 1,

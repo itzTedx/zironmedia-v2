@@ -3,15 +3,14 @@ import Link from "next/link";
 
 import { Logo, LogoMono } from "@/assets/logo";
 
+import { CURRENT_YEAR } from "@/data/office-details";
+
 import { cn } from "@/lib/utils";
 
 import { Noise } from "../shared/noise";
 import { FOOTER_LINKS, FOOTER_META, PARTNERS } from "./data/constants";
 import { ContactList } from "./ui/contact-list";
 import { Socials } from "./ui/socials";
-
-// Static copyright year to avoid re-computation
-const currentYear = new Date().getFullYear();
 
 export const Footer = () => {
 	return (
@@ -94,7 +93,7 @@ export const Footer = () => {
 				<div className="dashed dashed-x mx-auto max-w-7xl p-px">
 					<div className="flex flex-col items-center justify-between gap-4 bg-gray-1200 px-6 py-6 text-center md:flex-row md:gap-8 md:py-9 md:text-left">
 						<p className="w-full text-muted-foreground">
-							© {currentYear} Ziron Pro Digital Solutions LLC. All rights
+							© {CURRENT_YEAR} Ziron Pro Digital Solutions LLC. All rights
 							reserved.
 						</p>
 						<Link

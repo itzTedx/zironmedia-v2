@@ -6,10 +6,7 @@ import { Button } from "@/components/ui/button";
 
 import { IconArrowRightTag } from "@/assets/icons/arrow";
 import { IconDesktopPoint } from "@/assets/icons/desktop";
-import { IconNfc } from "@/assets/icons/nfc";
-import { IconPaint } from "@/assets/icons/paint";
 import { IconPlay } from "@/assets/icons/play";
-import { IconPointer } from "@/assets/icons/pointer";
 import { IconSpeaker } from "@/assets/icons/speaker";
 import { IconTarget } from "@/assets/icons/target";
 
@@ -19,16 +16,137 @@ import { IndustriesCarousel } from "./components/industries-carousel";
 import { StarsBackground } from "./components/stars-background";
 
 export const Services = () => {
+	const services = [
+		{
+			href: "/services/full-stack/marketing-and-growth-strategy",
+			linkClass:
+				"overflow-hidden rounded-2xl bg-orange-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+			iconboxColor: "bg-orange-100",
+			icon: IconTarget,
+			iconColor: "text-orange-500",
+			title: "Branding, Creative & Video Production",
+			desc: "Logo design, UI/UX, brand identity, video marketing, and visual storytelling that elevate brand perception.",
+			img: {
+				src: "/images/bento/branding.webp",
+				alt: "Branding, Creative & Video Production service showcase by Ziron pro",
+			},
+		},
+		{
+			href: "/services/websites/seo",
+			linkClass:
+				"overflow-hidden rounded-2xl bg-green-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+			iconboxColor: "bg-green-100",
+			icon: IconDesktopPoint,
+			iconColor: "text-green-500",
+			title: "Search Engine Optimization (SEO)",
+			desc: "Technical SEO, local SEO, content optimization, and authority building to dominate Google rankings.",
+			img: {
+				src: "/images/bento/web-dev-design.webp",
+				alt: "SEO service showcase by Ziron pro",
+			},
+		},
+		{
+			href: "/services/marketing/paid-ads",
+			linkClass:
+				"overflow-hidden rounded-2xl bg-fuchsia-50 shadow-md transition-[box-shadow_scale] hover:scale-102 hover:shadow-lg",
+			iconboxColor: "bg-fuchsia-100",
+			icon: IconSpeaker,
+			iconColor: "text-fuchsia-500",
+			title: "Paid Media & Performance Marketing",
+			desc: "ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok campaigns designed for predictable lead flow.",
+			img: {
+				src: "/images/bento/social-media-creatives.webp",
+				alt: "Paid Media performance creatives by Ziron pro",
+			},
+		},
+		{
+			href: "/services/full-stack/social-media-management",
+			linkClass:
+				"overflow-hidden rounded-2xl bg-cyan-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+			iconboxColor: "bg-cyan-100",
+			icon: IconPlay,
+			iconColor: "text-cyan-500",
+			title: "Social Media Marketing",
+			desc: "Strategic content, reels, paid promotions, and community management to build brand authority.",
+			img: {
+				src: "/images/bento/paid-ads.webp",
+				alt: "Social Media Marketing showcase by Ziron pro",
+			},
+		},
+		{
+			href: "/services/websites/website-development",
+			linkClass:
+				"overflow-hidden rounded-2xl bg-blue-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+			iconboxColor: "bg-blue-100",
+			icon: IconDesktopPoint,
+			iconColor: "text-blue-500",
+			title: "Website Design & Development",
+			desc: "High-converting, mobile-first, SEO-optimized websites built for performance and user experience.",
+			img: {
+				src: "/images/bento/web-dev-design.webp",
+				alt: "Web design and development service showcase by Ziron pro",
+			},
+		},
+		// {
+		// 	href: "/services/full-stack",
+		// 	linkClass:
+		// 		"overflow-hidden rounded-2xl bg-purple-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+		// 	iconboxColor: "bg-purple-100",
+		// 	icon: IconPointer,
+		// 	iconColor: "text-purple-500",
+		// 	title: "CRM Integration & Sales Automation Abu Dhabi, Dubai",
+		// 	desc: "We implement smart CRM systems, lead tracking, pipeline management, email automation, and WhatsApp workflows that convert enquiries into customers automatically.",
+		// 	img: {
+		// 		src: "/images/bento/conversion.webp",
+		// 		alt: "CRM Integration service showcase by Ziron pro",
+		// 	},
+		// },
+		// {
+		// 	href: "/services/printing",
+		// 	linkClass:
+		// 		"overflow-hidden rounded-2xl bg-rose-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+		// 	iconboxColor: "bg-rose-100",
+		// 	icon: IconNfc,
+		// 	iconColor: "text-rose-500",
+		// 	title: "NFC Smart Business Cards Abu Dhabi, Dubai",
+		// 	desc: "ZironPro provides NFC digital business cards that allow instant contact sharing, lead capture, and CRM integration, perfect for sales teams, events, exhibitions, and corporate networking in the UAE.",
+		// 	img: {
+		// 		src: "/images/bento/branding.webp",
+		// 		alt: "NFC Smart Business Cards showcase by Ziron pro",
+		// 	},
+		// },
+		{
+			href: "/services/full-stack/campaigns",
+			linkClass:
+				"overflow-hidden rounded-2xl bg-indigo-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+			iconboxColor: "bg-indigo-100",
+			icon: IconTarget,
+			iconColor: "text-indigo-500",
+			title: "Lead Generation & Funnel Optimization",
+			desc: "Conversion-driven funnels that attract, nurture, and convert high-quality leads.",
+			img: {
+				src: "/images/bento/conversion.webp",
+				alt: "Lead Generation & Funnel service showcase by Ziron pro",
+			},
+		},
+		// {
+		// 	href: "/services/branding",
+		// 	linkClass:
+		// 		"overflow-hidden rounded-2xl bg-amber-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg",
+		// 	iconboxColor: "bg-amber-100",
+		// 	icon: IconPaint,
+		// 	iconColor: "text-amber-500",
+		// 	title: "Branding, Creative & Video Production",
+		// 	desc: "Logo design, UI/UX, brand identity, video marketing, and visual storytelling that elevate brand perception.",
+		// 	img: {
+		// 		src: "/images/bento/branding.webp",
+		// 		alt: "Branding and creative service showcase by Ziron pro",
+		// 	},
+		// },
+	] as const;
+
 	return (
 		<section className="relative">
-			{/* <header className="absolute left-1/2 z-10 w-full -translate-x-1/2 px-6 py-12 text-center md:px-0 md:py-20">
-				<h2 className="shrink-0 font-bold font-display text-4xl text-primary tracking-tight md:text-6xl">
-					With our services
-				</h2>
-				<p className="mx-auto mt-3 max-w-2xs text-balance text-muted-foreground md:text-xl">
-					We help you achieve more at every stage of business growth.
-				</p>
-			</header> */}
 			<Header
 				description="Best Digital Marketing & CRM Company in Abu Dhabi, Dubai. From strategy to scale we engineer integrated growth ecosystems that generate consistent revenue."
 				title="What We Do"
@@ -64,242 +182,32 @@ export const Services = () => {
 			</Header>
 
 			<div className="dashed-b-0 dashed container grid max-w-7xl gap-4 py-12 md:grid-cols-3 md:py-16 lg:py-20">
-				<Link
-					className="overflow-hidden rounded-2xl bg-orange-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/full-stack/marketing-and-growth-strategy"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-orange-100">
-								<IconTarget className="size-6 text-orange-500" />
+				{services.map((s) => {
+					const Icon = s.icon;
+					return (
+						<Link className={s.linkClass} href={s.href} key={s.href}>
+							<div className="space-y-3 p-5 sm:p-7 md:p-9">
+								<div className="flex items-center gap-3">
+									<div
+										className={cn(
+											s.iconboxColor,
+											"squircle flex size-10 shrink-0 items-center justify-center rounded-2xl"
+										)}
+									>
+										<Icon className={cn(s.iconColor, "size-6")} />
+									</div>
+									<h3 className="font-medium text-base md:text-xl">
+										{s.title}
+									</h3>
+								</div>
+								<p className="text-muted-foreground text-sm sm:text-base">
+									{s.desc}
+								</p>
 							</div>
-							<h3 className="font-medium text-xl">
-								Digital Marketing Strategy Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							Customized growth blueprints aligned with your goals, audience
-							behavior, and competition in Abu Dhabi & Dubai markets.
-						</p>
-					</div>
-					<Image
-						alt="Digital Marketing Strategy service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/branding.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-green-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/websites/seo"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-green-100">
-								<IconDesktopPoint className="size-6 text-green-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Search Engine Optimization (SEO) Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							Technical SEO, local SEO, content optimization, and authority
-							building to dominate Google rankings.
-						</p>
-					</div>
-					<Image
-						alt="SEO service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/web-dev-design.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-fuchsia-50 shadow-md transition-[box-shadow_scale] hover:scale-102 hover:shadow-lg"
-					href="/services/marketing/paid-ads"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-fuchsia-100">
-								<IconSpeaker className="size-6 text-fuchsia-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Paid Media & Performance Marketing Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							ROI-focused Google Ads, Meta Ads, LinkedIn Ads, and TikTok
-							campaigns designed for predictable lead flow.
-						</p>
-					</div>
-					<Image
-						alt="Paid Media performance creatives by Ziron pro"
-						height={720}
-						src="/images/bento/social-media-creatives.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-cyan-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/full-stack/social-media-management"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-cyan-100">
-								<IconPlay className="size-6 text-cyan-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Social Media Marketing Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							Strategic content, reels, paid promotions, and community
-							management to build brand authority.
-						</p>
-					</div>
-					<Image
-						alt="Social Media Marketing showcase by Ziron pro"
-						height={720}
-						src="/images/bento/paid-ads.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-blue-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/websites/website-development"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-blue-100">
-								<IconDesktopPoint className="size-6 text-blue-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Website Design & Development Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							High-converting, mobile-first, SEO-optimized websites built for
-							performance and user experience.
-						</p>
-					</div>
-					<Image
-						alt="Web design and development service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/web-dev-design.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-purple-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/full-stack"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-purple-100">
-								<IconPointer className="size-6 text-purple-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								CRM Integration & Sales Automation Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							We implement smart CRM systems, lead tracking, pipeline
-							management, email automation, and WhatsApp workflows that convert
-							enquiries into customers automatically.
-						</p>
-					</div>
-					<Image
-						alt="CRM Integration service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/conversion.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-rose-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/printing"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-rose-100">
-								<IconNfc className="size-6 text-rose-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								NFC Smart Business Cards Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							ZironPro provides NFC digital business cards that allow instant
-							contact sharing, lead capture, and CRM integration, perfect for
-							sales teams, events, exhibitions, and corporate networking in the
-							UAE.
-						</p>
-					</div>
-					<Image
-						alt="NFC Smart Business Cards showcase by Ziron pro"
-						height={720}
-						src="/images/bento/branding.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-indigo-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/full-stack/campaigns"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-indigo-100">
-								<IconTarget className="size-6 text-indigo-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Lead Generation & Funnel Optimization Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							Conversion-driven funnels that attract, nurture, and convert
-							high-quality leads.
-						</p>
-					</div>
-					<Image
-						alt="Lead Generation & Funnel service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/conversion.webp"
-						width={800}
-					/>
-				</Link>
-
-				<Link
-					className="overflow-hidden rounded-2xl bg-amber-50 shadow-md transition-[box-shadow_translate] hover:scale-102 hover:shadow-lg"
-					href="/services/branding"
-				>
-					<div className="space-y-3 p-9">
-						<div className="flex items-center gap-3">
-							<div className="squircle flex size-10 items-center justify-center rounded-2xl bg-amber-100">
-								<IconPaint className="size-6 text-amber-500" />
-							</div>
-							<h3 className="font-medium text-xl">
-								Branding, Creative & Video Production Abu Dhabi, Dubai
-							</h3>
-						</div>
-						<p className="text-muted-foreground">
-							Logo design, UI/UX, brand identity, video marketing, and visual
-							storytelling that elevate brand perception.
-						</p>
-					</div>
-					<Image
-						alt="Branding and creative service showcase by Ziron pro"
-						height={720}
-						src="/images/bento/branding.webp"
-						width={800}
-					/>
-				</Link>
+							<Image alt={s.img.alt} height={720} src={s.img.src} width={800} />
+						</Link>
+					);
+				})}
 			</div>
 
 			<div className="dashed pb-12 md:pb-16 lg:pb-20">
@@ -318,13 +226,8 @@ export const Services = () => {
 					<h4 className="text-center font-medium text-3xl text-muted">
 						Ready to Grow Your Business Online?
 					</h4>
-					<Button
-						render={<Link className="gap-4" href="/contact" />}
-						size="xl"
-						variant="secondary"
-					>
-						Book Your Free 30-Minute Growth Consultation Today{" "}
-						<IconArrowRightTag />
+					<Button render={<Link className="gap-4" href="/contact" />} size="xl">
+						Book Consultation Today <IconArrowRightTag />
 					</Button>
 				</div>
 				<StarsBackground

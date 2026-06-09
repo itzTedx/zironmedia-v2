@@ -15,7 +15,7 @@ import type {
 	WithContext,
 } from "schema-dts";
 
-import { ADDRESS } from "@/data/constant";
+import { ADDRESS } from "@/data/office-details";
 import { siteConfig } from "@/data/site-config";
 
 type PageType = "website" | "article";

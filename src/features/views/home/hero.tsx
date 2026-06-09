@@ -4,6 +4,8 @@ import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+import { IconArrowRightTag } from "@/assets/icons/arrow";
+
 import { Featured } from "./featured";
 
 interface HeroProps {
@@ -19,18 +21,11 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 	) : (
 		<>
 			AI-Powered Digital Marketing & Growth Agency{" "}
-			<span className="text-brand-400">in Abu Dhabi And Dubai</span>
+			<span className="text-brand-400">in UAE</span>
 		</>
 	);
 
-	const headingNode = heading ?? (
-		<>
-			We Make Your Brand As a Revenue Machine
-			<span className="mt-3 block font-semibold text-xl normal-case sm:text-2xl md:text-3xl lg:text-4xl">
-				With Top Notch Marketing Solutions in Under The Sun
-			</span>
-		</>
-	);
+	const headingNode = heading ?? "We Make Your Brand As a Revenue Machine";
 
 	const subheadingNode = subheading ? (
 		subheading
@@ -46,13 +41,13 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 		<section className="relative bg-[radial-gradient(ellipse_400%_240%_at_50%_100%,#fff,#fff_10%,15%,#c7c5fd_16%,rgba(154,103,250,.6)_17%,21%,#264cab_28%,35%,#00031d_45%,#00031d)]">
 			<Noise className="opacity-20" />
 			<div className="dashed dashed-x relative mx-auto max-w-7xl">
-				<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-16 md:px-0 lg:py-20">
-					<Badge className="h-auto min-h-7 max-w-[90vw] flex-wrap justify-center gap-2 whitespace-normal text-balance px-3 py-1.5 text-center md:max-w-none">
+				<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 pt-16 pb-6 md:px-0 md:py-16 lg:py-20">
+					<Badge className="h-auto min-h-7 gap-2 px-3 py-1.5">
 						<span className="size-1.5 shrink-0 rounded-full bg-brand-400" />{" "}
 						<h1 className="tracking-wide">{badgeNode}</h1>
 					</Badge>
 
-					<h2 className="text-center font-bold font-display text-4xl text-primary text-shadow-[-1px_-1px_var(--color-brand-600)] uppercase md:text-5xl lg:text-6xl">
+					<h2 className="text-center font-bold font-display text-3xl text-primary text-shadow-[-1px_-1px_var(--color-brand-600)] uppercase sm:text-4xl md:text-5xl lg:text-6xl">
 						{headingNode}
 					</h2>
 					<p className="text-balance text-center font-medium text-muted leading-relaxed sm:text-lg md:text-xl">
@@ -68,8 +63,8 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 							render={<Link href="/contact" />}
 							size="lg"
 						>
-							{/* <PhoneIcon className="size-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-3" /> */}
-							<span>Book Growth Consultation Today</span>
+							<span>Book Consultation Today</span>
+							<IconArrowRightTag className="size-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-3" />
 						</Button>
 
 						<Button

@@ -11,3 +11,6 @@ export const OFFICE_HOURS = [
 		time: "9:00 AM - 4:00 PM (GST)",
 	},
 ];
+
+export const COMPANY_START_YEAR = 2019;
+export const CURRENT_YEAR = new Date().getFullYear();
