@@ -4,8 +4,6 @@ import { Noise } from "@/components/shared/noise";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-import { IconArrowRightTag } from "@/assets/icons/arrow";
-
 import { Featured } from "./featured";
 
 interface HeroProps {
@@ -47,7 +45,7 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 						<h1 className="tracking-wide">{badgeNode}</h1>
 					</Badge>
 
-					<h2 className="text-center font-bold font-display text-3xl text-primary text-shadow-[-1px_-1px_var(--color-brand-600)] uppercase sm:text-4xl md:text-5xl lg:text-6xl">
+					<h2 className="text-center font-bold font-display text-3xl text-primary text-shadow-[-1px_-1px_var(--color-brand-600)] uppercase sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
 						{headingNode}
 					</h2>
 					<p className="text-balance text-center font-medium text-muted leading-relaxed sm:text-lg md:text-xl">
@@ -64,7 +62,7 @@ export const Hero = ({ badgeLabel, heading, subheading }: HeroProps) => {
 							size="lg"
 						>
 							<span>Book Consultation Today</span>
-							<IconArrowRightTag className="size-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:-translate-x-3" />
+							{/* <IconArrowRightTag className="size-5 shrink-0 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:translate-x-3" /> */}
 						</Button>
 
 						<Button

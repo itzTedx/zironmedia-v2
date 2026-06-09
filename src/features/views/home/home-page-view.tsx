@@ -9,12 +9,17 @@ import { Video } from "@/features/views/home/video";
 import { VideoReel } from "@/features/views/home/video-reel";
 import { WhyUs } from "@/features/views/home/why-us";
 
+import { MiniCta } from "./components/mini-cta";
+import { Industries } from "./industries";
+
 export function HomePageView() {
 	return (
 		<main>
 			<Hero />
 			<Achievements />
 			<Services />
+			<Industries />
+			<MiniCta />
 			<Process />
 			<VideoReel />
 			<WhyUs />

@@ -20,7 +20,7 @@ export const FAQS: FaqCategory[] = [
 			{
 				question: "What is SEO for a business in Dubai?",
 				answer:
-					"SEO is the process of improving your website so search engines can crawl, understand, and rank your pages for queries that match your customers’ intent—so you attract qualified traffic and convert more leads.",
+					"SEO is the process of improving your website so search engines can crawl, understand, and rank your pages for queries that match your customers’ intenso you attract qualified traffic and convert more leads.",
 			},
 			{
 				question: "How long does it take to see SEO results?",
@@ -48,7 +48,7 @@ export const FAQS: FaqCategory[] = [
 		slug: "aeo",
 		title: "AEO (Answer Engine Optimization)",
 		description:
-			"How we structure content to win direct answers—ideal for featured snippets and answer-based results.",
+			"How we structure content to win direct answerideal for featured snippets and answer-based results.",
 		items: [
 			{
 				question: "What is Answer Engine Optimization (AEO)?",
@@ -81,12 +81,12 @@ export const FAQS: FaqCategory[] = [
 		slug: "technical",
 		title: "Technical SEO & Web Performance",
 		description:
-			"Mobile-first, fast, and crawlable websites—built to support rankings and conversions.",
+			"Mobile-first, fast, and crawlable websitebuilt to support rankings and conversions.",
 		items: [
 			{
 				question: "Can you improve technical SEO for Next.js websites?",
 				answer:
-					"Yes. We ensure pages are crawlable, fast, and correctly structured—covering metadata, internal linking, and the technical foundations needed for long-term SEO.",
+					"Yes. We ensure pages are crawlable, fast, and correctly structurecovering metadata, internal linking, and the technical foundations needed for long-term SEO.",
 			},
 			{
 				question: "Do you optimize Core Web Vitals?",
@@ -114,7 +114,7 @@ export const FAQS: FaqCategory[] = [
 		slug: "local-dubai",
 		title: "Local SEO for Dubai & the UAE",
 		description:
-			"Geo-targeted answers for clients searching “in Dubai”—including local intent and service coverage across the UAE.",
+			"Geo-targeted answers for clients searching “in Dubaiincluding local intent and service coverage across the UAE.",
 		items: [
 			{
 				question: "Do you offer SEO services in Dubai and the UAE?",
@@ -147,12 +147,12 @@ export const FAQS: FaqCategory[] = [
 		slug: "content-cro",
 		title: "Content, CRO & Reporting",
 		description:
-			"More than rankings—turning SEO traffic into leads with clearer page structure and stronger calls to action.",
+			"More than rankingturning SEO traffic into leads with clearer page structure and stronger calls to action.",
 		items: [
 			{
 				question: "What content do you create for SEO and AEO?",
 				answer:
-					"We create content designed to answer real questions and move readers forward—topic research, page structure, and concise explanations aligned to user intent.",
+					"We create content designed to answer real questions and move readers forwartopic research, page structure, and concise explanations aligned to user intent.",
 			},
 			{
 				question: "How do you improve conversions, not just traffic?",
@@ -186,7 +186,7 @@ export const FAQS: FaqCategory[] = [
 				question:
 					"What makes you a reliable digital marketing agency that Abu Dhabi & Dubai small business owners trust?",
 				answer:
-					"We combine affordability, transparency, and performance, ensuring small businesses get measurable ROI without overspending. Every campaign is built around real results — lead generation, revenue growth, and long-term brand authority.",
+					"We combine affordability, transparency, and performance, ensuring small businesses get measurable ROI without overspending. Every campaign is built around real results lead generation, revenue growth, and long-term brand authority.",
 			},
 			{
 				question: "Do you offer SEO services in Dubai affordable for startups?",
@@ -197,7 +197,7 @@ export const FAQS: FaqCategory[] = [
 				question:
 					"Are you a social media management company for UAE brands that you can outsource fully to?",
 				answer:
-					"Absolutely. We handle content, creatives, posting, engagement, and ads management end-to-end. Strategic content, reels, paid promotions, and community management — we build brand authority so you can focus on your business.",
+					"Absolutely. We handle content, creatives, posting, engagement, and ads management end-to-end. Strategic content, reels, paid promotions, and community management we build brand authority so you can focus on your business.",
 			},
 			{
 				question: "Can you manage Google Ads and Facebook Ads together?",
@@ -222,7 +222,7 @@ export const FAQS: FaqCategory[] = [
 			{
 				question: "Are your digital marketing packages affordable?",
 				answer:
-					"Yes. Our digital marketing packages in Abu Dhabi and Dubai are affordable for businesses that can start with minimal budgets. We offer flexible plans for startups, SMEs, and enterprise brands — all built around measurable ROI and clear KPIs.",
+					"Yes. Our digital marketing packages in Abu Dhabi and Dubai are affordable for businesses that can start with minimal budgets. We offer flexible plans for startups, SMEs, and enterprise brands all built around measurable ROI and clear KPIs.",
 			},
 		],
 	},

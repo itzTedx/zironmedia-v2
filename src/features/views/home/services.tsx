@@ -12,9 +12,6 @@ import { IconTarget } from "@/assets/icons/target";
 
 import { cn } from "@/lib/utils";
 
-import { IndustriesCarousel } from "./components/industries-carousel";
-import { StarsBackground } from "./components/stars-background";
-
 export const Services = () => {
 	const services = [
 		{
@@ -210,30 +207,6 @@ export const Services = () => {
 				})}
 			</div>
 
-			<div className="dashed pb-12 md:pb-16 lg:pb-20">
-				<Header
-					description="From real estate to startups, we deliver performance-driven growth solutions tailored to your industry dynamics across Abu Dhabi, Dubai, and the UAE."
-					title="Industries We Serve"
-				/>
-
-				<div className="container max-w-7xl px-6 md:px-0">
-					<IndustriesCarousel />
-				</div>
-			</div>
-
-			<div className="relative overflow-hidden bg-[radial-gradient(ellipse_at_bottom,var(--color-brand-950)_0%,#000_100%)]">
-				<div className="dashed dashed-b-0 container relative z-10 flex max-w-7xl flex-col items-center justify-center gap-6 py-12 md:flex-row">
-					<h4 className="text-center font-medium text-3xl text-muted">
-						Ready to Grow Your Business Online?
-					</h4>
-					<Button render={<Link className="gap-4" href="/contact" />} size="xl">
-						Book Consultation Today <IconArrowRightTag />
-					</Button>
-				</div>
-				<StarsBackground
-					className={cn("absolute inset-0 flex items-center justify-center")}
-				/>
-			</div>
 			<div className="absolute inset-x-0 top-0 -z-10 h-1/4 bg-linear-180 from-white" />
 			<div className="absolute inset-x-0 bottom-0 -z-10 h-1/4 bg-linear-0 from-white" />
 		</section>
