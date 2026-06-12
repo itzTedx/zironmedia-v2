@@ -3,10 +3,7 @@ import Link from "next/link";
 
 import { Card } from "@/features/services/components/card";
 import { Faq, FaqContent } from "@/features/services/components/faq";
-import {
-	ImageGallery,
-	ImageGalley,
-} from "@/features/services/components/image-gallery";
+import { ImageGallery } from "@/features/services/components/image-gallery";
 import { LogoVariants } from "@/features/services/components/logo-variants";
 import { Group, Section } from "@/features/services/components/section";
 import { Cta } from "@/features/views/cta";
@@ -20,6 +17,8 @@ function MdxImage({ className, ...props }: React.ComponentProps<typeof Image>) {
 				"rounded-2xl transition-transform hover:-translate-y-2",
 				className
 			)}
+			height={720}
+			width={1280}
 		/>
 	);
 }
@@ -48,7 +47,6 @@ export const serviceMdxComponents = {
 	FaqContent,
 	Group,
 	ImageGallery,
-	ImageGalley,
 	LogoVariants,
 	Section,
 	Cta,

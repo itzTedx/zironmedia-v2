@@ -91,7 +91,6 @@ export default function RootLayout({
 					{children}
 
 					<WhatsappPopover />
-					{/* <AiChatWidget /> */}
 					<Footer />
 					<BreakpointIndicator />
 
