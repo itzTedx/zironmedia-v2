@@ -61,12 +61,7 @@ export async function generateMetadata({
 		description,
 		path: canonicalPath,
 		image: service.metadata.image,
-		keywords: [
-			`${service.metadata.title.toLowerCase()} in Abu Dhabi`,
-			`${service.metadata.title.toLowerCase()} in Dubai`,
-			`${service.metadata.title.toLowerCase()} UAE`,
-			...siteConfig.keywords,
-		],
+		keywords: service.metadata.meta?.keywords ?? [...siteConfig.keywords],
 	});
 }
 

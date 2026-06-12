@@ -7,5 +7,6 @@ export type ServiceMetadata = {
 	meta?: {
 		title: string;
 		description: string;
+		keywords?: string[];
 	};
 };

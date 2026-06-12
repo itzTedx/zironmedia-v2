@@ -9,7 +9,7 @@ import { IconLogo, PrimaryLogo, SecondaryLogo } from "../assets/logo";
 export const LogoVariants = () => {
 	return (
 		<div className="not-prose grid grid-cols-3 gap-4">
-			<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
+			<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+--spacing(1))]">
 				<FramePanel>
 					<div className="relative flex aspect-8/9 items-center justify-center">
 						<Noise className="opacity-25" />
@@ -20,8 +20,8 @@ export const LogoVariants = () => {
 				<p className="text-center font-medium text-base">Primary logo design</p>
 			</Frame>
 			<div className="grid gap-4">
-				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
-					<FramePanel className="relative flex h-full items-center justify-center">
+				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+--spacing(1))]">
+					<FramePanel className="relative flex h-full items-center justify-center overflow-hidden">
 						<Noise className="opacity-25" />
 						<SecondaryLogo />
 					</FramePanel>
@@ -30,8 +30,8 @@ export const LogoVariants = () => {
 						Alternate / secondary logo versions
 					</p>
 				</Frame>
-				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
-					<FramePanel className="relative flex h-full gap-1 p-1">
+				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+--spacing(1))]">
+					<FramePanel className="relative flex h-full gap-1 overflow-hidden p-1">
 						<Noise className="opacity-25" />
 						<div className="flex size-full items-center justify-center rounded-lg bg-surface">
 							<IconLogo />
@@ -47,8 +47,8 @@ export const LogoVariants = () => {
 				</Frame>
 			</div>
 			<div className="grid-row-2 grid gap-4">
-				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
-					<FramePanel className="relative flex items-center justify-center">
+				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+--spacing(1))]">
+					<FramePanel className="relative flex items-center justify-center overflow-hidden">
 						<Noise className="opacity-25" />
 						<IconLogo className="h-auto w-28" />
 					</FramePanel>
@@ -57,8 +57,8 @@ export const LogoVariants = () => {
 						Icon or symbol variation
 					</p>
 				</Frame>
-				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
-					<FramePanel className="relative flex items-center justify-center">
+				<Frame className="relative z-50 rounded-[calc(var(--radius-2xl)+--spacing(1))]">
+					<FramePanel className="relative flex items-center justify-center overflow-hidden">
 						<Noise className="opacity-25" />
 
 						<Formats />
@@ -69,8 +69,8 @@ export const LogoVariants = () => {
 					</p>
 				</Frame>
 			</div>
-			<Frame className="relative z-50 col-span-full rounded-[calc(var(--radius-2xl)+calc(var(--spacing)*1))]">
-				<FramePanel className="relative grid grid-cols-[.5fr_1fr] items-center">
+			<Frame className="relative z-50 col-span-full rounded-[calc(var(--radius-2xl)+--spacing(1))]">
+				<FramePanel className="relative grid grid-cols-[.5fr_1fr] items-center overflow-hidden">
 					<Noise className="opacity-25" />
 
 					<h3 className="text-balance font-bold text-3xl text-brand-secondary uppercase tracking-tight">
